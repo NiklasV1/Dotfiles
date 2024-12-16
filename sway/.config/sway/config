@@ -135,6 +135,7 @@ bindsym $mod+n exec $notes
 
 # Kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # Start launcher
 bindsym $mod+d exec $menu

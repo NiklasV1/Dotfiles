@@ -21,7 +21,9 @@ set $webbrowser firefox
 # Set notes app
 set $notes "OBSIDIAN_USE_WAYLAND=1 obsidian -enable-features=UseOzonePlatform -ozone-platform=wayland"
 
-# Application launcher colors
+# Set calendar
+set $calendar gnome-calendar
+
 
 # Colors
 set $borderIndicator #F27900
@@ -132,6 +134,9 @@ bindsym $mod+w exec $webbrowser
 
 # Start note taking app
 bindsym $mod+n exec $notes
+
+# Start calendar
+bindsym $mod+c exec $calendar
 
 # Kill focused window
 bindsym $mod+Shift+q kill

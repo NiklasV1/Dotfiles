@@ -15,6 +15,12 @@ set $term kitty
 # Set file explorer
 set $explorer ranger
 
+# Set browser
+set $webbrowser firefox
+
+# Set notes app
+set $notes "OBSIDIAN_USE_WAYLAND=1 obsidian -enable-features=UseOzonePlatform -ozone-platform=wayland"
+
 # Application launcher colors
 
 # Colors
@@ -120,6 +126,12 @@ bindsym $mod+Return exec $term
 
 # Start file explorer
 bindsym $mod+e exec $term $explorer
+
+#Start browser
+bindsym $mod+w exec $webbrowser
+
+# Start note taking app
+bindsym $mod+n exec $notes
 
 # Kill focused window
 bindsym $mod+Shift+q kill

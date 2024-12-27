@@ -16,7 +16,7 @@ set $term kitty
 set $explorer ranger
 
 # Set browser
-set $webbrowser firefox
+set $webbrowser vivaldi
 
 # Set notes app
 set $notes "OBSIDIAN_USE_WAYLAND=1 obsidian -enable-features=UseOzonePlatform -ozone-platform=wayland"
@@ -48,9 +48,9 @@ set $menu bemenu-run -i -l "12" --center -W "0.16" -p Run --fn MononokiNerdFont 
 
 # Color styling
 # class                 border  bground text    indicator   child_border
-client.focused          $base5  $base1  $white  $base1      $base1
-client.unfocused        $base5  $base5  $black  $base5      $base5
-client.focused_inactive $base5  $base5  $black  $base5      $base5
+client.focused          $base5  $base1  $white  $base7      $base7
+client.unfocused        $base5  $base5  $black  $base1      $base1
+client.focused_inactive $base5  $base5  $black  $base1      $base1
 
 # Font
 # TODO
@@ -86,7 +86,7 @@ workspace 6 output DP-2
 # assign [app_id="obsidian"] workspace 4
 
 # Wallpaper
-output * bg "~/Pictures/Wallpapers/a_quiet_mind_UltraHD.png" fill
+output * bg "~/Pictures/Wallpapers/million_little_pieces_UltraHD_2.png" fill
 
 
 
@@ -312,10 +312,10 @@ bar {
     status_command while date +'%A | %d-%m-%Y | %T '; do sleep 1; done
 
     colors {
-        statusline $black
-        background $base6
-        focused_workspace $base1 $base1 $white
-        inactive_workspace $base5 $base5 $black
+        statusline $white
+        background $base1
+        focused_workspace $base0 $base0 $white
+        inactive_workspace $base1 $base1 $white
     }
 }
 

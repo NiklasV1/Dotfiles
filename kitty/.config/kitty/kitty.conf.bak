@@ -20,7 +20,7 @@
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
-font_size 12.0
+font_size 11.0
 
 #: Font size (in pts).
 
@@ -2653,3 +2653,9 @@ if status --is-interactive
   eval $(keychain --eval --quiet -Q id_github | source)
 end
 # END_KEYCHAIN
+
+
+# BEGIN_KITTY_THEME
+# Deep White
+include current-theme.conf
+# END_KITTY_THEME

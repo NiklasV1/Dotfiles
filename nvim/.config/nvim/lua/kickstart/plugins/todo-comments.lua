@@ -1,12 +1,12 @@
 -- Add highlighted keywords to comments
 -- Examples:
--- FIX:
--- TODO:
--- HACK:
--- WARN:
--- PERF:
--- NOTE:
--- TEST:
+-- FIX: test
+-- TODO: test
+-- HACK: test
+-- WARN: test
+-- PERF: test
+-- NOTE: test
+-- TEST: test
 
 return {
 	-- Highlight todo, notes, etc in comments

@@ -10,7 +10,7 @@ local colors = {
 	bg3 = "#2b2b2b",
 
 	blue = "#325CC0",
-	green = "#448C27",
+	green = "#387520",
 	red = "#AA3731",
 	magenta = "#7A3E9D",
 	orange = "#FFBC5D",

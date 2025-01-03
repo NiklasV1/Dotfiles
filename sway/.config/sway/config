@@ -38,6 +38,8 @@ set $bg1    #B7B7B7
 set $bg2    #5B5B5B
 set $bg3    #2B2B2B
 
+set $bg4    #E0E0E0
+
 set $blue  #325CC0
 
 set $base0 #1A1918

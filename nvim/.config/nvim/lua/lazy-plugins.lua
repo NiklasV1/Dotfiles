@@ -20,36 +20,36 @@ require("lazy").setup({
 	-- Use `opts = {}` to force a plugin to be loaded.
 
 	-- Color Scheme
-	require("custom/plugins/color-schemes/alabaster"),
+	require("custom.plugins.color-schemes.alabaster"),
 
 	-- Status Line
-	require("custom/plugins/lualine"),
+	require("custom.plugins.lualine"),
 
-	require("kickstart/plugins/gitsigns"),
+	require("kickstart.plugins.gitsigns"),
 
-	require("kickstart/plugins/which-key"),
+	require("kickstart.plugins.which-key"),
 
-	require("kickstart/plugins/telescope"),
+	require("kickstart.plugins.telescope"),
 
-	require("kickstart/plugins/lspconfig"),
+	require("kickstart.plugins.lspconfig"),
 
-	require("kickstart/plugins/autopairs"),
+	require("kickstart.plugins.autopairs"),
 
-	require("kickstart/plugins/conform"),
+	require("kickstart.plugins.conform"),
 
-	require("kickstart/plugins/cmp"),
+	require("kickstart.plugins.cmp"),
 
-	require("kickstart/plugins/todo-comments"),
+	require("kickstart.plugins.todo-comments"),
 
-	require("kickstart/plugins/mini"),
+	require("kickstart.plugins.mini"),
 
-	require("kickstart/plugins/treesitter"),
+	require("kickstart.plugins.treesitter"),
 
 	require("kickstart.plugins.indent_line"),
 
 	require("kickstart.plugins.lint"),
 
-	require("custom/plugins"),
+	require("custom.plugins"),
 
 	-- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
 	-- init.lua. If you want these files, they are in the repository, so you can just download them and

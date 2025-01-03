@@ -28,9 +28,17 @@ set $calendar gnome-calendar
 # Colors
 set $borderIndicator #F27900
 
-set $white #FFFFFF
-set $black #000000
-set $color #F27900
+set $white  #FFFFFF
+set $black  #000000
+
+set $active #007ACC
+
+set $bg0    #F7F7F7
+set $bg1    #B7B7B7
+set $bg2    #5B5B5B
+set $bg3    #2B2B2B
+
+set $blue  #325CC0
 
 set $base0 #1A1918
 set $base1 #595855
@@ -42,15 +50,15 @@ set $base6 #E6E4DF
 set $base7 #FAF2EB
 
 # Application launcher
-set $menu bemenu-run -i -l "12" --center -W "0.16" -p Run --fn MononokiNerdFont 12 --ch 14 -B 2 --bdr "$base1" --cw "2" --tb "$base1" --tf "$white" --fb "$base1" --ff "$white" --cb "$white" --cf "$white" --nb "$base6" --nf "$black" --hb "$base4" --hf "$black" --ab "$base6" --af "$black"
+set $menu bemenu-run -i -l "12" --center -W "0.16" -p Run --fn MononokiNerdFont 12 --ch 14 -B 2 --bdr "$bg3" --cw "2" --tb "$bg3" --tf "$white" --fb "$bg3" --ff "$white" --cb "$white" --cf "$white" --nb "$bg0" --nf "$black" --hb "$bg1" --hf "$black" --ab "$bg0" --af "$black"
 
 ### Styling
 
 # Color styling
 # class                 border  bground text    indicator   child_border
-client.focused          $base5  $base1  $white  $base7      $base7
-client.unfocused        $base5  $base5  $black  $base1      $base1
-client.focused_inactive $base5  $base5  $black  $base1      $base1
+client.focused          $bg1    $bg1    $white  $active     $active
+client.unfocused        $bg1    $bg1    $black  $bg1        $bg1
+client.focused_inactive $bg1    $bg1    $black  $bg1        $bg1
 
 # Font
 # TODO
@@ -313,9 +321,9 @@ bar {
 
     colors {
         statusline $white
-        background $base1
-        focused_workspace $base0 $base0 $white
-        inactive_workspace $base1 $base1 $white
+        background $bg3
+        focused_workspace $bg2 $bg2 $white
+        inactive_workspace $bg3 $bg3 $white
     }
 }
 

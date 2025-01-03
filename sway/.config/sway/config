@@ -42,15 +42,6 @@ set $bg4    #E0E0E0
 
 set $blue  #325CC0
 
-set $base0 #1A1918
-set $base1 #595855
-set $base2 #807E79
-set $base3 #999791
-set $base4 #B3B1AD
-set $base5 #CCCBC6
-set $base6 #E6E4DF
-set $base7 #FAF2EB
-
 # Application launcher
 set $menu bemenu-run -i -l "12" --center -W "0.16" -p Run --fn MononokiNerdFont 12 --ch 14 -B 2 --bdr "$bg3" --cw "2" --tb "$bg3" --tf "$white" --fb "$bg3" --ff "$white" --cb "$white" --cf "$white" --nb "$bg0" --nf "$black" --hb "$bg1" --hf "$black" --ab "$bg0" --af "$black"
 
@@ -63,7 +54,7 @@ client.unfocused        $bg1    $bg1    $black  $bg1        $bg1
 client.focused_inactive $bg1    $bg1    $black  $bg1        $bg1
 
 # Font
-# TODO
+# TODO:
 
 # Window borders
 default_border pixel 2

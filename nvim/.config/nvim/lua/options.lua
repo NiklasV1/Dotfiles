@@ -4,10 +4,11 @@
 --  For more options, you can see `:help option-list`
 
 -- Tabs
--- vim.cmd("set expandtab")
--- vim.cmd("set tabstop=2")
--- vim.cmd("set softtabstop=2")
--- vim.cmd("set shiftwidth=2")
+
+vim.cmd("set expandtab")
+vim.cmd("set tabstop=2")
+vim.cmd("set softtabstop=2")
+vim.cmd("set shiftwidth=2")
 
 -- Make line numbers default
 vim.opt.number = true

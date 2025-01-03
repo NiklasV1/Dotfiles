@@ -19,6 +19,12 @@ require("lazy").setup({
 	--
 	-- Use `opts = {}` to force a plugin to be loaded.
 
+	-- Color Scheme
+	require("custom/plugins/color-schemes/alabaster"),
+
+	-- Status Line
+	require("custom/plugins/lualine"),
+
 	require("kickstart/plugins/gitsigns"),
 
 	require("kickstart/plugins/which-key"),
@@ -32,8 +38,6 @@ require("lazy").setup({
 	require("kickstart/plugins/conform"),
 
 	require("kickstart/plugins/cmp"),
-
-	require("custom/plugins/color-schemes/alabaster"),
 
 	require("kickstart/plugins/todo-comments"),
 

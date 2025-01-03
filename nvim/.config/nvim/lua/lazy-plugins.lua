@@ -27,6 +27,8 @@ require("lazy").setup({
 
 	require("kickstart/plugins/lspconfig"),
 
+	require("kickstart/plugins/autopairs"),
+
 	{ -- Autoformat
 		"stevearc/conform.nvim",
 		event = { "BufWritePre" },

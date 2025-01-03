@@ -26,10 +26,14 @@ set $calendar gnome-calendar
 
 
 # Colors
-set $borderIndicator #F27900
-
 set $white  #FFFFFF
 set $black  #000000
+
+set $red    #AA3731
+set $green  #387520
+set $blue   #325CC0
+set $purple #7A3E9D
+set $orange #FFBC5D
 
 set $active #007ACC
 

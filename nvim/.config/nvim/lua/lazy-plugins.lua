@@ -35,14 +35,7 @@ require("lazy").setup({
 
 	require("custom/plugins/color-schemes/alabaster"),
 
-	-- Highlight todo, notes, etc in comments
-	{
-		"folke/todo-comments.nvim",
-		event = "VimEnter",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = { signs = false },
-	},
-
+	require("kickstart/plugins/todo-comments"),
 	{ -- Collection of various small independent plugins/modules
 		"echasnovski/mini.nvim",
 		config = function()

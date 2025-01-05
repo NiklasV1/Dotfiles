@@ -25,6 +25,8 @@ require("lazy").setup({
 	-- Status Line
 	require("custom.plugins.lualine"),
 
+	-- require("custom.plugins.java"),
+
 	require("kickstart.plugins.gitsigns"),
 
 	require("kickstart.plugins.which-key"),

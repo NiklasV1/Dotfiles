@@ -228,6 +228,15 @@ return {
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
+			-- require("java").setup({
+			--	jdk = {
+			--		-- install jdk using mason.nvim
+			--		auto_install = true,
+			--		version = "21.0.5",
+			--	},
+			-- })
+			-- require("lspconfig").jdtls.setup({})
+
 			require("mason-lspconfig").setup({
 				handlers = {
 					function(server_name)

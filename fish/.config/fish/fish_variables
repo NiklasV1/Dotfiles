@@ -3,6 +3,7 @@
 SETUVAR EDITOR:nvim
 SETUVAR SSH_KEYS_TO_AUTOLOAD:/home/niklas/\x2essh/id_github
 SETUVAR VISUAL:nvim
+SETUVAR _JAVA_AWT_WM_NONREPARENTING:1
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2d\x2dreverse

@@ -53,15 +53,17 @@ set $menu bemenu-run -i -l "12" --center -W "0.16" -p Run --fn MononokiNerdFont 
 
 # Color styling
 # class                 border  bground text    indicator   child_border
-client.focused          $bg1    $bg1    $white  $active     $active
-client.unfocused        $bg1    $bg1    $black  $bg1        $bg1
-client.focused_inactive $bg1    $bg1    $black  $bg1        $bg1
+client.focused          $active $bg3    $white  $active     $active
+client.unfocused        $bg1    $bg3    $white  $bg1        $bg1
+client.focused_inactive $bg1    $bg3    $white  $bg1        $bg1
 
 # Font
 # TODO:
 
 # Window borders
 default_border pixel 2
+default_floating_border pixel 2
+titlebar_border_thickness 2
 
 # Gaps
 # smart_gaps on

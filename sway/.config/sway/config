@@ -1,4 +1,7 @@
-### Variables
+### Variables 
+
+# Screen sharing tool
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
@@ -157,7 +160,7 @@ bindsym $mod+q kill
 bindsym $mod+d exec $menu
 
 # Take Screenshot
-bindsym $mod+Shift+s exec "grim - | wl-copy"
+bindsym $mod+Shift+s exec "grim -g $(slurp) - | wl-copy"
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.

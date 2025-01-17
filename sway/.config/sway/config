@@ -160,7 +160,7 @@ bindsym $mod+q kill
 bindsym $mod+d exec $menu
 
 # Take Screenshot
-bindsym $mod+Shift+s exec "grim -g $(slurp) - | wl-copy"
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.

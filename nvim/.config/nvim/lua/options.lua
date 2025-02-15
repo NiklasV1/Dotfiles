@@ -4,19 +4,16 @@
 --  For more options, you can see `:help option-list`
 
 -- Tabs
-
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
--- Make line numbers default
+-- Line numbers
 vim.opt.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
 
--- Enable mouse mode, can be useful for resizing splits for example!
+-- Enable mouse control
 vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
@@ -68,5 +65,3 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 20
-
--- vim: ts=2 sts=2 sw=2 et

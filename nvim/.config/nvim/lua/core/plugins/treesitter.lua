@@ -17,9 +17,12 @@ return {
 				"query",
 				"vim",
 				"vimdoc",
+				"scss",
+				"sql",
 				"css",
 				"json",
 				"typescript",
+				"fish",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,

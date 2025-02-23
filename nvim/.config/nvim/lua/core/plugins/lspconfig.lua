@@ -173,6 +173,8 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
+			local angularls_default_config = require("lspconfig.configs.angularls").default_config
+			table.insert(angularls_default_config.cmd, "--forceStrictTemplates")
 			-- Enable the following language servers
 			--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 			--
@@ -195,6 +197,15 @@ return {
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
 				-- ts_ls = {},
 				--
+				html = {},
+				ts_ls = {},
+				angularls = {
+					cmd = angularls_default_config.cmd,
+					on_new_config = function(new_config, _)
+						new_config.cmd = angularls_default_config.cmd
+					end,
+				},
+				cssls = {},
 
 				lua_ls = {
 					-- cmd = {...},

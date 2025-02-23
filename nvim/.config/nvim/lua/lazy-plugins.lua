@@ -13,6 +13,9 @@ require("lazy").setup({
 	-- Core functionality
 	require("core.plugins"),
 
+	-- Extra functionality
+	require("extra.plugins"),
+
 	-- Visual plugins
 	require("visuals.plugins"),
 

@@ -66,6 +66,7 @@ return {
 				{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
 				{ "<leader>l", group = "[L]azy Git" },
 				{ "<leader>g", group = "[G]o" },
+				{ "<leader>q", group = "[Q]quickfix list" },
 			},
 		},
 	},

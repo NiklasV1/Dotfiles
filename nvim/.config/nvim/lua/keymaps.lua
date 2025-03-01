@@ -7,7 +7,13 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+
+-- Quickfix list
+vim.keymap.set("n", "<leader>qd", vim.diagnostic.setloclist, { desc = "[Q]uickfix [D]iagnostics" })
+vim.keymap.set("n", "<leader>qn", "<Cmd>cnext<CR>", { desc = "[Q]uickfix [N]ext" })
+vim.keymap.set("n", "<leader>qp", "<Cmd>cprev<CR>", { desc = "[Q]uickfix [P]revious" })
+vim.keymap.set("n", "<leader>qf", "<Cmd>cfirst<CR>", { desc = "[Q]uickfix [F]irst" })
+vim.keymap.set("n", "<leader>ql", "<Cmd>clast<CR>", { desc = "[Q]uickfix [L]ast" })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which

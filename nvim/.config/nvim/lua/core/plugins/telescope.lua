@@ -91,6 +91,21 @@ return {
 					find_files = {
 						path_display = filenameFirst,
 					},
+					grep_string = {
+						path_display = filenameFirst,
+					},
+					live_grep = {
+						path_display = filenameFirst,
+					},
+					diagnostics = {
+						path_display = filenameFirst,
+					},
+					oldfiles = {
+						path_display = filenameFirst,
+					},
+					buffers = {
+						path_display = filenameFirst,
+					},
 				},
 			})
 

@@ -198,6 +198,7 @@ return {
 				-- ts_ls = {},
 				--
 				gopls = {},
+				pyright = {},
 				html = {},
 				ts_ls = {},
 				angularls = {

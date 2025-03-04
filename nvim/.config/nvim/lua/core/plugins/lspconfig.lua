@@ -200,7 +200,14 @@ return {
 				gopls = {},
 				pyright = {},
 				html = {},
-				ts_ls = {},
+				ts_ls = {
+					init_options = {
+						preferences = {
+							importModuleSpecifierPreference = "relative",
+							importModuleSpecifierEnding = "minimal",
+						},
+					},
+				},
 				angularls = {
 					cmd = angularls_default_config.cmd,
 					on_new_config = function(new_config, _)

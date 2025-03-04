@@ -3,5 +3,8 @@ return {
 	require("extra.plugins.ts-autotag"),
 
 	-- Harpoon
-	require("extra.plugins.harpoon"),
+	-- require("extra.plugins.harpoon"),
+
+	-- Grapple
+	require("extra.plugins.grapple"),
 }

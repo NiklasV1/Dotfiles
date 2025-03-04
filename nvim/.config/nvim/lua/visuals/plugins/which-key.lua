@@ -65,7 +65,7 @@ return {
 				{ "<leader>t", group = "[T]oggle" },
 				{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
 				{ "<leader>l", group = "[L]azy Git" },
-				{ "<leader>g", group = "[G]o" },
+				{ "<leader>g", group = "[G]rapple" },
 				{ "<leader>q", group = "[Q]quickfix list" },
 			},
 		},

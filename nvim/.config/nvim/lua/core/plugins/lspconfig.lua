@@ -175,6 +175,22 @@ return {
 
 			local angularls_default_config = require("lspconfig.configs.angularls").default_config
 			table.insert(angularls_default_config.cmd, "--forceStrictTemplates")
+
+			local languageServerPath =
+				"/home/niklasv/.nvm/versions/node/v22.14.0/lib/node_modules/@angular/language-server/bin/ngserver"
+			local typescriptPath = "/home/niklasv/.nvm/versions/node/v22.14.0/lib/node_modules/typescript/lib"
+			local angularLanguageServicePath =
+				"/home/niklasv/.nvm/versions/node/v22.14.0/lib/node_modules/@angular/language-service"
+			local angularls_new_cmd = {
+				languageServerPath,
+				"--stdio",
+				"--tsProbeLocations",
+				typescriptPath,
+				"--ngProbeLocations",
+				angularLanguageServicePath,
+				"--forceStrictTemplates",
+			}
+
 			-- Enable the following language servers
 			--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 			--
@@ -211,7 +227,7 @@ return {
 				angularls = {
 					cmd = angularls_default_config.cmd,
 					on_new_config = function(new_config, _)
-						new_config.cmd = angularls_default_config.cmd
+						new_config.cmd = angularls_new_cmd
 					end,
 				},
 				cssls = {},

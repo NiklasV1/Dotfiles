@@ -23,6 +23,7 @@ return {
 				"json",
 				"typescript",
 				"fish",
+				"http",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,

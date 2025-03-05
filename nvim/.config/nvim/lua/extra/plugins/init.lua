@@ -7,4 +7,7 @@ return {
 
 	-- Grapple
 	require("extra.plugins.grapple"),
+
+	-- Rest request testing
+	require("extra.plugins.rest"),
 }

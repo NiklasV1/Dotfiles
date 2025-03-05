@@ -9,6 +9,9 @@
 --    :Lazy update
 --
 require("lazy").setup({
+	rocks = {
+		hererocks = true,
+	},
 
 	-- Core functionality
 	require("core.plugins"),

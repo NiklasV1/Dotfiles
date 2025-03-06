@@ -27,16 +27,16 @@ return {
 					lsp_format_opt = "fallback"
 				end
 				return {
-					timeout_ms = 500,
+					timeout_ms = 2000,
 					lsp_format = lsp_format_opt,
 				}
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
-				typescript = { "prettier" },
-				css = { "prettier" },
-				scss = { "prettier" },
-				html = { "prettier" },
+				typescript = { "prettierd", "prettier", stop_after_first = true },
+				css = { "prettierd", "prettier", stop_after_first = true },
+				scss = { "prettierd", "prettier", stop_after_first = true },
+				html = { "prettierd", "prettier", stop_after_first = true },
 				python = { "autopep8" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },

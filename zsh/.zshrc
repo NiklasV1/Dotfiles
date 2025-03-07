@@ -108,3 +108,6 @@ source $ZSH/oh-my-zsh.sh
 alias v="nvim"
 alias vim="nvim"
 alias lg="lazygit"
+alias week="timew week"
+alias startw="timew start work"
+alias stopw="timew stop work"

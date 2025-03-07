@@ -67,6 +67,7 @@ return {
 				{ "<leader>l", group = "[L]azy Git" },
 				{ "<leader>g", group = "[G]rapple" },
 				{ "<leader>q", group = "[Q]quickfix list" },
+				{ "<leader>a", group = "[A]ngular" },
 			},
 		},
 	},

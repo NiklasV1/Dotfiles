@@ -10,4 +10,7 @@ return {
 
 	-- Rest request testing
 	require("extra.plugins.rest"),
+
+	-- Additional AngularLS features
+	require("extra.plugins.angular-extras"),
 }

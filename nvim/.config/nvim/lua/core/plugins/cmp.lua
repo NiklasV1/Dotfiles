@@ -41,6 +41,9 @@ return {
 			local luasnip = require("luasnip")
 			luasnip.config.setup({})
 
+			-- Load snippets
+			require("snippets")
+
 			cmp.setup({
 				snippet = {
 					expand = function(args)

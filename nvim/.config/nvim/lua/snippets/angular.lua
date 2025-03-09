@@ -1,6 +1,7 @@
 -- NOTE: Angular snippets
 
 local ls = require("luasnip")
+local fmt = require("luasnip.extras.fmt").fmt
 local s = ls.snippet
 local sn = ls.snippet_node
 local t = ls.text_node
@@ -10,13 +11,19 @@ local d = ls.dynamic_node
 local c = ls.choice_node
 
 return {
-	s({ trig = "ng-signal", dscr = "signal definition" }, {
-		t("protected readonly "),
-		i(1, { "name" }),
-		t(" = signal<"),
-		i(2, { "type" }),
-		t(">("),
-		i(3, { "value" }),
-		t(");"),
-	}),
+	s(
+		"ng-signal",
+		fmt("protected readonly {name} = signal<{type}>({value});", {
+			name = i(1, "name"),
+			type = i(2, "type"),
+			value = i(3, "value"),
+		})
+	),
+	s(
+		"ng-input",
+		fmt("public readonly {name} = input<{type}>();", {
+			name = i(1, "name"),
+			type = i(2, "type"),
+		})
+	),
 }

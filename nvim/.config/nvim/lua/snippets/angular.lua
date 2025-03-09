@@ -26,4 +26,27 @@ return {
 			type = i(2, "type"),
 		})
 	),
+	s(
+		"ng-inject",
+		fmt("readonly #{name} = inject({service});", {
+			name = i(1, "name"),
+			service = i(2, "service"),
+		})
+	),
+	s(
+		"ng-computed",
+		fmt(
+			[[
+		protected readonly |name/ = computed<|type/>(() => {
+			|body/
+		});
+		]],
+			{
+				name = i(1, "name"),
+				type = i(2, "type"),
+				body = i(3, "body"),
+			},
+			{ delimiters = "|/" }
+		)
+	),
 }

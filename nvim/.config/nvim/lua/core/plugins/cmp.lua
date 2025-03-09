@@ -100,6 +100,16 @@ return {
 							luasnip.jump(-1)
 						end
 					end, { "i", "s" }),
+					vim.keymap.set({ "i", "s" }, "<C-N>", function()
+						if luasnip.choice_active() then
+							luasnip.change_choice(1)
+						end
+					end, { silent = true }),
+					vim.keymap.set({ "i", "s" }, "<C-P>", function()
+						if luasnip.choice_active() then
+							luasnip.change_choice(-1)
+						end
+					end, { silent = true }),
 
 					-- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
 					--    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps

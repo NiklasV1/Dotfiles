@@ -176,11 +176,12 @@ return {
 			local angularls_default_config = require("lspconfig.configs.angularls").default_config
 			table.insert(angularls_default_config.cmd, "--forceStrictTemplates")
 
-			local languageServerPath =
-				"/home/niklasv/.nvm/versions/node/v22.14.0/lib/node_modules/@angular/language-server/bin/ngserver"
-			local typescriptPath = "/home/niklasv/.nvm/versions/node/v22.14.0/lib/node_modules/typescript/lib"
-			local angularLanguageServicePath =
-				"/home/niklasv/.nvm/versions/node/v22.14.0/lib/node_modules/@angular/language-service"
+			local home = vim.env.HOME
+			local languageServerPath = home
+				.. "/.nvm/versions/node/v22.14.0/lib/node_modules/@angular/language-server/bin/ngserver"
+			local typescriptPath = home .. "/.nvm/versions/node/v22.14.0/lib/node_modules/typescript/lib"
+			local angularLanguageServicePath = home
+				.. "/.nvm/versions/node/v22.14.0/lib/node_modules/@angular/language-service"
 			local angularls_new_cmd = {
 				languageServerPath,
 				"--stdio",

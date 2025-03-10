@@ -1,0 +1,18 @@
+
+[general]
+import = [
+"~/.config/alacritty/themes/github_light_high_contrast.toml",
+]
+live_config_reload = true
+
+[window]
+decorations = "Full"
+decorations_theme_variant = "Dark"
+
+[font]
+normal.family = "Mononoki Nerd Font"
+bold.family = "Mononoki Nerd Font"
+italic.family = "Mononoki Nerd Font"
+bold_italic.family = "Mononoki Nerd Font"
+
+size = 12.0

@@ -77,6 +77,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+source $HOME/.sdkman/bin/sdkman-init.sh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -102,9 +104,18 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Environment variables
+export ANDROID_HOME="$HOME/Android/Sdk" # Depending on the Android SDK path.
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"  # Depending on the Android SDK path.
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
+
+export PATH="$PATH:${JAVA_HOME}"
+
+# Aliases
 alias v="nvim"
 alias vim="nvim"
 alias lg="lazygit"

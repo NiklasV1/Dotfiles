@@ -105,7 +105,13 @@ source $HOME/.sdkman/bin/sdkman-init.sh
 # For a full list of active aliases, run `alias`.
 #
 
-# Environment variables
+# NOTE: Environment variables
+
+# Default Editor
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
+# App development
 export ANDROID_HOME="$HOME/Android/Sdk" # Depending on the Android SDK path.
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"  # Depending on the Android SDK path.
 export PATH=${PATH}:${ANDROID_HOME}/tools

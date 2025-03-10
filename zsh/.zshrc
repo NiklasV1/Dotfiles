@@ -115,10 +115,17 @@ export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 
 export PATH="$PATH:${JAVA_HOME}"
 
-# Aliases
+# NOTE: Aliases
+
+# Neovim
 alias v="nvim"
 alias vim="nvim"
+# Git
 alias lg="lazygit"
+# Timewarrior
 alias week="timew week"
 alias startw="timew start work"
 alias stopw="timew stop work"
+# Taskwarrior
+alias ta="task add"
+alias tl="task list"

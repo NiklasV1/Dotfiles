@@ -14,9 +14,12 @@ return {
 	-- Services
 	s(
 		"ng-service",
-		fmt("readonly #{name} = inject({service});", {
-			name = i(1, "name"),
-			service = i(2, "service"),
+		c(1, {
+			fmt("readonly #{name} = inject({service});", {
+				name = i(1, "name"),
+				service = i(2, "service"),
+			}),
+			t("readonly #translationService = inject(TranslateService);"),
 		})
 	),
 

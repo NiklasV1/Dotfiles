@@ -13,4 +13,7 @@ return {
 
 	-- Additional AngularLS features
 	require("extra.plugins.angular-extras"),
+
+	-- SQLs features
+	require("extra.plugins.sqls"),
 }

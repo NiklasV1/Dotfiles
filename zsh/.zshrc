@@ -135,3 +135,4 @@ alias stopw="timew stop work"
 # Taskwarrior
 alias ta="task add"
 alias tl="task list"
+alias tg="task list | grep"

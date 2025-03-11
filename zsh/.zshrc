@@ -138,3 +138,5 @@ alias tl="task list"
 alias tg="task list | grep"
 # File watcher override
 alias watcher-limit="sudo sysctl -w fs.inotify.max_user_watches=100000"
+# NPM
+alias npmstart="npm install && npm run start"

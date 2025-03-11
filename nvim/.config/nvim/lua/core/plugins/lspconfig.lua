@@ -199,7 +199,7 @@ return {
 			--  - cmd (table): Override the default command used to start the server
 			--  - filetypes (table): Override the default list of associated filetypes for the server
 			--  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
-			--  - settings (table): Overrp00f/alabaster.nvimide the default settings passed when initializing the server.
+			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				-- clangd = {},
@@ -247,14 +247,7 @@ return {
 						},
 					},
 				},
-				sqls = {
-					connections = {
-						{
-							driver = "postgresql",
-							dataSourceName = "host=127.0.0.1 port=5432 user=sa_backend password=mySecretDBPassword dbname=postgres sslmode=disable",
-						},
-					},
-				},
+				sqls = {},
 			}
 
 			-- Ensure the servers and tools above are installed

@@ -134,9 +134,9 @@ alias startw="timew start work"
 alias stopw="timew stop work"
 # Taskwarrior
 alias ta="task add"
-alias tl="task list"
-alias tg="task list | grep"
+alias tl="task next"
+alias tg="task next | grep"
 # File watcher override
-alias watcher-limit="sudo sysctl -w fs.inotify.max_user_watches=100000"
+alias watcher-limit="sudo sysctl -w fs.inotify.max_user_watches=10000000"
 # NPM
 alias npmstart="npm install && npm run start"

@@ -21,7 +21,7 @@ return {
 	require("core.plugins.lint"),
 
 	-- Better text objects
-	require("core.plugins.mini"),
+	-- require("core.plugins.mini"),
 
 	-- Auto detect indentation rules
 	require("core.plugins.vim-sleuth"),

@@ -173,9 +173,6 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
-			local angularls_default_config = require("lspconfig.configs.angularls").default_config
-			table.insert(angularls_default_config.cmd, "--forceStrictTemplates")
-
 			local home = vim.env.HOME
 			local languageServerPath = home
 				.. "/.nvm/versions/node/v22.14.0/lib/node_modules/@angular/language-server/bin/ngserver"
@@ -226,7 +223,7 @@ return {
 					},
 				},
 				angularls = {
-					cmd = angularls_default_config.cmd,
+					cmd = angularls_new_cmd,
 					on_new_config = function(new_config, _)
 						new_config.cmd = angularls_new_cmd
 					end,

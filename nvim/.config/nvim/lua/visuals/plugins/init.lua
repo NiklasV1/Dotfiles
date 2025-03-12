@@ -16,4 +16,7 @@ return {
 
 	-- Keymap helper window
 	require("visuals.plugins.which-key"),
+
+	-- Filetree
+	require("visuals.plugins.neo-tree"),
 }

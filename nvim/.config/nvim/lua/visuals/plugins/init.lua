@@ -1,6 +1,6 @@
 return {
 	-- Color scheme
-	require("visuals.plugins.color-schemes.modus"),
+	require("visuals.plugins.color-schemes.github"),
 
 	-- Status Line
 	require("visuals.plugins.lualine"),

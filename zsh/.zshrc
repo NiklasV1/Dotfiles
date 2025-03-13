@@ -141,4 +141,4 @@ alias watcher-limit="sudo sysctl -w fs.inotify.max_user_watches=10000000"
 # NPM
 alias npmstart="npm install && npm run start"
 # Navigation
-alias backend="cd $HOME/Programming/snapaddy-backend/packages/server/features"
+alias backend="cd $HOME/Programming/snapaddy-backend/packages/server/features && nvm use 18"

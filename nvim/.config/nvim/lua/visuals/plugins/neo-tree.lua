@@ -11,15 +11,16 @@ return {
 	},
 	cmd = "Neotree",
 	keys = {
-		{ "\\", ":Neotree reveal right<CR>", desc = "NeoTree reveal", silent = true },
+		{ "\\", ":Neotree reveal<CR>", desc = "NeoTree reveal", silent = true },
 	},
 	opts = {
-		filesystem = {
-			window = {
-				mappings = {
-					["\\"] = "close_window",
-				},
+		window = {
+			width = 84,
+			position = "right",
+			mappings = {
+				["\\"] = "close_window",
 			},
 		},
+		filesystem = {},
 	},
 }

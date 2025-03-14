@@ -235,6 +235,9 @@ return {
 					end,
 				},
 				cssls = {},
+				bashls = {
+					filetypes = { "bash", "sh", "zsh" },
+				},
 
 				lua_ls = {
 					-- cmd = {...},

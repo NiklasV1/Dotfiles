@@ -72,12 +72,15 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  nvm
 )
 
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/.sdkman/bin/sdkman-init.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # User configuration
 
@@ -123,7 +126,7 @@ export PATH="$PATH:${JAVA_HOME}"
 
 # FIX: DONT ENABLE THIS VARIABLE PERMANENTLY
 # PUT IT SOMWHERE ELSE
-export NODE_ENV=development
+#export NODE_ENV=development
 
 # NOTE: Aliases
 
@@ -146,3 +149,6 @@ alias watcher-limit="sudo sysctl -w fs.inotify.max_user_watches=10000000"
 alias npmstart="npm install && npm run start"
 # Navigation
 alias backend="cd $HOME/Programming/snapaddy-backend/packages/server/features && nvm use 18"
+# Tmuxinator
+alias backendUp="tmuxinator start backend"
+alias backendDown="tmuxinator stop backend"

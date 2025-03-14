@@ -1,20 +1,16 @@
 # /home/niklasv/.config/tmuxinator/backend.yml
 
 name: backend
-root: ~/Programming/
+root: ~/
 
-# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
 startup_window: Backend
+on_project_first_start: ~/.config/tmuxinator/scripts/backend/start.zsh
+on_project_stop: ~/.config/tmuxinator/scripts/backend/stop.zsh
 
-# Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
-# startup_pane: 1
-
-# Controls whether the tmux session should be attached to automatically. Defaults to true.
-# attach: false
 
 windows:
-  - Backend:
-    root: ~/Programming/snapaddy-backend/
-    panes:
-      - rush start:feat
-  - Watchdog: cd ~/Programming/snapaddy-watchdog/ && git pull && pnpm install && pnpm run start
+  - Backend: ~/.config/tmuxinator/scripts/backend/backend.zsh
+  - Watchdog: ~/.config/tmuxinator/scripts/backend/watchdog.zsh
+  - Analytics-Web: ~/.config/tmuxinator/scripts/backend/analytics-web.zsh
+  - Rest-Api: ~/.config/tmuxinator/scripts/backend/rest-api.zsh
+  - Web: ~/.config/tmuxinator/scripts/backend/web.zsh

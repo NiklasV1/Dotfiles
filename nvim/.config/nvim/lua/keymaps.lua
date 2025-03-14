@@ -14,6 +14,8 @@ vim.keymap.set("n", "<leader>qn", "<Cmd>cnext<CR>", { desc = "[Q]uickfix [N]ext"
 vim.keymap.set("n", "<leader>qp", "<Cmd>cprev<CR>", { desc = "[Q]uickfix [P]revious" })
 vim.keymap.set("n", "<leader>qf", "<Cmd>cfirst<CR>", { desc = "[Q]uickfix [F]irst" })
 vim.keymap.set("n", "<leader>ql", "<Cmd>clast<CR>", { desc = "[Q]uickfix [L]ast" })
+vim.keymap.set("n", "<leader>qo", "<Cmd>copen<CR>", { desc = "[Q]uickfix [O]pen" })
+vim.keymap.set("n", "<leader>qc", "<Cmd>cclose<CR>", { desc = "[Q]uickfix [C]lose" })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which

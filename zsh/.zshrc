@@ -121,6 +121,8 @@ export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 
 export PATH="$PATH:${JAVA_HOME}"
 
+# FIX: DONT ENABLE THIS VARIABLE PERMANENTLY
+# PUT IT SOMWHERE ELSE
 export NODE_ENV=development
 
 # NOTE: Aliases

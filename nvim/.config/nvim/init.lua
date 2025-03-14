@@ -16,6 +16,9 @@ require("custom-commands")
 -- [[ Keymaps ]]
 require("keymaps")
 
+-- Custom quickfix parsers
+require("parsers")
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 require("lazy-install")
 

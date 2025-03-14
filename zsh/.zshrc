@@ -121,6 +121,8 @@ export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 
 export PATH="$PATH:${JAVA_HOME}"
 
+export NODE_ENV=development
+
 # NOTE: Aliases
 
 # Neovim

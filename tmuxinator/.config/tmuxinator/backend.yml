@@ -9,8 +9,8 @@ on_project_stop: ~/.config/tmuxinator/scripts/backend/stop.zsh
 
 
 windows:
-  - Backend: ~/.config/tmuxinator/scripts/backend/backend.zsh
-  - Watchdog: ~/.config/tmuxinator/scripts/backend/watchdog.zsh
-  - Analytics-Web: ~/.config/tmuxinator/scripts/backend/analytics-web.zsh
-  - Rest-Api: ~/.config/tmuxinator/scripts/backend/rest-api.zsh
-  - Web: ~/.config/tmuxinator/scripts/backend/web.zsh
+  - Backend: source ~/.config/tmuxinator/scripts/backend/backend.zsh
+  - Watchdog: source ~/.config/tmuxinator/scripts/backend/watchdog.zsh
+  - Analytics-Web: source ~/.config/tmuxinator/scripts/backend/analytics-web.zsh
+  - Rest-Api: source ~/.config/tmuxinator/scripts/backend/rest-api.zsh
+  - Web: source ~/.config/tmuxinator/scripts/backend/web.zsh

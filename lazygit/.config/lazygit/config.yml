@@ -1,0 +1,10 @@
+# Config relating to the Lazygit UI
+gui:
+  theme:
+    # Background color of selected line.
+    selectedLineBgColor:
+      - "#e0e0e0"
+
+  # Window border style.
+  # One of 'rounded' (default) | 'single' | 'double' | 'hidden'
+  border: single

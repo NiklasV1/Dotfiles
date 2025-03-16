@@ -40,6 +40,7 @@ return {
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 			luasnip.config.setup({})
+			local border = "single"
 
 			-- Load snippets
 			require("snippets")
@@ -51,6 +52,10 @@ return {
 					end,
 				},
 				completion = { completeopt = "menu,menuone,noinsert" },
+				window = {
+					completion = { border = border },
+					documentation = { border = border },
+				},
 
 				-- For an understanding of why these mappings were
 				-- chosen, you will need to read `:help ins-completion`

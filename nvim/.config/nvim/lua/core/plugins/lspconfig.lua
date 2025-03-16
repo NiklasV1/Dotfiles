@@ -172,6 +172,19 @@ return {
 			--   vim.diagnostic.config { signs = { text = diagnostic_signs } }
 			-- end
 
+			-- Diagnostic float config
+			vim.diagnostic.config({
+				signs = true,
+				underline = true,
+				severity_sort = true,
+				update_in_insert = false,
+				float = {
+					scope = "line",
+					source = "if_many",
+					border = "single",
+				},
+			})
+
 			-- LSP servers and clients are able to communicate to each other what features they support.
 			--  By default, Neovim doesn't support everything that is in the LSP specification.
 			--  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.

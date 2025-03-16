@@ -1,0 +1,12 @@
+# /home/niklasv/.config/tmuxinator/settings-ui.yml
+
+name: settings-ui
+root: ~/Programming/snapaddy-settings-ui/
+
+startup_window: Editor
+on_project_first_start: lazygit
+
+windows:
+  - Editor: nvim .
+  - Terminal:
+  - Server: npm install && npm run start

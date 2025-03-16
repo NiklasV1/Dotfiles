@@ -1,0 +1,10 @@
+# /home/niklasv/.config/tmuxinator/nvim-config.yml
+
+name: nvim-config
+root: ~/.config/nvim/
+
+startup_window: Editor
+
+windows:
+  - Editor: nvim .
+  - Terminal:

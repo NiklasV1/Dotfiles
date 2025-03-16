@@ -1,6 +1,6 @@
-# /home/niklasv/.config/tmuxinator/questionsBackend.yml
+# /home/niklasv/.config/tmuxinator/questions-backend.yml
 
-name: questionsBackend
+name: questions-backend
 root: ~/Programming/snapaddy-questions-backend/
 
 startup_window: Editor

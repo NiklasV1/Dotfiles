@@ -92,5 +92,7 @@ return {
 			inactive_winbar = {},
 			extensions = {},
 		})
+		-- Show divider between horizontal splits
+		vim.opt.laststatus = 3
 	end,
 }

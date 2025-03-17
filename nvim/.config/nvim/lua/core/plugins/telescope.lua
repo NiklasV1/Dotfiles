@@ -82,6 +82,18 @@ return {
 				--   },
 				-- },
 				-- pickers = {}
+				defaults = {
+					border = {
+						prompt = { 1, 1, 1, 1 },
+						results = { 1, 1, 1, 1 },
+						preview = { 1, 1, 1, 1 },
+					},
+					borderchars = {
+						prompt = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+						results = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+						preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+					},
+				},
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),

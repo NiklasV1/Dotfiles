@@ -1,6 +1,6 @@
-# /home/niklasv/.config/tmuxinator/app.yml
+# /home/niklasv/.config/tmuxinator/snapaddy-app.yml
 
-name: app
+name: snapaddy-app
 root: ~/Programming/snapaddy-app/
 
 startup_window: Editor

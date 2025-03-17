@@ -1,0 +1,12 @@
+# /home/niklasv/.config/tmuxinator/app.yml
+
+name: app
+root: ~/Programming/snapaddy-app/
+
+startup_window: Editor
+on_project_first_start: lazygit
+
+windows:
+  - Editor: nvim .
+  - Terminal:
+  - Server: npm install && npm run start

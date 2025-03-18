@@ -3,7 +3,7 @@ return {
 		print("Running rushx build.")
 		print("...")
 		local quickfixEntries = {}
-		local output = vim.fn.system({ "rushx", "build" })
+		local output = vim.fn.system({ "rushx", "build-only" })
 		local _, count = string.gsub(
 			output,
 			"(src/[%w_%-/]*%.[%w_%-%.]*)%((%d*),%d*%): [^:]*: ([^\n]*)",

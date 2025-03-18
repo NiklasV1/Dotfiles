@@ -151,3 +151,8 @@ for tmux_environment in $tmux_environments; do
   alias "${tmux_environment}Up"="tmuxinator start $tmux_environment"
   alias "${tmux_environment}Down"="tmuxinator stop $tmux_environment"
 done
+# Daily notes
+alias daily="tmuxinator start daily-notes"
+alias dailyDown="tmuxinator stop daily-notes"
+# Start day
+alias krokodil=~/Scripts/zsh/start-day.zsh

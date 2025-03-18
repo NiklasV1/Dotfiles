@@ -1,0 +1,10 @@
+# /home/niklasv/.config/tmuxinator/daily-notes.yml
+
+name: daily-notes
+root: ~/Notes/Daily-Notes/
+
+startup_window: Editor
+on_project_first_start: touch ./$(date +%d-%m-%Y).md
+
+windows:
+  - Note: nvim "./$(date +%d-%m-%Y).md"

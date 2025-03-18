@@ -4,7 +4,7 @@ name: settings-ui
 root: ~/Programming/snapaddy-settings-ui/
 
 startup_window: Editor
-on_project_first_start: lazygit
+on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node22.zsh && lazygit
 
 windows:
   - Editor: nvim .

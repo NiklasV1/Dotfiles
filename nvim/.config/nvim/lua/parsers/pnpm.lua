@@ -12,7 +12,7 @@ return {
 					filename = path,
 					lnum = line,
 					type = "E",
-					text = message,
+					text = string.sub(message, 1, 100) .. "...",
 				})
 			end
 		)

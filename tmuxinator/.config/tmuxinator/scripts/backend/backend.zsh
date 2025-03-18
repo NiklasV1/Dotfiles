@@ -7,5 +7,6 @@ export NVM_DIR="$HOME/.nvm"
 cd ~/Programming/snapaddy-backend/
 nvm use 18
 lazygit
-rush build
+rush install
+rush build-only
 rush start:partial

@@ -12,11 +12,9 @@ local c = ls.choice_node
 
 return {
 	-- Console log
-	-- TODO: Fix error
-	-- s("log", {
-	-- 	fmt("console.log('{name}: ', {value});", {
-	-- 		name = i(1, "name"),
-	-- 		value = i(2, "value"),
-	-- 	}),
-	-- }),
+	s("cons", {
+		t("console.log("),
+		i(1, "value"),
+		t(");"),
+	}),
 }

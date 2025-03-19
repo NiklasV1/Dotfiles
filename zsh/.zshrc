@@ -156,4 +156,4 @@ alias daily="tmuxinator start daily-notes"
 alias dailyDown="tmuxinator stop daily-notes"
 alias yesterday="nvim ~/Notes/Daily-Notes/$(date --date="yesterday" +%d-%m-%Y).md"
 # Start day
-alias krokodil=~/Scripts/zsh/start-day.zsh
+alias krokodil=~/Scripts/start-day.zsh

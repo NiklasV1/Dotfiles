@@ -7,6 +7,13 @@ return {
 		{ desc = "Parse pnpm output to quickfix list." }
 	),
 
+	-- Jest
+	vim.api.nvim_create_user_command(
+		"Jest",
+		[[lua require("parsers.jest").parse()]],
+		{ desc = "Parse jest output to quickfix list." }
+	),
+
 	-- Eslint_d
 	vim.api.nvim_create_user_command(
 		"Eslint",

@@ -53,7 +53,7 @@ return {
 				},
 				completion = { completeopt = "menu,menuone,noinsert" },
 				window = {
-					completion = { border = border },
+					completion = { border = border, winhighlight = "Normal:CmpNormal", scrollbar = false },
 					documentation = { border = border },
 				},
 

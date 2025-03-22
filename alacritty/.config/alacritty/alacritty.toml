@@ -1,3 +1,5 @@
+[env]
+term = "xterm-256color"
 
 [general]
 import = [

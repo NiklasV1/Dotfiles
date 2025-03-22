@@ -20,39 +20,41 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
+		local palette = require("github-theme.palette.github_light_default").palette
+
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
 				theme = {
 					normal = {
-						a = { bg = colors.bg3, fg = colors.white, gui = "bold" },
+						a = { bg = palette.fg.default, fg = colors.white, gui = "bold" },
 						b = { bg = colors.bg4, fg = colors.black },
 						c = { bg = colors.bg4, fg = colors.black },
 					},
 					insert = {
-						a = { bg = colors.blue, fg = colors.white, gui = "bold" },
-						b = { bg = colors.bg0, fg = colors.black },
-						c = { bg = colors.bg0, fg = colors.black },
+						a = { bg = palette.blue.base, fg = colors.white, gui = "bold" },
+						b = { bg = colors.bg4, fg = colors.black },
+						c = { bg = colors.bg4, fg = colors.black },
 					},
 					visual = {
-						a = { bg = colors.magenta, fg = colors.white, gui = "bold" },
-						b = { bg = colors.bg0, fg = colors.black },
-						c = { bg = colors.bg0, fg = colors.black },
+						a = { bg = palette.magenta.base, fg = colors.white, gui = "bold" },
+						b = { bg = colors.bg4, fg = colors.black },
+						c = { bg = colors.bg4, fg = colors.black },
 					},
 					replace = {
-						a = { bg = colors.red, fg = colors.white, gui = "bold" },
-						b = { bg = colors.bg0, fg = colors.black },
-						c = { bg = colors.bg0, fg = colors.black },
+						a = { bg = palette.red.base, fg = colors.white, gui = "bold" },
+						b = { bg = colors.bg4, fg = colors.black },
+						c = { bg = colors.bg4, fg = colors.black },
 					},
 					command = {
-						a = { bg = colors.green, fg = colors.white, gui = "bold" },
-						b = { bg = colors.bg0, fg = colors.black },
-						c = { bg = colors.bg0, fg = colors.black },
+						a = { bg = palette.green.bright, fg = colors.white, gui = "bold" },
+						b = { bg = colors.bg4, fg = colors.black },
+						c = { bg = colors.bg4, fg = colors.black },
 					},
 					inactive = {
 						a = { bg = colors.bg1, fg = colors.white, gui = "bold" },
-						b = { bg = colors.bg0, fg = colors.black },
-						c = { bg = colors.bg0, fg = colors.black },
+						b = { bg = colors.bg4, fg = colors.black },
+						c = { bg = colors.bg4, fg = colors.black },
 					},
 				},
 				component_separators = { left = "|", right = "|" },

@@ -21,6 +21,11 @@ return {
 				["\\"] = "close_window",
 			},
 		},
-		filesystem = {},
+		filesystem = {
+			filtered_items = {
+				hide_gitignored = false,
+				hide_dotfiles = false,
+			},
+		},
 	},
 }

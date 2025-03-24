@@ -16,4 +16,7 @@ return {
 
 	-- SQLs features
 	require("extra.plugins.sqls"),
+
+	-- Treesitter textobjects
+	require("extra.plugins.treesitter-textobjects"),
 }

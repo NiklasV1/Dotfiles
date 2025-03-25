@@ -27,5 +27,11 @@ return {
 		})
 
 		vim.cmd("colorscheme github_light_default")
+
+		vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#57606a" })
+		vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { link = "DiagnosticHint" })
+		vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { link = "DiagnosticHint" })
+		vim.api.nvim_set_hl(0, "@comment.todo", { fg = "#000000" })
+		-- vim.api.nvim_set_hl(0, "Comment", { fg = "#0b5c00" })
 	end,
 }

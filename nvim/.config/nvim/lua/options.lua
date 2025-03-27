@@ -65,3 +65,6 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 20
+
+-- Cfilter package
+vim.cmd("packadd cfilter")

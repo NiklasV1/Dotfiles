@@ -7,6 +7,7 @@
 -- PERF: test
 -- NOTE: test
 -- TEST: test
+-- DEPRECATED: test
 
 return {
 	-- Highlight todo, notes, etc in comments
@@ -24,8 +25,12 @@ return {
 				PERF = { icon = " ", color = "optimize", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
 				NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
 				TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+				DEPRECATED = { icon = " ", color = "error", alt = {} },
 			},
-
+			gui_style = {
+				fg = "BOLD", -- The gui style to use for the fg highlight group.
+				bg = "BOLD", -- The gui style to use for the bg highlight group.
+			},
 			colors = {
 				info = { "#387520" },
 				hint = { "#325CC0" },

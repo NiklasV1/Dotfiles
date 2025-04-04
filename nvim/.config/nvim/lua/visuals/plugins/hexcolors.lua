@@ -6,6 +6,7 @@ return {
 		colorizer.setup({
 			css = { css = true, mode = "background" },
 			scss = { css = true, mode = "background" },
+			lua = { css = false, mode = "background" },
 		})
 
 		local command_group = vim.api.nvim_create_augroup("colorizer", { clear = true })

@@ -150,7 +150,9 @@ return {
 			-- File search
 			vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+			vim.keymap.set("n", "<leader><leader>", function()
+				builtin.buffers({ sort_mru = true })
+			end, { desc = "[ ] Find existing buffers" })
 
 			-- Grep search
 			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
@@ -174,13 +176,13 @@ return {
 			vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 
 			-- Terminal search
-			vim.keymap.set("n", "<leader>st", function()
-				builtin.buffers(require("telescope.themes").get_dropdown({
-					border = border,
-					borderchars = borderchars,
-					previewer = false,
-				}))
-			end, { desc = "[S]earch [T]erminals" })
+			-- vim.keymap.set("n", "<leader>st", function()
+			-- 	builtin.buffers(require("telescope.themes").get_dropdown({
+			-- 		border = border,
+			-- 		borderchars = borderchars,
+			-- 		previewer = false,
+			-- 	}))
+			-- end, { desc = "[S]earch [T]erminals" })
 
 			-- Slightly advanced example of overriding default behavior and theme
 			vim.keymap.set("n", "<leader>/", function()

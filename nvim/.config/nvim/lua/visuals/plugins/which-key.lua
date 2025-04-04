@@ -75,6 +75,7 @@ return {
 				{ "<leader>g", group = "[G]rapple" },
 				{ "<leader>q", group = "[Q]quickfix list" },
 				{ "<leader>a", group = "[A]ngular" },
+				{ "<leader>p", group = "[P]aste" },
 			},
 		},
 	},

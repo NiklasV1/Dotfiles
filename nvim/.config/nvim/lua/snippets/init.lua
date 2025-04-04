@@ -5,7 +5,7 @@ local ls = require("luasnip")
 local angular_snippets = require("snippets.angular")
 ls.add_snippets("typescript", angular_snippets)
 
--- Angular snippets
+-- Typescript snippets
 local typescript_snippets = require("snippets.typescript")
 ls.add_snippets("typescript", typescript_snippets)
 

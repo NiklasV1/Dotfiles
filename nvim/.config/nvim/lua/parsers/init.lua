@@ -2,17 +2,19 @@ return {
 
 	-- Rushx quickfix
 	vim.api.nvim_create_user_command(
-		"RushxFix",
+		"RushFix",
+		[[lua require("parsers.rush").parse()]],
+		{ desc = "Parse rush build output to quickfix list." }
+	),
+	vim.api.nvim_create_user_command(
+		"RushFeatureFix",
 		[[lua require("parsers.pnpm").parse()]],
 		{ desc = "Parse rush feature build output to quickfix list." }
 	),
 
 	-- Rush build
-	vim.api.nvim_create_user_command(
-		"Rush",
-		[[lua require("parsers.rush").parse()]],
-		{ desc = "Parse rush build output to quickfix list." }
-	),
+	vim.api.nvim_create_user_command("Rush", [[edit term://rush build-only]], { desc = "Build all features" }),
+	vim.api.nvim_create_user_command("RushFeature", [[edit term://rushx build]], { desc = "Build current feature" }),
 
 	-- Jest
 	vim.api.nvim_create_user_command(

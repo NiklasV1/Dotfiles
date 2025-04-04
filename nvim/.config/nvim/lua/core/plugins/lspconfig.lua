@@ -155,7 +155,7 @@ return {
 					--
 					-- This may be unwanted, since they displace some of your code
 					if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
-						map("<leader>th", function()
+						map("<leader>Th", function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
 						end, "[T]oggle Inlay [H]ints")
 					end
@@ -251,7 +251,6 @@ return {
 				bashls = {
 					filetypes = { "bash", "sh", "zsh" },
 				},
-
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},
@@ -263,16 +262,6 @@ return {
 							},
 							-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
 							-- diagnostics = { disable = { 'missing-fields' } },
-						},
-					},
-				},
-				sqls = {
-					settings = {
-						connections = {
-							{
-								driver = "postgresql",
-								dataSourceName = "host=127.0.0.1 port=5432 user=sa_backend password=mySecretDBPassword dbname=postgres",
-							},
 						},
 					},
 				},

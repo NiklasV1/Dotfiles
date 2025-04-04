@@ -19,8 +19,8 @@ return {
 			},
 		},
 		config = function(_, opts)
-			vim.api.nvim_set_hl(0, "IndentLineDefault", { fg = "#CECECE" })
-			vim.api.nvim_set_hl(0, "IndentLineScope", { fg = "#325CC0" })
+			vim.api.nvim_set_hl(0, "IndentLineDefault", { fg = "#d2d3d4" })
+			vim.api.nvim_set_hl(0, "IndentLineScope", { fg = "#0969da" })
 			require("ibl").setup(opts)
 		end,
 	},

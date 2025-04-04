@@ -128,6 +128,18 @@ return {
 			pcall(require("telescope").load_extension, "fzf")
 			pcall(require("telescope").load_extension, "ui-select")
 
+			local border = {
+				prompt = { 1, 1, 1, 1 },
+				results = { 1, 1, 1, 1 },
+				preview = { 1, 1, 1, 1 },
+			}
+
+			local borderchars = {
+				prompt = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+				results = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
+				preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+			}
+
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
 
@@ -161,20 +173,21 @@ return {
 			vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
 			vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 
+			-- Terminal search
+			vim.keymap.set("n", "<leader>st", function()
+				builtin.buffers(require("telescope.themes").get_dropdown({
+					border = border,
+					borderchars = borderchars,
+					previewer = false,
+				}))
+			end, { desc = "[S]earch [T]erminals" })
+
 			-- Slightly advanced example of overriding default behavior and theme
 			vim.keymap.set("n", "<leader>/", function()
 				-- You can pass additional configuration to Telescope to change the theme, layout, etc.
 				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-					border = {
-						prompt = { 1, 1, 1, 1 },
-						results = { 1, 1, 1, 1 },
-						preview = { 1, 1, 1, 1 },
-					},
-					borderchars = {
-						prompt = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-						results = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
-						preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-					},
+					border = border,
+					borderchars = borderchars,
 					previewer = false,
 				}))
 			end, { desc = "[/] Fuzzily search in current buffer" })

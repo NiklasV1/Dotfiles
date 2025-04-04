@@ -1,42 +1,9 @@
-local colors = {
-	black = "#000000",
-	white = "#ffffff",
-
-	-- NOTE: background colors
-	bg0 = "#f7f7f7",
-	bg1 = "#b7b7b7",
-	bg2 = "#5b5b5b",
-	bg3 = "#2b2b2b",
-	bg4 = "#e0e0e0",
-
-	-- NOTE: old colors
-	-- blue = "#325CC0",
-	-- green = "#387520",
-	-- red = "#AA3731",
-	-- magenta = "#7A3E9D",
-	-- orange = "#FFBC5D",
-	orangeBright = "#dd8100",
-
-	-- NOTE: light colors
-	redLight = "#f5d2d5",
-	redLight2 = "#fae8ea",
-	greenLight = "#d1e5d7",
-	greenLight2 = "#e8f2eb",
-	blueLight = "#cde1f7",
-	blueLight2 = "#e6f0fb",
-	magentaLight = "#e6dcf8",
-	magentaLight2 = "#f2edfb",
-	orangeLight = "#f8e5cc",
-	orangeLight2 = "#fbf2e5",
-	fgLight = "#d2d3d4",
-	fgLight2 = "#e8e9e9",
-}
-
 return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		local palette = require("github-theme.palette.github_light_default").palette
+		local colors = require("colors")
+		local palette = colors.palette
 		-- vim.print(palette)
 
 		require("lualine").setup({
@@ -75,8 +42,8 @@ return {
 					},
 					inactive = {
 						a = { bg = colors.bg1, fg = colors.white, gui = "bold" },
-						b = { bg = colors.fgLight2, fg = colors.black },
-						c = { bg = colors.fgLight2, fg = colors.black },
+						b = { bg = colors.bg4, fg = colors.black },
+						c = { bg = colors.bg4, fg = colors.black },
 					},
 				},
 				component_separators = { left = "|", right = "|" },

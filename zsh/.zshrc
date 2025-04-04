@@ -145,6 +145,7 @@ alias watcher-limit="sudo sysctl -w fs.inotify.max_user_watches=10000000"
 alias npmstart="npm install && npm run start"
 # Navigation
 alias backend="cd $HOME/Programming/snapaddy-backend/packages/server/features && nvm use 18"
+alias backendLibs="cd $HOME/Programming/snapaddy-backend/packages/server/libs && nvm use 18"
 # Tmuxinator
 tmux_environments=(backend questions-backend settings-ui nvim-config snapaddy-app components backend-edit)
 for tmux_environment in $tmux_environments; do
@@ -157,3 +158,6 @@ alias dailyDown="tmuxinator stop daily-notes"
 alias yesterday="nvim ~/Notes/Daily-Notes/$(date --date="yesterday" +%d-%m-%Y).md"
 # Start day
 alias krokodil=~/Scripts/start-day.sh
+# Rush
+alias featstart="rushx build && rushx start:feat"
+alias fullrush="rush update && rush build-only && rush gen:code"

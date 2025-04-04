@@ -11,7 +11,7 @@ return {
 	-- Status Line
 	require("visuals.plugins.lualine"),
 
-	-- Gis change signs
+	-- Git change signs
 	require("visuals.plugins.gitsigns"),
 
 	-- Indentation lines

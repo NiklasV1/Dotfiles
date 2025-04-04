@@ -12,3 +12,7 @@ ls.add_snippets("typescript", typescript_snippets)
 -- JSON snippets
 local json_snippets = require("snippets.json")
 ls.add_snippets("json", json_snippets)
+
+-- Go snippets
+local go_snippets = require("snippets.go")
+ls.add_snippets("go", go_snippets)

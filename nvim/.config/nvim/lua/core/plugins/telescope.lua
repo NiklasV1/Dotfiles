@@ -144,8 +144,8 @@ return {
 			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 
-			-- Locations search
-			vim.keymap.set("n", "<leader>sl", builtin.loclist, { desc = "[S]earch [L]ocations List" })
+			-- Jumplist search
+			vim.keymap.set("n", "<leader>sj", builtin.jumplist, { desc = "[S]earch [J]ump List" })
 
 			-- Paste/Register search
 			vim.keymap.set("n", "<leader>pr", builtin.registers, { desc = "[P]aste [R]egister" })

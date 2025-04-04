@@ -1,6 +1,6 @@
-# /home/niklasv/.config/tmuxinator/questions-backend.yml
+# /home/niklasv/.config/tmuxinator/backend-edit.yml
 
-name: questions-backend
+name: backend-edit
 root: ~/Programming/snapaddy-backend/packages/server/features/
 
 startup_window: Editor
@@ -9,4 +9,3 @@ on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node18.zsh && lazy
 windows:
   - Editor: nvim .
   - Backend: cd ~/Programming/snapaddy-backend/
-  - Feature: rushx build && rushx start:feat

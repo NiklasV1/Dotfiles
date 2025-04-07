@@ -68,6 +68,10 @@ return {
 					--
 					-- In this case, we create a function that lets us more easily define mappings specific
 					-- for LSP related items. It sets the mode, buffer and description for us each time.
+
+					-- Border config
+					local border = "single"
+
 					local map = function(keys, func, desc, mode)
 						mode = mode or "n"
 						vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
@@ -100,6 +104,13 @@ return {
 					-- Search outgoing calls of symbol
 					map("<leader>so", vim.lsp.buf.outgoing_calls, "[S]earch [O]utgoing")
 
+					-- Hover
+					map("K", function()
+						vim.lsp.buf.hover({
+							border = border,
+						})
+					end, "Hover")
+
 					-- Fuzzy find all the symbols in your current workspace.
 					--  Similar to document symbols, except searches over your entire project.
 					map(
@@ -126,7 +137,14 @@ return {
 					--
 					-- When you move your cursor, the highlights will be cleared (the second autocommand).
 					local client = vim.lsp.get_client_by_id(event.data.client_id)
-					if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
+					if
+						client
+						and client.supports_method(
+							client,
+							vim.lsp.protocol.Methods.textDocument_documentHighlight,
+							event.buf
+						)
+					then
 						local highlight_augroup =
 							vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
 						vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
@@ -154,7 +172,10 @@ return {
 					-- code, if the language server you are using supports them
 					--
 					-- This may be unwanted, since they displace some of your code
-					if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
+					if
+						client
+						and client.supports_method(client, vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf)
+					then
 						map("<leader>Th", function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
 						end, "[T]oggle Inlay [H]ints")
@@ -182,6 +203,19 @@ return {
 					scope = "line",
 					source = "if_many",
 					border = "single",
+				},
+				virtual_text = {
+					source = "if_many",
+					spacing = 2,
+					format = function(diagnostic)
+						local diagnostic_message = {
+							[vim.diagnostic.severity.ERROR] = diagnostic.message,
+							[vim.diagnostic.severity.WARN] = diagnostic.message,
+							[vim.diagnostic.severity.INFO] = diagnostic.message,
+							[vim.diagnostic.severity.HINT] = diagnostic.message,
+						}
+						return diagnostic_message[diagnostic.severity]
+					end,
 				},
 			})
 
@@ -291,15 +325,6 @@ return {
 			--	},
 			-- })
 			-- require("lspconfig").jdtls.setup({})
-
-			-- Add borders by overwriting handlers
-			local border = "single"
-			vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-				border = border,
-			})
-			vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-				border = border,
-			})
 
 			require("mason-lspconfig").setup({
 				ensure_installed = {},

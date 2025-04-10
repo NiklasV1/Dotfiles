@@ -3,7 +3,7 @@ return {
 	config = function()
 		local command_group = vim.api.nvim_create_augroup("ng-extras", { clear = true })
 		vim.api.nvim_create_autocmd({ "FileType" }, {
-			pattern = { "html", "typescript" },
+			pattern = { "html", "typescript", "htmlangular" },
 			group = command_group,
 			desc = "Apply angular features to Angular files",
 			callback = function(args)

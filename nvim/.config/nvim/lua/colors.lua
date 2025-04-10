@@ -9,6 +9,15 @@ return {
 	bg3 = "#2b2b2b",
 	bg4 = "#e0e0e0",
 
+	-- NOTE: Diagnostic colors
+	Error = "#d1242f",
+	Warning = "#9a6700",
+	Info = "#0969da",
+	Hint = "#57606a",
+
+	-- NOTE: Syntax highlighting
+	Function = "",
+
 	-- NOTE: Old colors
 	-- blue = "#325CC0",
 	-- green = "#387520",
@@ -31,6 +40,6 @@ return {
 	fgLight = "#d2d3d4",
 	fgLight2 = "#e8e9e9",
 
-	-- NOTE: Theme palette
+	-- NOTE: Theme palette default values
 	palette = require("github-theme.palette.github_light_default").palette,
 }

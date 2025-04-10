@@ -35,7 +35,8 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-buffer",
-			"ray-x/cmp-sql",
+			"hrsh7th/cmp-nvim-lsp-signature-help",
+			-- "ray-x/cmp-sql",
 		},
 		config = function()
 			-- See `:help cmp`
@@ -129,8 +130,9 @@ return {
 					},
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
-					{ name = "path" },
 					{ name = "buffer" },
+					{ name = "path" },
+					{ name = "nvim_lsp_signature_help" },
 					-- { name = "sql" },
 				},
 			})

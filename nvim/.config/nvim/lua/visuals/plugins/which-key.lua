@@ -65,7 +65,6 @@ return {
 			spec = {
 				{ "<leader>c", group = "[C]ode", mode = { "n", "x" } },
 				{ "<leader>d", group = "[D]ocument" },
-				{ "<leader>r", group = "[R]ename" },
 				{ "<leader>s", group = "[S]earch" },
 				{ "<leader>w", group = "[W]orkspace" },
 				{ "<leader>T", group = "[T]oggle" },
@@ -76,6 +75,9 @@ return {
 				{ "<leader>q", group = "[Q]quickfix list" },
 				{ "<leader>a", group = "[A]ngular" },
 				{ "<leader>p", group = "[P]aste" },
+				{ "<leader>j", group = "[J]est" },
+				{ "<leader>r", group = "[R]ush | [R]ename" },
+				{ "<leader>rx", group = "[R]ush[X]" },
 			},
 		},
 	},

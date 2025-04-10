@@ -1,34 +1,56 @@
 return {
 
-	-- Rushx quickfix
-	vim.api.nvim_create_user_command(
-		"RushFix",
-		[[lua require("parsers.rush").parse()]],
-		{ desc = "Parse rush build output to quickfix list." }
-	),
-	vim.api.nvim_create_user_command(
-		"RushFeatureFix",
-		[[lua require("parsers.pnpm").parse()]],
-		{ desc = "Parse rush feature build output to quickfix list." }
-	),
+	-- NOTE: Rush
+	vim.keymap.set("n", "<leader>rb", function()
+		vim.cmd([[edit term://rush build-only]])
+	end, { desc = "[R]ush [B]uild" }),
 
-	-- Rush build
-	vim.api.nvim_create_user_command("Rush", [[edit term://rush build-only]], { desc = "Build all features" }),
-	vim.api.nvim_create_user_command("RushFeature", [[edit term://rushx build]], { desc = "Build current feature" }),
+	vim.keymap.set("n", "<leader>rxb", function()
+		vim.cmd([[edit term://rushx build]])
+	end, { desc = "[R]ush[X] [B]uild" }),
 
-	-- Jest
-	vim.api.nvim_create_user_command(
-		"Jest",
-		[[edit term://rushx test:e2e]],
-		{ desc = "Run jest tests of current feature" }
-	),
-	vim.api.nvim_create_user_command(
-		"JestCurrent",
-		[[edit term://npm exec jest -- --testMatch='**/%:t']],
-		{ desc = "Run jest test of current buffer" }
-	),
+	vim.keymap.set("n", "<leader>ru", function()
+		vim.cmd([[edit term://rush update]])
+	end, { desc = "[R]ush [U]pdate" }),
 
-	-- Eslint
+	vim.keymap.set("n", "<leader>rc", function()
+		vim.cmd([[edit term://rush gen:code]])
+	end, { desc = "[R]ush [C]ode" }),
+
+	vim.keymap.set("n", "<leader>rf", function()
+		vim.cmd([[edit term://rush update && rush build-only && rush gen:code]])
+	end, { desc = "[R]ush [F]ull" }),
+
+	-- NOTE: Rush quickfix
+	vim.keymap.set("n", "<leader>rq", function()
+		require("parsers.rush").parse()
+	end, { desc = "[R]ush [Q]uickfix" }),
+
+	vim.keymap.set("n", "<leader>rxq", function()
+		require("parsers.pnpm").parse()
+	end, { desc = "[R]ush[X] [Q]uickfix" }),
+
+	-- NOTE: Jest
+	vim.keymap.set("n", "<leader>je", function()
+		vim.cmd([[edit term://npm exec jest -- --test-path-pattern='[.]e2e-spec[.]js$']])
+	end, { desc = "[J]est [E]nd-to-end" }),
+
+	vim.keymap.set("n", "<leader>ju", function()
+		vim.cmd([[edit term://npm exec jest -- --test-path-pattern='[.]spec[.]js$']])
+	end, { desc = "[J]est [U]nit tests" }),
+
+	vim.keymap.set("n", "<leader>jc", function()
+		vim.cmd([[edit term://npm exec jest -- --testMatch='**/%:t']])
+	end, { desc = "[J]est [C]urrent test" }),
+
+	vim.keymap.set("n", "<leader>jt", function()
+		vim.cmd([[edit %:h:s?dist?src?/%:t:r.ts]])
+	end, { desc = "[J]est finc [T]ypescript test" }),
+
+	-- NOTE: VsCode (Debugger)
+	vim.api.nvim_create_user_command("Debugger", [[!code %]], { desc = "Open Debugger" }),
+
+	-- NOTE: Eslint
 	vim.api.nvim_create_user_command(
 		"Eslint",
 		[[lua require("parsers.eslint").parse()]],

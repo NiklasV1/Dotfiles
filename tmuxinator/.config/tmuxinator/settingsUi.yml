@@ -1,4 +1,4 @@
-# /home/niklasv/.config/tmuxinator/settings-ui.yml
+# /home/niklasv/.config/tmuxinator/settingsUi.yml
 
 name: settings-ui
 root: ~/Programming/snapaddy-settings-ui/

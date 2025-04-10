@@ -1,4 +1,4 @@
-# /home/niklasv/.config/tmuxinator/questions-backend.yml
+# /home/niklasv/.config/tmuxinator/questionsBackend.yml
 
 name: questions-backend
 root: ~/Programming/snapaddy-questions-backend/

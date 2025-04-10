@@ -147,7 +147,7 @@ alias npmstart="npm install && npm run start"
 alias backend="cd $HOME/Programming/snapaddy-backend/packages/server/features && nvm use 18"
 alias backendLibs="cd $HOME/Programming/snapaddy-backend/packages/server/libs && nvm use 18"
 # Tmuxinator
-tmux_environments=(backend questions-backend settings-ui nvim-config snapaddy-app components backend-edit cards-configurator)
+tmux_environments=(backend questionsBackend settingsUi nvimConfig snapaddyApp components backendEdit cardsConfigurator)
 for tmux_environment in $tmux_environments; do
   alias "${tmux_environment}Up"="tmuxinator start $tmux_environment"
   alias "${tmux_environment}Down"="tmuxinator stop $tmux_environment"

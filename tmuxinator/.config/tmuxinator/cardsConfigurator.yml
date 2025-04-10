@@ -1,4 +1,4 @@
-# /home/niklasv/.config/tmuxinator/cards-configurator.yml
+# /home/niklasv/.config/tmuxinator/cardsConfigurator.yml
 
 name: cards-configurator
 root: ~/Programming/business-cards-configurator/

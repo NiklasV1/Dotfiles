@@ -1,4 +1,4 @@
-# /home/niklasv/.config/tmuxinator/snapaddy-app.yml
+# /home/niklasv/.config/tmuxinator/snapaddyApp.yml
 
 name: snapaddy-app
 root: ~/Programming/snapaddy-app/

@@ -1,4 +1,4 @@
-# /home/niklasv/.config/tmuxinator/backend-edit.yml
+# /home/niklasv/.config/tmuxinator/backendEdit.yml
 
 name: backend-edit
 root: ~/Programming/snapaddy-backend/packages/server/features/

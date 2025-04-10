@@ -1,4 +1,4 @@
-# /home/niklasv/.config/tmuxinator/nvim-config.yml
+# /home/niklasv/.config/tmuxinator/nvimConfig.yml
 
 name: nvim-config
 root: ~/.config/nvim/

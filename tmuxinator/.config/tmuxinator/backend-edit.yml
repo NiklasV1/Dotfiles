@@ -9,3 +9,4 @@ on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node18.zsh && lazy
 windows:
   - Editor: nvim .
   - Backend: cd ~/Programming/snapaddy-backend/
+  - Feature:

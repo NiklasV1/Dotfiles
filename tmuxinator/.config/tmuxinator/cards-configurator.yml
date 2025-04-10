@@ -1,0 +1,12 @@
+# /home/niklasv/.config/tmuxinator/cards-configurator.yml
+
+name: cards-configurator
+root: ~/Programming/business-cards-configurator/
+
+startup_window: Editor
+on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node22.zsh && lazygit
+
+windows:
+  - Editor: nvim .
+  - Terminal:
+  - Server: npm install && npm run start

@@ -65,8 +65,11 @@ return {
 		vim.api.nvim_set_hl(0, "@type.builtin", { link = "Type" })
 		vim.api.nvim_set_hl(0, "@attribute.typescript", { link = "Function" })
 		vim.api.nvim_set_hl(0, "@variable.member", { fg = colors.black })
+		vim.api.nvim_set_hl(0, "@constructor", { link = "Function" })
 		vim.api.nvim_set_hl(0, "Tag", { fg = colors.black })
-		vim.api.nvim_set_hl(0, "@tag", { link = "Tag" })
+		vim.api.nvim_set_hl(0, "@tag", { link = "Function" })
+		vim.api.nvim_set_hl(0, "@keyword.angular", { fg = colors.black })
+		vim.api.nvim_set_hl(0, "@tag.attribute.angular", { link = "@keyword.angular" })
 		vim.api.nvim_set_hl(0, "@markup.raw", { fg = colors.black })
 	end,
 }

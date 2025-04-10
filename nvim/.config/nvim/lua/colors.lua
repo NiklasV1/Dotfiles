@@ -18,17 +18,11 @@ return {
 	-- NOTE: Syntax highlighting
 	Definition = "#325CC0",
 	Strings = "#448C27",
-	Types = "#AA3731",
+	Comments = "#AA3731",
 	Constants = "#7A3E9D",
-	Comments = "",
+	Types = "",
 	Keywords = "",
 
-	-- NOTE: Old colors
-	-- blue = "#325CC0",
-	-- green = "#387520",
-	-- red = "#AA3731",
-	-- magenta = "#7A3E9D",
-	-- orange = "#FFBC5D",
 	orangeBright = "#dd8100",
 
 	-- NOTE: Light colors

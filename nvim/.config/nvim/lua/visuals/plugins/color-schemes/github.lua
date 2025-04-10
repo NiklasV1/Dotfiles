@@ -59,6 +59,7 @@ return {
 		vim.api.nvim_set_hl(0, "Function", { fg = colors.Definition })
 		vim.api.nvim_set_hl(0, "String", { fg = colors.Strings })
 		vim.api.nvim_set_hl(0, "Constant", { fg = colors.Constants })
+		vim.api.nvim_set_hl(0, "Comment", { fg = colors.Comments })
 		vim.api.nvim_set_hl(0, "Type", { fg = colors.black })
 		vim.api.nvim_set_hl(0, "@type", { link = "Type" })
 		vim.api.nvim_set_hl(0, "@type.builtin", { link = "Type" })

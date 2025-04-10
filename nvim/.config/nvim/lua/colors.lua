@@ -16,7 +16,12 @@ return {
 	Hint = "#57606a",
 
 	-- NOTE: Syntax highlighting
-	Function = "",
+	Definition = "#325CC0",
+	Strings = "#448C27",
+	Types = "#AA3731",
+	Constants = "#7A3E9D",
+	Comments = "",
+	Keywords = "",
 
 	-- NOTE: Old colors
 	-- blue = "#325CC0",

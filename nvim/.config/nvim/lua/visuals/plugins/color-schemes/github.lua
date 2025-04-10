@@ -54,5 +54,18 @@ return {
 		vim.api.nvim_set_hl(0, "@comment.todo", { fg = colors.black })
 		vim.api.nvim_set_hl(0, "IncSearch", { fg = colors.black, bg = "#ffd363" })
 		-- vim.api.nvim_set_hl(0, "Comment", { fg = "#0b5c00" })
+
+		-- NOTE: Syntax highlighting
+		vim.api.nvim_set_hl(0, "Function", { fg = colors.Definition })
+		vim.api.nvim_set_hl(0, "String", { fg = colors.Strings })
+		vim.api.nvim_set_hl(0, "Constant", { fg = colors.Constants })
+		vim.api.nvim_set_hl(0, "Type", { fg = colors.black })
+		vim.api.nvim_set_hl(0, "@type", { link = "Type" })
+		vim.api.nvim_set_hl(0, "@type.builtin", { link = "Type" })
+		vim.api.nvim_set_hl(0, "@attribute.typescript", { link = "Function" })
+		vim.api.nvim_set_hl(0, "@variable.member", { fg = colors.black })
+		vim.api.nvim_set_hl(0, "Tag", { fg = colors.black })
+		vim.api.nvim_set_hl(0, "@tag", { link = "Tag" })
+		vim.api.nvim_set_hl(0, "@markup.raw", { fg = colors.black })
 	end,
 }

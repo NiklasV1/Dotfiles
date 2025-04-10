@@ -266,7 +266,9 @@ return {
 				--
 				gopls = {},
 				pyright = {},
-				html = {},
+				html = {
+					filetypes = { "html", "htmlangular" },
+				},
 				ts_ls = {
 					init_options = {
 						preferences = {

@@ -8,6 +8,7 @@ return {
 			lint.linters_by_ft = {
 				markdown = {},
 				html = { "eslint_d" },
+				htmlangular = { "eslint_d" },
 				typescript = { "eslint_d" },
 				css = { "eslint_d" },
 			}

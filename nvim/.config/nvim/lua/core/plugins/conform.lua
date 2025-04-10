@@ -37,6 +37,7 @@ return {
 				css = { "prettierd", "prettier", stop_after_first = true },
 				scss = { "prettierd", "prettier", stop_after_first = true },
 				html = { "prettierd", "prettier", stop_after_first = true },
+				htmlangular = { "prettierd", "prettier", stop_after_first = true },
 				python = { "autopep8" },
 				markdown = { "mdformat" },
 				-- Conform can also run multiple formatters sequentially

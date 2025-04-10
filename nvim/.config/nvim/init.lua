@@ -13,14 +13,11 @@ vim.o.termguicolors = true
 -- [[ Setting Options ]]
 require("options")
 
--- Custom commands
-require("custom-commands")
-
 -- [[ Keymaps ]]
 require("keymaps")
 
--- Custom quickfix parsers
-require("parsers")
+-- Custom keymaps
+require("extra.plugins.keymaps")
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 require("lazy-install")

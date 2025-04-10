@@ -3,7 +3,7 @@
 -- Jest keymaps
 require("extra.plugins.keymaps.jest")
 
--- Jest keymaps
+-- Rush keymaps
 require("extra.plugins.keymaps.rush")
 
 -- Quickfix list keymaps
@@ -12,7 +12,12 @@ require("extra.plugins.keymaps.quickfix")
 -- NOTE: Misc keymaps
 
 -- VsCode (Debugger)
-vim.api.nvim_create_user_command("Debugger", [[!code %]], { desc = "Open Debugger" })
+vim.keymap.set("n", "<leader>gd", function()
+	local cursorPosition = vim.fn.getpos(".")
+	local lineNr = cursorPosition[2]
+	local colNr = cursorPosition[3]
+	vim.cmd("!code -g %:S:" .. lineNr .. ":" .. colNr)
+end, { desc = "[G]o to [D]ebugger" })
 
 -- Eslint
 vim.api.nvim_create_user_command(

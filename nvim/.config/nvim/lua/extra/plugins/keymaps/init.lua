@@ -25,3 +25,9 @@ vim.api.nvim_create_user_command(
 	[[lua require("parsers.eslint").parse()]],
 	{ desc = "Parse eslint output to quickfix list." }
 )
+
+-- Notes
+vim.keymap.set("n", "<leader>N", function()
+	local currentNotePath = "~/Notes/Daily-Notes/" .. os.date("%d-%m-%Y") .. ".md"
+	vim.cmd("edit " .. currentNotePath)
+end, { desc = "[N]otes" })

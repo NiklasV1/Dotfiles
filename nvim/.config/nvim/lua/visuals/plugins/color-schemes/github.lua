@@ -62,6 +62,8 @@ return {
 		vim.api.nvim_set_hl(0, "Comment", { fg = colors.Comments })
 		vim.api.nvim_set_hl(0, "Type", { fg = colors.black })
 		vim.api.nvim_set_hl(0, "@type", { link = "Type" })
+		vim.api.nvim_set_hl(0, "@constant.builtin", { link = "Constant" })
+		vim.api.nvim_set_hl(0, "@constant.html", { link = "Constant" })
 		vim.api.nvim_set_hl(0, "@type.builtin", { link = "Type" })
 		vim.api.nvim_set_hl(0, "@attribute.typescript", { link = "Function" })
 		vim.api.nvim_set_hl(0, "@variable.member", { fg = colors.black })
@@ -71,5 +73,9 @@ return {
 		vim.api.nvim_set_hl(0, "@keyword.angular", { fg = colors.black })
 		vim.api.nvim_set_hl(0, "@tag.attribute.angular", { link = "@keyword.angular" })
 		vim.api.nvim_set_hl(0, "@markup.raw", { fg = colors.black })
+		vim.api.nvim_set_hl(0, "@markup.italic", { link = "Keyword" })
+		vim.api.nvim_set_hl(0, "@markup.list.checked", { fg = colors.black, bg = colors.greenLight })
+		vim.api.nvim_set_hl(0, "@markup.list.unchecked", { fg = colors.black, bg = colors.redLight })
+		-- vim.api.nvim_set_hl(0, "@spell.markdown", { link = "Comment" })
 	end,
 }

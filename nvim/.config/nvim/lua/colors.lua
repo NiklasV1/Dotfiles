@@ -17,7 +17,7 @@ return {
 
 	-- NOTE: Syntax highlighting
 	Definition = "#325CC0",
-	Strings = "#448C27",
+	Strings = "#3a7821",
 	Comments = "#AA3731",
 	Constants = "#7A3E9D",
 	Types = "",

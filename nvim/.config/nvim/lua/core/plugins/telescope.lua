@@ -128,6 +128,10 @@ return {
 						fname_width = 98,
 						path_display = "absolute",
 					},
+					lsp_document_symbols = {
+						symbol_width = 50,
+						symbol_type_width = 16,
+					},
 				},
 				-- Extensions
 				extensions = {

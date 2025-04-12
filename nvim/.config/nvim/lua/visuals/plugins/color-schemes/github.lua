@@ -57,6 +57,7 @@ return {
 
 		-- NOTE: Syntax highlighting
 		vim.api.nvim_set_hl(0, "Function", { fg = colors.Definition })
+		vim.api.nvim_set_hl(0, "Method", { link = "Function" })
 		vim.api.nvim_set_hl(0, "String", { fg = colors.Strings })
 		vim.api.nvim_set_hl(0, "Constant", { fg = colors.Constants })
 		vim.api.nvim_set_hl(0, "Comment", { fg = colors.Comments })

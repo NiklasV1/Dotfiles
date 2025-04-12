@@ -19,6 +19,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 
 		vim.keymap.set("n", "<leader>jt", function()
 			vim.cmd([[edit %:h:s?dist?src?/%:t:r.ts]])
-		end, { desc = "[J]est finc [T]ypescript test" })
+		end, { desc = "[J]est find [T]ypescript test" })
 	end,
 })

@@ -9,6 +9,9 @@ require("extra.plugins.keymaps.rush")
 -- Quickfix list keymaps
 require("extra.plugins.keymaps.quickfix")
 
+-- Angular file keymaps
+require("extra.plugins.keymaps.angular")
+
 -- NOTE: Misc keymaps
 
 -- VsCode (Debugger)

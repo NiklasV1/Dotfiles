@@ -103,15 +103,12 @@ return {
 							i = {
 								["<C-d>"] = "delete_buffer",
 							},
+							n = {
+								["<C-d>"] = "delete_buffer",
+							},
 						},
 						sort_mru = true,
 						disable_coordinates = true,
-					},
-					find_files = {
-						path_display = filenameFirst,
-					},
-					oldfiles = {
-						path_display = filenameFirst,
 					},
 					jumplist = {
 						path_display = function(_, path)

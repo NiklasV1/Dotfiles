@@ -1,10 +1,3 @@
--- NOTE: Plugins can specify dependencies.
---
--- The dependencies are proper plugin specifications as well - anything
--- you do for a plugin at the top level, you can do for a dependency.
---
--- Use the `dependencies` key to specify the dependencies of a particular plugin
-
 return {
 	{ -- Fuzzy Finder (files, lsp, etc)
 		"nvim-telescope/telescope.nvim",
@@ -31,28 +24,14 @@ return {
 			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 		},
 		config = function()
-			-- Telescope is a fuzzy finder that comes with a lot of different things that
-			-- it can fuzzy find! It's more than just a "file finder", it can search
-			-- many different aspects of Neovim, your workspace, LSP, and more!
-			--
-			-- The easiest way to use Telescope, is to start by doing something like:
-			--  :Telescope help_tags
-			--
-			-- After running this command, a window will open up and you're able to
-			-- type in the prompt window. You'll see a list of `help_tags` options and
-			-- a corresponding preview of the help.
-			--
 			-- Two important keymaps to use while in Telescope are:
 			--  - Insert mode: <c-/>
 			--  - Normal mode: ?
-			--
-			-- This opens a window that shows you all of the keymaps for the current
-			-- Telescope picker. This is really useful to discover what Telescope can
-			-- do as well as how to actually do it!
 
 			-- [[ Configure Telescope ]]
 			-- See `:help telescope` and `:help telescope.setup()`
 
+			-- Change color of file paths
 			vim.api.nvim_create_autocmd("Filetype", {
 				pattern = "TelescopeResults",
 				callback = function(ctx)
@@ -63,6 +42,7 @@ return {
 				end,
 			})
 
+			-- Override function for path_display
 			local function filenameFirst(_, path)
 				local tail = vim.fs.basename(path)
 				local parent = vim.fs.dirname(path)
@@ -72,26 +52,40 @@ return {
 				return string.format("%s\t\t%s", tail, parent)
 			end
 
+			-- Default border settings
+			local borderSettings = {
+				prompt = { 1, 1, 1, 1 },
+				results = { 1, 1, 1, 1 },
+				preview = { 1, 1, 1, 1 },
+			}
+
+			-- Default border characters settings
+			local borderChars = {
+				prompt = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+				results = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+				preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+			}
+
+			-- Alternative border characters settings
+			local alternativeBorderChars = {
+				prompt = borderChars.prompt,
+				results = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
+				preview = borderChars.preview,
+			}
+
+			-- Additional key mappings
+			local keymaps = {
+				["<C-enter>"] = "to_fuzzy_refine",
+			}
+
 			require("telescope").setup({
-				-- You can put your default mappings / updates / etc. in here
-				--  All the info you're looking for is in `:help telescope.setup()`
-				--
-				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
-				-- },
-				-- pickers = {}
+				-- Default settings
 				defaults = {
-					border = {
-						prompt = { 1, 1, 1, 1 },
-						results = { 1, 1, 1, 1 },
-						preview = { 1, 1, 1, 1 },
-					},
-					borderchars = {
-						prompt = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-						results = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-						preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+					border = borderSettings,
+					borderchars = borderChars,
+					mappings = {
+						i = keymaps,
+						n = keymaps,
 					},
 				},
 				extensions = {
@@ -99,6 +93,7 @@ return {
 						require("telescope.themes").get_dropdown(),
 					},
 				},
+				-- Overrides for individual pickers
 				pickers = {
 					find_files = {
 						path_display = filenameFirst,
@@ -127,18 +122,6 @@ return {
 			-- Enable Telescope extensions if they are installed
 			pcall(require("telescope").load_extension, "fzf")
 			pcall(require("telescope").load_extension, "ui-select")
-
-			local border = {
-				prompt = { 1, 1, 1, 1 },
-				results = { 1, 1, 1, 1 },
-				preview = { 1, 1, 1, 1 },
-			}
-
-			local borderchars = {
-				prompt = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-				results = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
-				preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
-			}
 
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
@@ -188,8 +171,8 @@ return {
 			vim.keymap.set("n", "<leader>/", function()
 				-- You can pass additional configuration to Telescope to change the theme, layout, etc.
 				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-					border = border,
-					borderchars = borderchars,
+					border = borderSettings,
+					borderchars = alternativeBorderChars,
 					previewer = false,
 				}))
 			end, { desc = "[/] Fuzzily search in current buffer" })

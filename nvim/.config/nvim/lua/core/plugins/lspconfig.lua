@@ -97,6 +97,9 @@ return {
 					-- Fuzzy find all the symbols in your current document.
 					--  Symbols are things like variables, functions, types, etc.
 					map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
+					map("<leader>dm", function()
+						require("telescope.builtin").lsp_document_symbols({ symbols = "method" })
+					end, "[D]ocument [M]ethods")
 
 					-- Search incoming calls of symbol
 					map("<leader>si", vim.lsp.buf.incoming_calls, "[S]earch [I]ncoming")

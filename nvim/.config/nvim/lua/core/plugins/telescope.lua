@@ -30,6 +30,7 @@ return {
 
 			-- [[ Configure Telescope ]]
 			-- See `:help telescope` and `:help telescope.setup()`
+			local actions = require("telescope.actions")
 
 			-- Change color of file paths
 			vim.api.nvim_create_autocmd("Filetype", {
@@ -70,7 +71,9 @@ return {
 			}
 
 			-- Additional key mappings
-			local keymaps = {}
+			local keymaps = {
+				["<C-Space>"] = actions.to_fuzzy_refine,
+			}
 
 			require("telescope").setup({
 				-- Default settings

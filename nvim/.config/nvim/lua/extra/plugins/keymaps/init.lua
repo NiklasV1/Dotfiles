@@ -12,6 +12,9 @@ require("extra.plugins.keymaps.quickfix")
 -- Angular file keymaps
 require("extra.plugins.keymaps.angular")
 
+-- Make keymaps
+require("extra.plugins.keymaps.make")
+
 -- NOTE: Misc keymaps
 
 -- VsCode (Debugger)

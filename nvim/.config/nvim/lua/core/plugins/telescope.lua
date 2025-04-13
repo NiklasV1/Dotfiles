@@ -93,7 +93,7 @@ return {
 							height = 0.9,
 							width = 0.8,
 							prompt_position = "bottom",
-							preview_cutoff = 40,
+							preview_cutoff = 20,
 							scroll_speed = 2,
 						},
 					},

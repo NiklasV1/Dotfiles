@@ -13,7 +13,7 @@ set $up k
 set $right l
 
 # Terminal emulator
-set $term kitty
+set $term alacritty -e zsh
 
 # Set file explorer
 set $explorer ranger

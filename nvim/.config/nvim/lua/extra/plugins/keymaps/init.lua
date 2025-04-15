@@ -22,7 +22,8 @@ vim.keymap.set("n", "<leader>gd", function()
 	local cursorPosition = vim.fn.getpos(".")
 	local lineNr = cursorPosition[2]
 	local colNr = cursorPosition[3]
-	vim.cmd("!code -g %:S:" .. lineNr .. ":" .. colNr)
+	local command = vim.fn.expandcmd("code -g %:S:" .. lineNr .. ":" .. colNr)
+	os.execute(command)
 end, { desc = "[G]o to [D]ebugger" })
 
 -- Eslint

@@ -47,8 +47,10 @@ return {
 		vim.api.nvim_set_hl(0, "Changed", { fg = colors.black, bg = colors.orangeLight })
 		vim.api.nvim_set_hl(0, "Removed", { fg = colors.black, bg = colors.redLight })
 		vim.api.nvim_set_hl(0, "GitSignsAdd", { link = "Added" })
+		vim.api.nvim_set_hl(0, "GitSignsAddInline", { fg = colors.black, bg = colors.greenLight3 })
 		vim.api.nvim_set_hl(0, "GitSignsChange", { link = "Changed" })
 		vim.api.nvim_set_hl(0, "GitSignsDelete", { link = "Removed" })
+		vim.api.nvim_set_hl(0, "GitSignsDeleteInline", { fg = colors.black, bg = colors.redLight3 })
 
 		-- NOTE: Misc
 		vim.api.nvim_set_hl(0, "@comment.todo", { fg = colors.black })

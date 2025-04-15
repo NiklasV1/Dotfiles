@@ -28,8 +28,10 @@ return {
 	-- NOTE: Light colors
 	redLight = "#f5d2d5",
 	redLight2 = "#fae8ea",
+	redLight3 = "#d49b98",
 	greenLight = "#d1e5d7",
 	greenLight2 = "#e8f2eb",
+	greenLight3 = "#acc6a1",
 	blueLight = "#cde1f7",
 	blueLight2 = "#e6f0fb",
 	magentaLight = "#e6dcf8",

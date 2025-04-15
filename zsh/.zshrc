@@ -124,6 +124,10 @@ export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 
 export PATH="$PATH:${JAVA_HOME}"
 
+# NOTE: Kubernetes
+source <(kubectl completion zsh)
+export KUBECONFIG="$(find -L ~/.kube/config ~/.kube/config.d -type f 2>/dev/null | sort | paste -s -d :)"
+
 # NOTE: Aliases
 
 # Neovim
@@ -143,6 +147,8 @@ alias tg="task next | grep"
 alias watcher-limit="sudo sysctl -w fs.inotify.max_user_watches=10000000"
 # NPM
 alias npmstart="npm install && npm run start"
+# Python
+alias python="python3"
 # Navigation
 alias backend="cd $HOME/Programming/snapaddy-backend/packages/server/features && nvm use 18"
 alias backendLibs="cd $HOME/Programming/snapaddy-backend/packages/server/libs && nvm use 18"

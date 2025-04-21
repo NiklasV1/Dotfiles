@@ -8,7 +8,7 @@ import = [
 live_config_reload = true
 
 [window]
-decorations = "Full"
+decorations = "None"
 decorations_theme_variant = "Dark"
 
 [font]

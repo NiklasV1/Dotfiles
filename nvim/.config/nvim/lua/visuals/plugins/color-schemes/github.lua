@@ -88,6 +88,10 @@ return {
 		vim.api.nvim_set_hl(0, "@function.builtin.lua", { link = "Function" })
 		vim.api.nvim_set_hl(0, "@function.builtin.make", { link = "Function" })
 		vim.api.nvim_set_hl(0, "@function.builtin.bash", { link = "Function" })
+		vim.api.nvim_set_hl(0, "@keyword.exception", { link = "Keyword" })
+		vim.api.nvim_set_hl(0, "@string.scss", { fg = colors.black })
+		vim.api.nvim_set_hl(0, "@number.scss", { fg = colors.black })
+		vim.api.nvim_set_hl(0, "@number.float.scss", { fg = colors.black })
 		-- vim.api.nvim_set_hl(0, "@spell.markdown", { link = "Comment" })
 	end,
 }

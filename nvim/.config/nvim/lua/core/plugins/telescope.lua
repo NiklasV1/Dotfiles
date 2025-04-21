@@ -169,6 +169,11 @@ return {
 
 			-- Diagnostics search
 			vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
+			vim.keymap.set("n", "<leader>se", function()
+				builtin.diagnostics({
+					severity = "Error",
+				})
+			end, { desc = "[S]earch [E]rrors" })
 
 			-- Quickfix search
 			vim.keymap.set("n", "<leader>qs", builtin.quickfix, { desc = "[Q]uickfix [S]earch" })

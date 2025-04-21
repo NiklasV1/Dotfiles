@@ -270,7 +270,7 @@ return {
 				gopls = {},
 				pyright = {},
 				html = {
-					filetypes = { "html", "htmlangular" },
+					filetypes = { "html", "htmlangular", "htmldjango" },
 				},
 				ts_ls = {
 					init_options = {
@@ -282,6 +282,7 @@ return {
 				},
 				angularls = {
 					cmd = angularls_new_cmd,
+					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },
 					on_new_config = function(new_config, _)
 						new_config.cmd = angularls_new_cmd
 					end,
@@ -289,6 +290,11 @@ return {
 				cssls = {},
 				bashls = {
 					filetypes = { "bash", "sh", "zsh" },
+				},
+				typos_lsp = {
+					init_options = {
+						diagnosticSeverity = "Hint",
+					},
 				},
 				lua_ls = {
 					-- cmd = {...},

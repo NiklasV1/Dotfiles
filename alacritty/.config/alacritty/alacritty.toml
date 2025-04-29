@@ -9,6 +9,8 @@ live_config_reload = true
 
 [window]
 decorations = "None"
+title = ""
+dynamic_title = false
 decorations_theme_variant = "Dark"
 
 [font]

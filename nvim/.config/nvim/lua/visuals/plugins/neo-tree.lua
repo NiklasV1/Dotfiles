@@ -28,4 +28,9 @@ return {
 			},
 		},
 	},
+	default_component_configs = {
+		name = {
+			use_git_status_colors = false,
+		},
+	},
 }

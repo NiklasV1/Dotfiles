@@ -8,6 +8,6 @@ on_project_first_start: ~/.config/tmuxinator/scripts/backend/start.zsh && lazygi
 on_project_stop: ~/.config/tmuxinator/scripts/backend/stop.zsh
 
 windows:
-  - Editor: nvim .
+  - Editor: nvim
   - Terminal:
   - Server: source ~/.config/tmuxinator/scripts/backend/analytics-web.zsh

@@ -6,5 +6,5 @@ root: ~/.config/nvim/
 startup_window: Editor
 
 windows:
-  - Editor: nvim .
+  - Editor: nvim
   - Terminal:

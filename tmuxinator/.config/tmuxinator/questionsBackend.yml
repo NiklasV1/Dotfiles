@@ -9,4 +9,4 @@ on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node22.zsh && lazy
 windows:
   - Editor: nvim
   - Terminal:
-  - Server: npm install && npm run start
+  - Server: pnpm install && pnpm run start

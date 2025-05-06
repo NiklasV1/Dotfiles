@@ -1,0 +1,13 @@
+# /home/niklasv/.config/tmuxinator/analyticsWeb.yml
+
+name: analytics-web
+root: ~/Programming/snapaddy-analytics-web/
+
+startup_window: Editor
+on_project_first_start: ~/.config/tmuxinator/scripts/backend/start.zsh && lazygit
+on_project_stop: ~/.config/tmuxinator/scripts/backend/stop.zsh
+
+windows:
+  - Editor: nvim
+  - Terminal:
+  - Server: source ~/.config/tmuxinator/scripts/backend/analytics-web.zsh

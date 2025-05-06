@@ -1,0 +1,12 @@
+# /home/niklasv/.config/tmuxinator/snapaddyApp.yml
+
+name: snapaddy-app
+root: ~/Programming/snapaddy-app/
+
+startup_window: Editor
+on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node22.zsh && lazygit
+
+windows:
+  - Editor: nvim
+  - Terminal:
+  - Server: EVENTS_BROWSER_LOGS=true && npm install && npm run env:staging && npm run start

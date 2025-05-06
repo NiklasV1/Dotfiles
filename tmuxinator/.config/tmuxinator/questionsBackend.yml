@@ -1,0 +1,12 @@
+# /home/niklasv/.config/tmuxinator/questionsBackend.yml
+
+name: questions-backend
+root: ~/Programming/snapaddy-questions-backend/
+
+startup_window: Editor
+on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node22.zsh && lazygit
+
+windows:
+  - Editor: nvim
+  - Terminal:
+  - Server: pnpm install && pnpm run start

@@ -1,0 +1,11 @@
+# /home/niklasv/.config/tmuxinator/backendEdit.yml
+
+name: backend-edit
+root: ~/Programming/snapaddy-backend/
+
+startup_window: Editor
+on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node18.zsh && lazygit
+
+windows:
+  - Editor: cd ~/Programming/snapaddy-backend/packages/server/ && nvim
+  - Terminal: cd ~/Programming/snapaddy-backend/

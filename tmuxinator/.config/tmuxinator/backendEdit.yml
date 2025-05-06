@@ -3,10 +3,9 @@
 name: backend-edit
 root: ~/Programming/snapaddy-backend/
 
-startup_window: Features
+startup_window: Editor
 on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node18.zsh && lazygit
 
 windows:
-  - Features: cd ~/Programming/snapaddy-backend/packages/server/features/
-  - Libs: cd ~/Programming/snapaddy-backend/packages/server/libs/
+  - Editor: cd ~/Programming/snapaddy-backend/packages/server/ && nvim
   - Terminal: cd ~/Programming/snapaddy-backend/

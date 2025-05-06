@@ -166,3 +166,4 @@ alias krokodil=~/Scripts/start-day.sh
 # Rush
 alias featstart="rushx build && rushx start:feat"
 alias fullrush="rush update && rush build-only && rush gen:code"
+alias rushpart="rush update && rush build-only && rush start:partial"

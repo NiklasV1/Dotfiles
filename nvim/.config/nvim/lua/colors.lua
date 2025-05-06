@@ -38,8 +38,8 @@ return {
 	magentaLight2 = "#f2edfb",
 	orangeLight = "#f8e5cc",
 	orangeLight2 = "#fbf2e5",
-	fgLight = "#d2d3d4",
-	fgLight2 = "#e8e9e9",
+	fgLight = "#d2d2d2",
+	fgLight2 = "#e9e9e9",
 
 	-- NOTE: Theme palette default values
 	palette = require("github-theme.palette.github_light_default").palette,

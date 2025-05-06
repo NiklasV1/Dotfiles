@@ -9,7 +9,8 @@ return {
 				markdown = {},
 				html = { "eslint_d" },
 				htmlangular = { "eslint_d" },
-				typescript = { "eslint_d" },
+				-- NOTE: Replaced by eslint LSP
+				-- typescript = { "eslint_d" },
 				css = { "eslint_d" },
 			}
 

@@ -287,6 +287,7 @@ return {
 						new_config.cmd = angularls_new_cmd
 					end,
 				},
+				eslint = {},
 				cssls = {},
 				bashls = {
 					filetypes = { "bash", "sh", "zsh" },

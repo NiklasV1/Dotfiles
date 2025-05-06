@@ -20,7 +20,7 @@ return {
 	Strings = "#3a7821",
 	Comments = "#AA3731",
 	Constants = "#7A3E9D",
-	Types = "",
+	Types = "#aa5a00",
 	Keywords = "",
 
 	orangeBright = "#dd8100",

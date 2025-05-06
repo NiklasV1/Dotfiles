@@ -14,10 +14,12 @@ return {
 		{ "\\", ":Neotree reveal<CR>", desc = "NeoTree reveal", silent = true },
 	},
 	opts = {
+		close_if_last_window = false,
 		window = {
 			width = 84,
 			position = "right",
 			mappings = {
+				["<F5>"] = "refresh",
 				["\\"] = "close_window",
 			},
 		},
@@ -25,12 +27,25 @@ return {
 			filtered_items = {
 				hide_gitignored = false,
 				hide_dotfiles = false,
+				always_show = {
+					".gitignore",
+				},
+				always_show_by_pattern = {
+					".env*",
+				},
+			},
+			follow_current_file = {
+				enabled = true,
+				leave_dirs_open = false,
 			},
 		},
 	},
 	default_component_configs = {
-		name = {
-			use_git_status_colors = false,
+		indent = {
+			with_markers = true,
+			indent_marker = "│",
+			last_indent_marker = "└",
+			indent_size = 2,
 		},
 	},
 }

@@ -1,6 +1,7 @@
 return {
 	-- Color scheme
-	require("visuals.plugins.color-schemes.github"),
+	require("visuals.plugins.color-schemes.custom-sepia"),
+	-- require("visuals.plugins.color-schemes.github"),
 	-- require("visuals.plugins.color-schemes.modus"),
 	-- require("visuals.plugins.color-schemes.melange"),
 	-- require("visuals.plugins.color-schemes.alabaster"),

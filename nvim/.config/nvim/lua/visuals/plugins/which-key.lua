@@ -78,6 +78,7 @@ return {
 				{ "<leader>j", group = "[J]est" },
 				{ "<leader>r", group = "[R]ush | [R]ename" },
 				{ "<leader>rx", group = "[R]ush[X]" },
+				{ "<leader>m", group = "[M]ake" },
 			},
 		},
 	},

@@ -1,5 +1,5 @@
 return {
-	"norcalli/nvim-colorizer.lua",
+	"NiklasV1/nvim-colorizer.lua",
 	config = function()
 		local colorizer = require("colorizer")
 

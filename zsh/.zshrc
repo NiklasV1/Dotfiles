@@ -152,7 +152,7 @@ alias python="python3"
 # Navigation
 alias backend="cd $HOME/Programming/snapaddy-backend/packages/server && nvm use 18"
 # Tmuxinator
-tmux_environments=(backend questionsBackend settingsUi nvimConfig snapaddyApp components backendEdit cardsConfigurator analyticsWeb)
+tmux_environments=(backend questionsBackend settingsUi nvimConfig snapaddyApp components backendEdit cardsConfigurator cardsPage analyticsWeb)
 for tmux_environment in $tmux_environments; do
   alias "${tmux_environment}Up"="tmuxinator start $tmux_environment"
   alias "${tmux_environment}Down"="tmuxinator stop $tmux_environment"
@@ -167,3 +167,4 @@ alias krokodil=~/Scripts/start-day.sh
 alias featstart="rushx build && rushx start:feat"
 alias fullrush="rush update && rush build-only && rush gen:code"
 alias rushpart="rush update && rush build-only && rush start:partial"
+alias rushto="rush update && rush build-only --to ."

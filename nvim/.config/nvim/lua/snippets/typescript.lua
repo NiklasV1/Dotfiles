@@ -17,4 +17,30 @@ return {
 		i(1, "value"),
 		t(");"),
 	}),
+
+	s(
+		"apierr",
+		fmt(
+			[[
+		throw ApiError.|errorType/([
+			{
+				id: |id/,
+				message: |message/,
+			},
+		]);
+		]],
+			{
+				errorType = i(1, "errorType"),
+				id = i(2, "id"),
+				message = i(3, "message"),
+			},
+			{ delimiters = "|/" }
+		)
+	),
 }
+
+-- 	fmt("readonly #{name} = inject({service});", {
+-- 		name = i(1, "name"),
+-- 		service = i(2, "service"),
+-- 	}),
+-- }),

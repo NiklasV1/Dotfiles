@@ -108,7 +108,7 @@ export NVM_DIR="$HOME/.nvm"
 # For a full list of active aliases, run `alias`.
 #
 
-# NOTE: Environment variables
+# SECTION: Environment variables
 
 # Default Editor
 export VISUAL=nvim
@@ -120,15 +120,18 @@ export ANDROID_SDK_ROOT="$HOME/Android/Sdk"  # Depending on the Android SDK path
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
+# Java
 export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
-
 export PATH="$PATH:${JAVA_HOME}"
 
-# NOTE: Kubernetes
+# Go
+export GOPATH=$HOME/go
+
+# Kubernetes
 source <(kubectl completion zsh)
 export KUBECONFIG="$(find -L ~/.kube/config ~/.kube/config.d -type f 2>/dev/null | sort | paste -s -d :)"
 
-# NOTE: Aliases
+# SECTION: Aliases
 
 # Neovim
 alias v="nvim"

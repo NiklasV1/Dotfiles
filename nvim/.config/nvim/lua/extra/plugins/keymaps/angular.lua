@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 		end, { desc = "[A]ngular [T]emplate" })
 
 		vim.keymap.set("n", "<leader>as", function()
-			vim.cmd([[edit %:h/%:t:r.scss]])
+			vim.cmd([[edit %:h/%:t:r.css]])
 		end, { desc = "[A]ngular [S]tyle" })
 	end,
 })

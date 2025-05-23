@@ -133,6 +133,8 @@ export KUBECONFIG="$(find -L ~/.kube/config ~/.kube/config.d -type f 2>/dev/null
 
 # SECTION: Aliases
 
+# General
+alias cl="clear"
 # Neovim
 alias v="nvim"
 alias vim="nvim"
@@ -171,3 +173,7 @@ alias featstart="rushx build && rushx start:feat"
 alias fullrush="rush update && rush build-only && rush gen:code"
 alias rushpart="rush update && rush build-only && rush start:partial"
 alias rushto="rush update && rush build-only --to ."
+alias rxb="rushto"
+alias rxt="rushx _phase:test"
+alias rxe="rushx test:e2e"
+alias rb="rush update && rush build-only"

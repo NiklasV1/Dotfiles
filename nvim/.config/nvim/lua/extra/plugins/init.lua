@@ -7,4 +7,10 @@ return {
 
 	-- Treesitter textobjects
 	require("extra.plugins.treesitter-textobjects"),
+
+	-- Copilot integration
+	require("extra.plugins.copilot"),
+
+	-- Copilot cmp completions
+	require("extra.plugins.copilot-cmp"),
 }

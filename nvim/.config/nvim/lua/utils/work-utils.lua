@@ -6,11 +6,14 @@ end
 
 -- NOTE: Work related utility functions
 return {
-	-- NOTE: Gets the path of the current feature when in the backend
+	-- @return string
+	-- @usage Returns the path of the current feature in the backend
 	getBackendFeaturePath = function()
 		return _getBackendFeaturePath()
 	end,
 
+	-- @return string
+	-- @usage Returns a command to change directory to the current feature path
 	goToFeaturePath = function()
 		return "cd " .. _getBackendFeaturePath()
 	end,

@@ -1,10 +1,10 @@
 local executeCommands = require("utils.utils").executeCommands
-local getBackendFeaturePath = require("utils.work-utils").getBackendFeaturePath
+local goToFeaturePath = require("utils.work-utils").goToFeaturePath
 
 -- SECTION: Commands
 local UPDATE = "rush update"
 local BUILD_ONLY = "rush build-only"
-local BUILD_FEATURE = "rush build-only --to " -- add feature path as param
+local BUILD_FEATURE = "rush build-only --to ."
 local GEN_CODE = "rush gen:code"
 
 -- SECTION: Command functions
@@ -17,7 +17,7 @@ local function rushFull()
 end
 
 local function rushXBuild()
-	executeCommands({ UPDATE, BUILD_FEATURE .. getBackendFeaturePath() })
+	executeCommands({ UPDATE, goToFeaturePath(), BUILD_FEATURE })
 end
 
 -- SECTION: Keybinds

@@ -32,8 +32,8 @@ vim.keymap.set("n", "<leader>rxb", rushXBuild, { desc = "[R]ush[X] [B]uild" })
 vim.keymap.set("n", "<leader>rf", rushFull, { desc = "[R]ush [F]ull" })
 
 -- TODO: Fix this for monorepo use
-vim.keymap.set("n", "<leader>rq", function()
-	require("parsers.rush").parse()
-end, { desc = "[R]ush [Q]uickfix" })
+-- vim.keymap.set("n", "<leader>rq", function()
+-- 	require("parsers.rush").parseRush()
+-- end, { desc = "[R]ush [Q]uickfix" })
 
 vim.keymap.set("n", "<leader>rxq", parseRushX, { desc = "[R]ush[X] [Q]uickfix" })

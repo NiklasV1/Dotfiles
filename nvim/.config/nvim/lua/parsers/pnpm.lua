@@ -1,9 +1,14 @@
+local getBackendFeaturePath = require("utils.work-utils").getBackendFeaturePath
+
 return {
 	parse = function()
 		print("Running rushx build.")
 		print("...")
 		local quickfixEntries = {}
-		local output = vim.fn.system({ "rushx", "build" })
+		local output = vim.fn.system({
+			"rushx",
+			"build",
+		})
 		local _, count = string.gsub(
 			output,
 			"(src/[%w_%-/]*%.[%w_%-%.]*)%((%d*),%d*%): [^:]*: ([^\n]*)",

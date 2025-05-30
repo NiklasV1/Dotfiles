@@ -1,29 +1,37 @@
--- NOTE: Rush
-vim.keymap.set("n", "<leader>rb", function()
-	vim.cmd([[edit term://rush build-only]])
-end, { desc = "[R]ush [B]uild" })
+local executeCommands = require("utils.utils").executeCommands
+local getBackendFeaturePath = require("utils.work-utils").getBackendFeaturePath
 
--- vim.keymap.set("n", "<leader>rxb", function()
--- 	vim.cmd([[edit term://rushx build]])
--- end, { desc = "[R]ush[X] [B]uild" })
+-- SECTION: Commands
+local UPDATE = "rush update"
+local BUILD_ONLY = "rush build-only"
+local BUILD_FEATURE = "rush build-only --to " -- add feature path as param
+local GEN_CODE = "rush gen:code"
 
-vim.keymap.set("n", "<leader>ru", function()
-	vim.cmd([[edit term://rush update]])
-end, { desc = "[R]ush [U]pdate" })
+-- SECTION: Command functions
+local function rushBuild()
+	executeCommands({ UPDATE, BUILD_ONLY })
+end
 
-vim.keymap.set("n", "<leader>rc", function()
-	vim.cmd([[edit term://rush gen:code]])
-end, { desc = "[R]ush [C]ode" })
+local function rushFull()
+	executeCommands({ UPDATE, BUILD_ONLY, GEN_CODE })
+end
 
-vim.keymap.set("n", "<leader>rf", function()
-	vim.cmd([[edit term://rush update && rush build-only && rush gen:code]])
-end, { desc = "[R]ush [F]ull" })
+local function rushXBuild()
+	executeCommands({ UPDATE, BUILD_FEATURE .. getBackendFeaturePath() })
+end
 
--- NOTE: Rush quickfix
+-- SECTION: Keybinds
+vim.keymap.set("n", "<leader>rb", rushBuild, { desc = "[R]ush [B]uild" })
+
+vim.keymap.set("n", "<leader>rxb", rushXBuild, { desc = "[R]ush[X] [B]uild" })
+
+vim.keymap.set("n", "<leader>rf", rushFull, { desc = "[R]ush [F]ull" })
+
+-- TODO: Fix these for monorepo use
 vim.keymap.set("n", "<leader>rq", function()
 	require("parsers.rush").parse()
 end, { desc = "[R]ush [Q]uickfix" })
 
--- vim.keymap.set("n", "<leader>rxq", function()
--- 	require("parsers.pnpm").parse()
--- end, { desc = "[R]ush[X] [Q]uickfix" })
+vim.keymap.set("n", "<leader>rxq", function()
+	require("parsers.pnpm").parse()
+end, { desc = "[R]ush[X] [Q]uickfix" })

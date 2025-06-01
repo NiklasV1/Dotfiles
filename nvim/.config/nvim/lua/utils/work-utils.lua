@@ -1,5 +1,5 @@
 local function _getBackendFeaturePath()
-	local filepath = vim.fn.expand("%")
+	local filepath = vim.fn.expand("%:p")
 
 	return string.match(filepath, ".*/packages/server/[^/]*/[^/]*/")
 end

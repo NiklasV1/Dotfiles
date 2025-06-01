@@ -8,7 +8,7 @@ local function parseOutput(output)
 		"(src/[%w_%-/]*%.[%w_%-%.]*)%((%d*),%d*%): [^:]*: ([^\n]*)",
 		function(path, line, message)
 			table.insert(quickfixEntries, {
-				filename = vim.fs.find(path, { type = "file" }),
+				-- filename = vim.fs.find(path, { type = "file" }),
 				lnum = line,
 				type = "E",
 				text = string.sub(message, 1, 100) .. "...",
@@ -53,6 +53,7 @@ return {
 		end
 	end,
 
+	-- TODO: Fix this for monorepo use
 	parseRush = function()
 		print("Running rush build.")
 

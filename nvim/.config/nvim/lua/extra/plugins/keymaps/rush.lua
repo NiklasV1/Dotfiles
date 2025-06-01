@@ -20,6 +20,10 @@ local function rushXBuild()
 	executeCommands({ UPDATE, goToFeaturePath(), BUILD_FEATURE })
 end
 
+local function parseRush()
+	require("parsers.rush").parseRush()
+end
+
 local function parseRushX()
 	require("parsers.rush").parseRushX()
 end
@@ -31,9 +35,6 @@ vim.keymap.set("n", "<leader>rxb", rushXBuild, { desc = "[R]ush[X] [B]uild" })
 
 vim.keymap.set("n", "<leader>rf", rushFull, { desc = "[R]ush [F]ull" })
 
--- TODO: Fix this for monorepo use
--- vim.keymap.set("n", "<leader>rq", function()
--- 	require("parsers.rush").parseRush()
--- end, { desc = "[R]ush [Q]uickfix" })
+vim.keymap.set("n", "<leader>rq", parseRush, { desc = "[R]ush [Q]uickfix" })
 
 vim.keymap.set("n", "<leader>rxq", parseRushX, { desc = "[R]ush[X] [Q]uickfix" })

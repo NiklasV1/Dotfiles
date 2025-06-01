@@ -19,6 +19,14 @@ local function jestCurrentTest()
 	executeCommands({ goToFeaturePath(), CURRENT_TEST })
 end
 
+local function jestQuickfixEndToEnd()
+	require("parsers.jest").jestEndToEnd()
+end
+
+local function jestQuickfixUnit()
+	require("parsers.jest").jestUnitTest()
+end
+
 local function findTypescriptTest()
 	vim.cmd([[edit %:h:s?dist?src?/%:t:r.ts]])
 end
@@ -30,6 +38,10 @@ local function loadKeybinds()
 	vim.keymap.set("n", "<leader>ju", jestUnitTests, { desc = "[J]est [U]nit tests" })
 
 	vim.keymap.set("n", "<leader>jc", jestCurrentTest, { desc = "[J]est [C]urrent test" })
+
+	vim.keymap.set("n", "<leader>jqu", jestQuickfixUnit, { desc = "[J]est [Q]uickfix [U]nit tests" })
+
+	vim.keymap.set("n", "<leader>jqe", jestQuickfixEndToEnd, { desc = "[J]est [Q]uickfix [E]nt to end" })
 
 	vim.keymap.set("n", "<leader>jt", findTypescriptTest, { desc = "[J]est find [T]ypescript test" })
 end

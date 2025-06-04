@@ -9,6 +9,6 @@ return {
 				command = command .. " && " .. com
 			end
 		end
-		vim.cmd("edit term://" .. command)
+		vim.cmd("split term://" .. command)
 	end,
 }

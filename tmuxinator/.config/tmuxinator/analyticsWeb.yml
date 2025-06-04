@@ -4,8 +4,7 @@ name: analytics-web
 root: ~/Programming/snapaddy-analytics-web/
 
 startup_window: Editor
-on_project_first_start: ~/.config/tmuxinator/scripts/backend/start.zsh && lazygit
-on_project_stop: ~/.config/tmuxinator/scripts/backend/stop.zsh
+on_project_first_start: ~/.config/tmuxinator/scripts/shared/node18.zsh && lazygit
 
 windows:
   - Editor: nvim

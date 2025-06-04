@@ -1,0 +1,12 @@
+# /home/niklasv/.config/tmuxinator/restApi.yml
+
+name: rest-api
+root: ~/Programming/snapaddy-rest-api/
+
+startup_window: Editor
+on_project_first_start: ~/.config/tmuxinator/scripts/shared/node18.zsh && lazygit
+
+windows:
+  - Editor: nvim
+  - Terminal:
+  - Server: source ~/.config/tmuxinator/scripts/backend/rest-api.zsh

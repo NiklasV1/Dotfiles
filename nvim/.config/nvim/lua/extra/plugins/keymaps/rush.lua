@@ -6,6 +6,7 @@ local UPDATE = "rush update"
 local BUILD_ONLY = "rush build-only"
 local BUILD_FEATURE = "rush build-only --to ."
 local GEN_CODE = "rush gen:code"
+local START_FEATURE = "rushx start:feat"
 
 -- SECTION: Command functions
 local function rushBuild()
@@ -28,6 +29,10 @@ local function parseRushX()
 	require("parsers.rush").parseRushX()
 end
 
+local function rushStartFeat()
+	executeCommands({ goToFeaturePath(), BUILD_FEATURE, START_FEATURE })
+end
+
 -- SECTION: Keybinds
 vim.keymap.set("n", "<leader>rb", rushBuild, { desc = "[R]ush [B]uild" })
 
@@ -38,3 +43,5 @@ vim.keymap.set("n", "<leader>rf", rushFull, { desc = "[R]ush [F]ull" })
 vim.keymap.set("n", "<leader>rq", parseRush, { desc = "[R]ush [Q]uickfix" })
 
 vim.keymap.set("n", "<leader>rxq", parseRushX, { desc = "[R]ush[X] [Q]uickfix" })
+
+vim.keymap.set("n", "<leader>rsf", rushStartFeat, { desc = "[R]ush [S]tart [F]eat" })

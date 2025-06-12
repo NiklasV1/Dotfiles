@@ -18,7 +18,7 @@ return {
 	require("core.plugins.conform"),
 
 	-- Linter
-	require("core.plugins.lint"),
+	-- require("core.plugins.lint"),
 
 	-- Auto detect indentation rules
 	require("core.plugins.vim-sleuth"),

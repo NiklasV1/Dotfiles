@@ -287,7 +287,9 @@ return {
 						new_config.cmd = angularls_new_cmd
 					end,
 				},
-				eslint = {},
+				eslint = {
+					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },
+				},
 				cssls = {},
 				bashls = {
 					filetypes = { "bash", "sh", "zsh" },
@@ -301,6 +303,7 @@ return {
 					-- cmd = {...},
 					-- filetypes = { ...},
 					-- capabilities = {},
+					--
 					settings = {
 						Lua = {
 							completion = {

@@ -7,11 +7,11 @@ return {
 			local lint = require("lint")
 			lint.linters_by_ft = {
 				markdown = {},
-				html = { "eslint_d" },
-				htmlangular = { "eslint_d" },
+				-- html = { "eslint_d" },
+				-- htmlangular = { "eslint_d" },
 				-- NOTE: Replaced by eslint LSP
 				-- typescript = { "eslint_d" },
-				css = { "eslint_d" },
+				-- css = { "eslint_d" },
 			}
 
 			-- To allow other plugins to add linters to require('lint').linters_by_ft,

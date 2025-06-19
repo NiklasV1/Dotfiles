@@ -8,9 +8,12 @@ return {
 	-- Treesitter textobjects
 	require("extra.plugins.treesitter-textobjects"),
 
+	-- Treesitter textsubjects
+	-- require("extra.plugins.treesitter-textsubjects"),
+
 	-- Copilot integration
-	require("extra.plugins.copilot"),
+	-- require("extra.plugins.copilot"),
 
 	-- Copilot cmp completions
-	require("extra.plugins.copilot-cmp"),
+	-- require("extra.plugins.copilot-cmp"),
 }

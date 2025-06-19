@@ -8,6 +8,15 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 
+-- Vertical splits
+vim.keymap.set("n", "<leader>v", function()
+	vim.cmd("vsplit")
+end, { desc = "Split [V]ertically" })
+
+vim.keymap.set("n", "<leader>bd", function()
+	vim.cmd("bdelete")
+end, { desc = "[B]uffer [D]elete" })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.

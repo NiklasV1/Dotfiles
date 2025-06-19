@@ -4,6 +4,11 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Remaps for common command typos
+vim.api.nvim_create_user_command("W", ":w", {})
+vim.api.nvim_create_user_command("Wa", ":wa", {})
+vim.api.nvim_create_user_command("Wq", ":wq", {})
+
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 

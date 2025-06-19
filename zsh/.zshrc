@@ -157,7 +157,7 @@ alias python="python3"
 # Navigation
 alias backend="cd $HOME/Programming/snapaddy-backend/packages/server && nvm use 18"
 # Tmuxinator
-tmux_environments=(backend questionsBackend settingsUi nvimConfig snapaddyApp components backendEdit cardsConfigurator cardsPage analyticsWeb watchdog snapaddyTypes restApi)
+tmux_environments=(backend questionsBackend settingsUi nvimConfig snapaddyApp components backendEdit cardsConfigurator cardsPage analyticsWeb watchdog snapaddyTypes restApi backendKnowledge dataQuality)
 for tmux_environment in $tmux_environments; do
   alias "${tmux_environment}Up"="tmuxinator start $tmux_environment"
   alias "${tmux_environment}Down"="tmuxinator stop $tmux_environment"
@@ -177,3 +177,4 @@ alias rxb="rushto"
 alias rxt="rushx _phase:test"
 alias rxe="rushx test:e2e"
 alias rb="rush update && rush build-only"
+alias rsf="rushx build && rushx start:feat"

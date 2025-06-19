@@ -7,6 +7,7 @@ local BUILD_ONLY = "rush build-only"
 local BUILD_FEATURE = "rush build-only --to ."
 local GEN_CODE = "rush gen:code"
 local START_FEATURE = "rushx start:feat"
+local BUILD_ONLY_FEATURE = "rushx build"
 
 -- SECTION: Command functions
 local function rushBuild()
@@ -30,7 +31,7 @@ local function parseRushX()
 end
 
 local function rushStartFeat()
-	executeCommands({ goToFeaturePath(), BUILD_FEATURE, START_FEATURE })
+	executeCommands({ goToFeaturePath(), BUILD_ONLY_FEATURE, START_FEATURE })
 end
 
 -- SECTION: Keybinds

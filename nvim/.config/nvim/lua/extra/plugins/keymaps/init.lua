@@ -15,6 +15,9 @@ require("extra.plugins.keymaps.angular")
 -- Make keymaps
 require("extra.plugins.keymaps.make")
 
+-- Telepresence keymaps
+require("extra.plugins.keymaps.telepresence")
+
 -- NOTE: Misc keymaps
 
 -- VsCode (Debugger)

@@ -93,6 +93,8 @@ return {
 		vim.api.nvim_set_hl(0, "@number.scss", { fg = colors.black })
 		vim.api.nvim_set_hl(0, "@number.float.scss", { fg = colors.black })
 		vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = "#555555" })
+		vim.api.nvim_set_hl(0, "@type.go", { fg = colors.Constants })
+		vim.api.nvim_set_hl(0, "@type.builtin.go", { fg = colors.Constants })
 		-- vim.api.nvim_set_hl(0, "@spell.markdown", { link = "Comment" })
 	end,
 }

@@ -2,6 +2,7 @@ local executeCommands = require("utils.utils").executeCommands
 local goToFeaturePath = require("utils.work-utils").goToFeaturePath
 
 -- SECTION: Commands
+local MISE_ENVIRONMENT = 'eval "$(mise env)"'
 local UPDATE = "rush update"
 local BUILD_ONLY = "rush build-only"
 local BUILD_FEATURE = "rush build-only --to ."
@@ -15,7 +16,7 @@ local function rushBuild()
 end
 
 local function rushFull()
-	executeCommands({ UPDATE, BUILD_ONLY, GEN_CODE })
+	executeCommands({ UPDATE, BUILD_ONLY, GEN_CODE, BUILD_ONLY })
 end
 
 local function rushXBuild()
@@ -31,7 +32,7 @@ local function parseRushX()
 end
 
 local function rushStartFeat()
-	executeCommands({ goToFeaturePath(), BUILD_ONLY_FEATURE, START_FEATURE })
+	executeCommands({ goToFeaturePath(), START_FEATURE })
 end
 
 -- SECTION: Keybinds

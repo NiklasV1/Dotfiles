@@ -7,4 +7,5 @@ export NVM_DIR="$HOME/.nvm"
 cd ~/Programming/snapaddy-watchdog/
 nvm use 18
 pnpm install --config.confirmModulesPurge=false
+pnpm run build
 pnpm run start

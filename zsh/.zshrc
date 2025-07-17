@@ -131,6 +131,9 @@ export GOPATH=$HOME/go
 source <(kubectl completion zsh)
 export KUBECONFIG="$(find -L ~/.kube/config ~/.kube/config.d -type f 2>/dev/null | sort | paste -s -d :)"
 
+# Mise
+eval "$(/home/niklasv/.local/bin/mise activate zsh)"
+
 # SECTION: Aliases
 
 # General

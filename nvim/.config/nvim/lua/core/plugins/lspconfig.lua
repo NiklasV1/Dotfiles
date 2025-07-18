@@ -222,10 +222,7 @@ return {
 				},
 			})
 
-			-- LSP servers and clients are able to communicate to each other what features they support.
-			--  By default, Neovim doesn't support everything that is in the LSP specification.
-			--  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
-			--  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
+			-- TODO: find out if this still works
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
@@ -245,9 +242,6 @@ return {
 				"--forceStrictTemplates",
 			}
 
-			-- Enable the following language servers
-			--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
-			--
 			--  Add any additional override configuration in the following tables. Available keys are:
 			--  - cmd (table): Override the default command used to start the server
 			--  - filetypes (table): Override the default list of associated filetypes for the server
@@ -270,9 +264,11 @@ return {
 				gopls = {},
 				pyright = {},
 				html = {
+					-- capabilities = capabilities,
 					filetypes = { "html", "htmlangular", "htmldjango" },
 				},
 				ts_ls = {
+					-- capabilities = capabilities,
 					init_options = {
 						preferences = {
 							importModuleSpecifierPreference = "relative",
@@ -281,6 +277,7 @@ return {
 					},
 				},
 				angularls = {
+					-- capabilities = capabilities,
 					cmd = angularls_new_cmd,
 					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },
 					on_new_config = function(new_config, _)
@@ -288,10 +285,12 @@ return {
 					end,
 				},
 				eslint = {
+					-- capabilities = capabilities,
 					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },
 				},
 				cssls = {},
 				bashls = {
+					-- capabilities = capabilities,
 					filetypes = { "bash", "sh", "zsh" },
 				},
 				typos_lsp = {
@@ -302,7 +301,6 @@ return {
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},
-					-- capabilities = {},
 					--
 					settings = {
 						Lua = {
@@ -316,45 +314,16 @@ return {
 				},
 			}
 
-			-- Ensure the servers and tools above are installed
-			--  To check the current status of installed tools and/or manually install
-			--  other tools, you can run
-			--    :Mason
-			--
-			--  You can press `g?` for help in this menu.
-			-- require("mason").setup()
-
-			-- You can add other tools here that you want Mason to install
-			-- for you, so that they are available from within Neovim.
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-			-- require("java").setup({
-			--	jdk = {
-			--		-- install jdk using mason.nvim
-			--		auto_install = true,
-			--		version = "21.0.5",
-			--	},
-			-- })
-			-- require("lspconfig").jdtls.setup({})
-
-			require("mason-lspconfig").setup({
-				ensure_installed = {},
-				automatic_installation = false,
-				handlers = {
-					function(server_name)
-						local server = servers[server_name] or {}
-						-- This handles overriding only values explicitly passed
-						-- by the server configuration above. Useful when disabling
-						-- certain features of an LSP (for example, turning off formatting for ts_ls)
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						require("lspconfig")[server_name].setup(server)
-					end,
-				},
-			})
+			for server_name, server_config in pairs(servers) do
+				vim.lsp.config(server_name, server_config)
+				vim.lsp.enable(server_name)
+			end
 		end,
 	},
 }

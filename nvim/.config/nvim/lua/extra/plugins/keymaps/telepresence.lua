@@ -22,7 +22,7 @@ local function telepresenceQuit()
 end
 
 local function telepresenceStart()
-	executeCommands({ goToFeaturePath(), MISE_ENVIRONMENT, START_FEATURE })
+	executeCommands({ goToFeaturePath(), MISE_ENVIRONMENT, START_FEATURE }, "", "zsh")
 end
 
 -- SECTION: Keybinds

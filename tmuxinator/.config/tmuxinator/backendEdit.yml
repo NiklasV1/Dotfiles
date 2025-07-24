@@ -4,7 +4,7 @@ name: backend-edit
 root: ~/Programming/snapaddy-backend/
 
 startup_window: Editor
-on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node18.zsh && lazygit
+on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node20.zsh && lazygit
 
 windows:
   - Editor: cd ~/Programming/snapaddy-backend/packages/server/ && nvim

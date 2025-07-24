@@ -1,0 +1,11 @@
+# /home/niklasv/.config/tmuxinator/k8sConfig.yml
+
+name: k8s-config
+root: ~/Programming/snapaddy-k8s-config/
+
+startup_window: Editor
+on_project_first_start: lazygit
+
+windows:
+  - Editor: nvim
+  - Terminal:

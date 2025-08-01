@@ -158,7 +158,7 @@ alias npmstart="npm install && npm run start"
 # Python
 alias python="python3"
 # Navigation
-alias backend="cd $HOME/Programming/snapaddy-backend/packages/server && nvm use 18"
+alias backend="cd $HOME/Programming/snapaddy-backend/packages/server && nvm use 20"
 # Tmuxinator
 tmux_environments=(backend questionsBackend settingsUi nvimConfig snapaddyApp components backendEdit cardsConfigurator cardsPage analyticsWeb watchdog snapaddyTypes restApi backendKnowledge dataQuality k8sConfig)
 for tmux_environment in $tmux_environments; do

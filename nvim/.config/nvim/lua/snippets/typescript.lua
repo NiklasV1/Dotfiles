@@ -37,10 +37,13 @@ return {
 			{ delimiters = "|/" }
 		)
 	),
-}
 
--- 	fmt("readonly #{name} = inject({service});", {
--- 		name = i(1, "name"),
--- 		service = i(2, "service"),
--- 	}),
--- }),
+	-- Arrow function
+	s(
+		"af",
+		fmt([[(|args/) => { |body/ }]], {
+			args = i(1, "args"),
+			body = i(0),
+		}, { delimiters = "|/" })
+	),
+}

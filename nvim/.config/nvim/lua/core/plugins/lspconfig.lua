@@ -242,6 +242,29 @@ return {
 				"--forceStrictTemplates",
 			}
 
+			local function ignore_on_backend_dir(filename)
+				-- Don't attach to files in snapaddy-backend directory
+				if string.match(filename, "snapaddy%-backend") then
+					return nil
+				end
+				-- Use default root_dir logic for angularls
+				return vim.fs.dirname(vim.fs.find("package.json", { path = filename, upward = true })[1])
+					or vim.fs.dirname(vim.fs.find("node_modules", { path = filename, upward = true })[1])
+					or vim.fs.dirname(vim.fs.find(".git", { path = filename, upward = true })[1])
+			end
+
+			local function not_in_backend(bufnr, on_dir)
+				local filename = vim.api.nvim_buf_get_name(bufnr)
+
+				local root = ignore_on_backend_dir(filename)
+
+				if root then
+					on_dir(root)
+				end
+
+				-- Do not call on_dir if root is nil to prevent the client from attaching to the buffer
+			end
+
 			--  Add any additional override configuration in the following tables. Available keys are:
 			--  - cmd (table): Override the default command used to start the server
 			--  - filetypes (table): Override the default list of associated filetypes for the server
@@ -280,20 +303,13 @@ return {
 					-- capabilities = capabilities,
 					cmd = angularls_new_cmd,
 					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },
-					root_dir = function(fname)
-						-- Don't attach to files in snapaddy-backend directory
-						if string.match(fname, "snapaddy%-backend") then
-							return nil
-						end
-						-- Use default root_dir logic for angularls
-						local lspconfig = require('lspconfig')
-						return lspconfig.util.find_package_json_ancestor(fname)
-							or lspconfig.util.find_node_modules_ancestor(fname)
-							or lspconfig.util.find_git_ancestor(fname)
-					end,
+					root_dir = not_in_backend,
 					on_new_config = function(new_config, _)
 						new_config.cmd = angularls_new_cmd
 					end,
+				},
+				tailwindcss = {
+					root_dir = not_in_backend,
 				},
 				eslint = {
 					-- capabilities = capabilities,

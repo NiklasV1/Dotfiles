@@ -280,6 +280,17 @@ return {
 					-- capabilities = capabilities,
 					cmd = angularls_new_cmd,
 					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },
+					root_dir = function(fname)
+						-- Don't attach to files in snapaddy-backend directory
+						if string.match(fname, "snapaddy%-backend") then
+							return nil
+						end
+						-- Use default root_dir logic for angularls
+						local lspconfig = require('lspconfig')
+						return lspconfig.util.find_package_json_ancestor(fname)
+							or lspconfig.util.find_node_modules_ancestor(fname)
+							or lspconfig.util.find_git_ancestor(fname)
+					end,
 					on_new_config = function(new_config, _)
 						new_config.cmd = angularls_new_cmd
 					end,

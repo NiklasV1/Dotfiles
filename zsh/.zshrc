@@ -106,7 +106,8 @@ export NVM_DIR="$HOME/.nvm"
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
+
+source <(fzf --zsh)
 
 # SECTION: Environment variables
 
@@ -159,12 +160,6 @@ alias npmstart="npm install && npm run start"
 alias python="python3"
 # Navigation
 alias backend="cd $HOME/Programming/snapaddy-backend/packages/server && nvm use 20"
-# Tmuxinator
-tmux_environments=(backend questionsBackend settingsUi nvimConfig snapaddyApp components backendEdit cardsConfigurator cardsPage analyticsWeb watchdog snapaddyTypes restApi backendKnowledge dataQuality k8sConfig)
-for tmux_environment in $tmux_environments; do
-  alias "${tmux_environment}Up"="tmuxinator start $tmux_environment"
-  alias "${tmux_environment}Down"="tmuxinator stop $tmux_environment"
-done
 # Daily notes
 alias daily="tmuxinator start daily-notes"
 alias dailyDown="tmuxinator stop daily-notes"
@@ -182,3 +177,22 @@ alias rxe="rushx test:e2e"
 alias rb="rush update && rush build-only"
 alias rsf="rushx build && rushx start:feat"
 alias vibe="opencode"
+alias backend-mcp-server="cd /home/niklasv/Programming/snapaddy-backend/packages/tools/backend-mcp-server && pnpm start"
+
+# Tmuxinator
+tmux_environments=(backend questionsBackend settingsUi nvimConfig snapaddyApp components backendEdit cardsConfigurator cardsPage analyticsWeb watchdog snapaddyTypes restApi backendKnowledge dataQuality k8sConfig requestTesting)
+# Tmux environment selectors
+up() {
+  local env
+  env=$(print -l $tmux_environments | fzf)
+  if [[ -n "$env" ]]; then
+    tmuxinator start $env
+  fi
+}
+down() {
+  local env
+  env=$(print -l $tmux_environments | fzf)
+  if [[ -n "$env" ]]; then
+    tmuxinator stop $env
+  fi
+}

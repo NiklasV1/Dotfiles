@@ -8,7 +8,7 @@ export NVM_DIR="$HOME/.nvm"
 export NODE_ENV=development
 
 cd ~/Programming/snapaddy-rest-api/
-nvm use 18
+nvm use 20
 pnpm install --config.confirmModulesPurge=false
 pnpm build
 pnpm run start

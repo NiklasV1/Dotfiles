@@ -4,7 +4,7 @@ name: watchdog
 root: ~/Programming/snapaddy-watchdog/
 
 startup_window: Editor
-on_project_first_start: ~/.config/tmuxinator/scripts/shared/node18.zsh && lazygit
+on_project_first_start: ~/.config/tmuxinator/scripts/shared/node20.zsh && lazygit
 
 windows:
   - Editor: nvim

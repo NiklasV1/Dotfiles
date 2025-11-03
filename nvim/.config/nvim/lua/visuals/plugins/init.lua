@@ -27,7 +27,7 @@ return {
 	require("visuals.plugins.neo-tree"),
 
 	-- Hex colorizer
-	require("visuals.plugins.hexcolors"),
+	-- require("visuals.plugins.hexcolors"),
 
 	-- Treesitter-context
 	require("visuals.plugins.treesitter-context"),

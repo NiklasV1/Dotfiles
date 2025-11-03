@@ -20,7 +20,7 @@ local function rushFull()
 end
 
 local function rushXBuild()
-	executeCommands({ UPDATE, goToFeaturePath(), BUILD_FEATURE })
+	executeCommands({ goToFeaturePath(), BUILD_FEATURE })
 end
 
 local function parseRush()

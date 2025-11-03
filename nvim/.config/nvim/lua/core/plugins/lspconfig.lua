@@ -308,9 +308,10 @@ return {
 						new_config.cmd = angularls_new_cmd
 					end,
 				},
-				tailwindcss = {
-					root_dir = not_in_backend,
-				},
+				-- tailwindcss = {
+				-- 	filetypes = { "html", "htmlangular", "htmldjango" },
+				-- 	root_dir = not_in_backend,
+				-- },
 				eslint = {
 					-- capabilities = capabilities,
 					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },

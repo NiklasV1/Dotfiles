@@ -39,6 +39,7 @@ return {
 				html = { "prettier", stop_after_first = true },
 				htmlangular = { "prettier", stop_after_first = true },
 				python = { "autopep8" },
+				json = { "jq" },
 				-- markdown = { "mdformat" },
 				markdown = { "prettierd", "prettier", stop_after_first = true },
 				-- Conform can also run multiple formatters sequentially
@@ -46,6 +47,7 @@ return {
 				--
 				-- You can use 'stop_after_first' to run the first available formatter from the list
 				-- javascript = { "prettierd", "prettier", stop_after_first = true },
+				sql = { "sql-formatter" },
 			},
 		},
 	},

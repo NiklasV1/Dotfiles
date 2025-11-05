@@ -1,4 +1,33 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "system"
+  "theme": "system",
+  "mcp": {
+    "snapaddy-components": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "markdown-mcp-resource@latest",
+        "https://components.snapaddy.com/assets/mcp/index.json"
+      ],
+      "enabled": true
+    },
+    "snapaddy-backend": {
+      "type": "local",
+      "command": [
+        "node",
+        "/home/niklasv/Programming/snapaddy-backend/packages/tools/backend-mcp-server/dist/main.js"
+      ],
+      "enabled": true
+    },
+    "postgres": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgres://sa_backend:mySecretDBPassword@localhost:5432/postgres"
+      ]
+    }
+  }
 }

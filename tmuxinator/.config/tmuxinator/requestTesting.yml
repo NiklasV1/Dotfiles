@@ -1,0 +1,11 @@
+# /home/niklasv/.config/tmuxinator/requestTesting.yml
+
+name: request-testing
+root: ~/Programming/request-testing/
+
+startup_window: Editor
+on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node22.zsh && lazygit
+
+windows:
+  - Editor: nvim
+  - Terminal:

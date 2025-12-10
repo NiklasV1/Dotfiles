@@ -291,6 +291,8 @@ return {
 					filetypes = { "html", "htmlangular", "htmldjango" },
 				},
 				ts_ls = {
+					-- Disabled for now
+					-- filetypes = {},
 					-- capabilities = capabilities,
 					init_options = {
 						preferences = {
@@ -326,6 +328,14 @@ return {
 						diagnosticSeverity = "Hint",
 					},
 				},
+				-- tsgo = {
+				-- 	init_options = {
+				-- 		preferences = {
+				-- 			importModuleSpecifierPreference = "relative",
+				-- 			importModuleSpecifierEnding = "minimal",
+				-- 		},
+				-- 	},
+				-- },
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},

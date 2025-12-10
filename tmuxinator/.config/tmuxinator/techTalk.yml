@@ -1,0 +1,11 @@
+# /home/niklasv/.config/tmuxinator/techTalk.yml
+
+name: tech-talk
+root: ~/Documents/tech_talks/
+
+startup_window: Editor
+on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node22.zsh && lazygit
+
+windows:
+  - Editor: nvim
+  - Terminal:

@@ -76,6 +76,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+set -o vi
+
 source $HOME/.sdkman/bin/sdkman-init.sh
 
 export NVM_DIR="$HOME/.nvm"
@@ -180,7 +182,7 @@ alias vibe="opencode"
 alias backend-mcp-server="cd /home/niklasv/Programming/snapaddy-backend/packages/tools/backend-mcp-server && pnpm start"
 
 # Tmuxinator
-tmux_environments=(backend questionsBackend settingsUi nvimConfig snapaddyApp components backendEdit cardsConfigurator cardsPage analyticsWeb watchdog snapaddyTypes restApi backendKnowledge dataQuality k8sConfig requestTesting)
+tmux_environments=(backend questionsBackend settingsUi nvimConfig snapaddyApp components backendEdit cardsConfigurator cardsPage analyticsWeb watchdog snapaddyTypes restApi backendKnowledge dataQuality k8sConfig requestTesting techTalk)
 # Tmux environment selectors
 up() {
   local env
@@ -196,3 +198,7 @@ down() {
     tmuxinator stop $env
   fi
 }
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

@@ -1,0 +1,11 @@
+# /home/niklasv/.config/tmuxinator/snapaddyUtils.yml
+
+name: snapaddy-utils
+root: ~/Programming/snapaddy-utils/
+
+startup_window: Editor
+on_project_first_start: lazygit
+
+windows:
+  - Editor: nvim
+  - Terminal:

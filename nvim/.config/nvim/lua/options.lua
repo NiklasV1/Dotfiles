@@ -68,3 +68,9 @@ vim.opt.scrolloff = 20
 
 -- Cfilter package
 vim.cmd("packadd cfilter")
+
+-- Folding
+vim.opt.fillchars = { fold = " " }
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = false
+vim.opt.foldlevel = 99

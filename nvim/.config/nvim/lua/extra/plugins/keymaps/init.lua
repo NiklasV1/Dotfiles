@@ -1,5 +1,8 @@
 -- NOTE: Keymap files
 
+-- Execute keymap
+require("extra.plugins.keymaps.execute")
+
 -- Jest keymaps
 require("extra.plugins.keymaps.jest")
 

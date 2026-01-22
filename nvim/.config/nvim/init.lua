@@ -93,4 +93,4 @@ require("keymaps")
 require("lazy-install")
 
 -- Load plugins
-require("lazy-plugins")
+require("plugins")

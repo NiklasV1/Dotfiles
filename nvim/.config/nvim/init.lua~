@@ -78,6 +78,10 @@ vim.opt.splitright = true -- Vertical splits go right
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Performance improvements
+vim.opt.redrawtime = 10000
+vim.opt.maxmempattern = 20000
+
 -- Cfilter package for quickfix filtering
 vim.cmd("packadd cfilter")
 

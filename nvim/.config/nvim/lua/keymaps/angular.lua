@@ -1,10 +1,10 @@
--- NOTE: Angular file switching
+-- Angular file switching
 local angularCommandGroup = vim.api.nvim_create_augroup("angularCommandGroup", { clear = true })
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = { "html", "typescript", "htmlangular", "css", "scss" },
 	group = angularCommandGroup,
 	desc = "Apply angular features to Angular files",
-	callback = function(args)
+	callback = function()
 		vim.keymap.set("n", "<leader>ac", function()
 			vim.cmd([[edit %:h/%:t:r.ts]])
 		end, { desc = "[A]ngular [C]omponent" })

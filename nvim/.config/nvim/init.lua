@@ -42,7 +42,8 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" } -- chars to repl
 vim.opt.inccommand = "split" -- Preview substitutions
 
 -- File handling
-vim.opt.backup = true -- Create backup files
+vim.opt.backup = false -- Don't Create backup files
+vim.opt.writebackup = false -- Don't Create backup files
 vim.opt.swapfile = true -- Create swap files
 vim.opt.undofile = true -- Persistent undo
 vim.opt.undodir = vim.fn.expand("~/.vim/undodir") -- Undo directory
@@ -87,9 +88,6 @@ vim.cmd("packadd cfilter")
 
 -- Keymaps
 require("keymaps")
-
--- Custom keymaps
-require("extra.plugins.keymaps")
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 require("lazy-install")

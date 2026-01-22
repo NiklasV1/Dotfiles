@@ -1,3 +1,4 @@
+-- TODO: Refactor to new format
 -- Golang keybinds
 local makeFileCommandGroup = vim.api.nvim_create_augroup("makeFileCommandGroup", { clear = true })
 vim.api.nvim_create_autocmd({ "FileType" }, {

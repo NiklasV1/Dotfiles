@@ -1,3 +1,4 @@
+-- TODO: Refactor to new format
 -- Angular file switching
 local angularCommandGroup = vim.api.nvim_create_augroup("angularCommandGroup", { clear = true })
 vim.api.nvim_create_autocmd({ "FileType" }, {

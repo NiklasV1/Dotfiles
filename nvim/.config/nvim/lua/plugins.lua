@@ -22,18 +22,18 @@ require("lazy").setup({
 	-- Formatting setup
 	require("plugins.conform"),
 
-	-- Auto detect indentation rules
-	-- TODO: Maybe not needed
-	-- require("plugins.vim-sleuth"),
+	-- Grapple
+	require("plugins.grapple"),
 
 	-- Lazy-Git integration
 	require("plugins.lazygit"),
 
+	-- Auto detect indentation rules
+	-- TODO: Maybe not needed
+	-- require("plugins.vim-sleuth"),
+
 	-- Auto close HTML/XML tags
 	require("plugins.ts-autotag"),
-
-	-- Grapple
-	require("plugins.grapple"),
 
 	-- Treesitter textobjects
 	require("plugins.treesitter-textobjects"),

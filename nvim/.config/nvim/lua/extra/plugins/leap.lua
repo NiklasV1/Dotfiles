@@ -2,7 +2,7 @@ return {
 	name = "leap",
 	url = "https://codeberg.org/andyg/leap.nvim.git",
 	enabled = true,
-	event = "VimEnter",
+	lazy = false,
 	config = function(_, opts)
 		local leap = require("leap")
 		for k, v in pairs(opts) do

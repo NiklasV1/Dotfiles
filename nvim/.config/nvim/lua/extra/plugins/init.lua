@@ -8,6 +8,9 @@ return {
 	-- Treesitter textobjects
 	require("extra.plugins.treesitter-textobjects"),
 
+	-- Leap
+	require("extra.plugins.leap"),
+
 	-- Treesitter textsubjects
 	-- require("extra.plugins.treesitter-textsubjects"),
 

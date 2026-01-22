@@ -3,7 +3,7 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		local colors = require("colors")
-		local palette = colors.palette
+		-- local palette = colors.palette
 		-- vim.print(palette)
 
 		require("lualine").setup({

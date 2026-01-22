@@ -1,6 +1,6 @@
 return {
 	-- Color scheme
-	require("visuals.plugins.color-schemes.github"),
+	-- require("visuals.plugins.color-schemes.github"),
 	-- require("visuals.plugins.color-schemes.modus"),
 	-- require("visuals.plugins.color-schemes.melange"),
 	-- require("visuals.plugins.color-schemes.alabaster"),
@@ -9,7 +9,7 @@ return {
 	-- require("visuals.plugins.color-schemes.one-dark"),
 
 	-- Status Line
-	require("visuals.plugins.lualine"),
+	-- require("visuals.plugins.lualine"),
 
 	-- Git change signs
 	require("visuals.plugins.gitsigns"),
@@ -30,5 +30,5 @@ return {
 	-- require("visuals.plugins.hexcolors"),
 
 	-- Treesitter-context
-	require("visuals.plugins.treesitter-context"),
+	-- require("visuals.plugins.treesitter-context"),
 }

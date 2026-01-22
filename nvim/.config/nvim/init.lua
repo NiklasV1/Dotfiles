@@ -89,8 +89,8 @@ vim.cmd("packadd cfilter")
 -- Keymaps
 require("keymaps")
 
--- [[ Install `lazy.nvim` plugin manager ]]
+-- Install plugin manager
 require("lazy-install")
 
--- [[ Configure and install plugins ]]
+-- Load plugins
 require("lazy-plugins")

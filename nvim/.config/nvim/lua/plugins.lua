@@ -43,12 +43,6 @@ require("lazy").setup({
 
 	-- Color scheme
 	-- require("plugins.color-schemes.github"),
-	-- require("plugins.color-schemes.modus"),
-	-- require("plugins.color-schemes.melange"),
-	-- require("plugins.color-schemes.alabaster"),
-	-- require("plugins.color-schemes.sonokai"),
-	-- require("plugins.color-schemes.oh-lucy"),
-	-- require("plugins.color-schemes.one-dark"),
 
 	-- Status Line
 	-- TODO: Maybe not needed

@@ -24,6 +24,7 @@ vim.opt.incsearch = true -- Show matches as you type
 vim.cmd.colorscheme("retrobox") -- Colorscheme
 vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#ffffff", bg = "#303030" })
 vim.api.nvim_set_hl(0, "TelescopePreviewLine", { fg = "#ffffff", bg = "#303030" })
+vim.api.nvim_set_hl(0, "Visual", { bg = "#404040" })
 vim.cmd("set background=dark") -- Dark mode
 vim.opt.termguicolors = true -- Enable 24-bit colors
 vim.g.have_nerd_font = true -- Enable nerd font

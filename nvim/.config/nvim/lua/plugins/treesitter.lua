@@ -10,7 +10,6 @@ return {
 			"javascript",
 			"scss",
 			"bash",
-			"zsh",
 			"c",
 			"diff",
 			"lua",

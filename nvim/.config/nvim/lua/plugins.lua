@@ -28,10 +28,6 @@ require("lazy").setup({
 	-- Lazy-Git integration
 	require("plugins.lazygit"),
 
-	-- Auto detect indentation rules
-	-- TODO: Maybe not needed
-	-- require("plugins.vim-sleuth"),
-
 	-- Auto close HTML/XML tags
 	require("plugins.ts-autotag"),
 

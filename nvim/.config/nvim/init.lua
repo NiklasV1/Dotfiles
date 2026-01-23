@@ -3,7 +3,8 @@ vim.opt.number = true -- Line numbers
 vim.opt.relativenumber = true -- Relative line numbers
 vim.opt.cursorline = true -- Highlight current line
 vim.opt.scrolloff = 20 -- Keep 10 lines above/below cursor
-vim.opt.wrap = true -- Wrap lines
+vim.opt.wrap = false -- Don't wrap lines
+vim.opt.sidescrolloff = 8 -- Keep 8 cols shown
 vim.opt.breakindent = true -- Indent wrapped lines
 
 -- Indentation
@@ -40,7 +41,7 @@ vim.opt.conceallevel = 0 -- Don't hide markup
 vim.opt.concealcursor = "" -- Don't hide cursor line markup
 vim.opt.lazyredraw = true -- Don't redraw during macros
 vim.opt.synmaxcol = 300 -- Syntax highlighting limit
-vim.opt.list = false -- show special characters like tab
+vim.opt.list = false -- Don't show special characters like tab
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" } -- chars to replace special characters with
 vim.opt.inccommand = "split" -- Preview substitutions
 

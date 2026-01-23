@@ -182,7 +182,7 @@ alias vibe="opencode"
 alias backend-mcp-server="cd /home/niklasv/Programming/snapaddy-backend/packages/tools/backend-mcp-server && pnpm start"
 
 # Tmuxinator
-tmux_environments=(backend questionsBackend settingsUi nvimConfig snapaddyApp components backendEdit cardsConfigurator cardsPage analyticsWeb watchdog snapaddyTypes restApi backendKnowledge dataQuality k8sConfig requestTesting techTalk snapaddyUtils userRegistration)
+tmux_environments=(~/.config/tmuxinator/*.yml(:t:r))
 # Tmux environment selectors
 up() {
   local env
@@ -198,7 +198,6 @@ down() {
     tmuxinator stop $env
   fi
 }
-
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)

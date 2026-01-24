@@ -36,10 +36,6 @@ require("lazy").setup({
 	-- Leap
 	require("plugins.leap"),
 
-	-- Status Line
-	-- TODO: Maybe not needed
-	-- require("plugins.lualine"),
-
 	-- Git change signs
 	require("plugins.gitsigns"),
 

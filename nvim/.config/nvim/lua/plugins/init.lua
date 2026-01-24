@@ -39,9 +39,6 @@ require("lazy").setup({
 	-- Git change signs
 	require("plugins.gitsigns"),
 
-	-- Indentation lines
-	require("plugins.indent_line"),
-
 	-- Todo comments and notes highlighting
 	require("plugins.todo-comments"),
 

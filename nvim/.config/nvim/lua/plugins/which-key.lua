@@ -33,30 +33,28 @@ local icons = {
 }
 
 return {
-	{
-		"folke/which-key.nvim",
-		event = "VimEnter",
-		opts = {
-			delay = 0,
-			win = {
-				border = "single",
-			},
-			icons = icons,
-			spec = {
-				{ "<leader>s", group = "[S]earch" },
-				{ "<leader>g", group = "[G]rapple" },
-				{ "<leader>q", group = "[Q]quickfix list" },
-				{ "<leader>a", group = "[A]ngular" },
-				{ "<leader>j", group = "[J]est" },
-				{ "<leader>r", group = "[R]ush" },
-				{ "<leader>rx", group = "[R]ush[X]" },
-				-- Maybe remove these:
-				{ "<leader>c", group = "[C]ode", mode = { "n", "x" } },
-				{ "<leader>T", group = "[T]oggle" },
-				{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
-				{ "<leader>l", group = "[L]azy Git" },
-				{ "<leader>y", group = "[Y]ank" },
-			},
+	"folke/which-key.nvim",
+	event = "VimEnter",
+	opts = {
+		delay = 0,
+		win = {
+			border = "single",
+		},
+		icons = icons,
+		spec = {
+			{ "<leader>s", group = "[S]earch" },
+			{ "<leader>g", group = "[G]rapple" },
+			{ "<leader>q", group = "[Q]quickfix list" },
+			{ "<leader>a", group = "[A]ngular" },
+			{ "<leader>j", group = "[J]est" },
+			{ "<leader>r", group = "[R]ush" },
+			{ "<leader>rx", group = "[R]ush[X]" },
+			-- Maybe remove these:
+			{ "<leader>c", group = "[C]ode", mode = { "n", "x" } },
+			{ "<leader>T", group = "[T]oggle" },
+			{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
+			{ "<leader>l", group = "[L]azy Git" },
+			{ "<leader>y", group = "[Y]ank" },
 		},
 	},
 }

@@ -45,9 +45,11 @@ end, { desc = "[Y]ank [F]ilename" })
 -- Highlight when yanking text
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
-	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	group = vim.api.nvim_create_augroup("highlightYankGroup", { clear = true }),
 	callback = function()
-		vim.highlight.on_yank()
+		if vim.v.event.operator == "y" then
+			vim.highlight.on_yank()
+		end
 	end,
 })
 

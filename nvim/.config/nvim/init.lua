@@ -1,6 +1,6 @@
 -- Basic settings
 vim.opt.number = true -- Line numbers
-vim.opt.relativenumber = true -- Relative line numbers
+vim.opt.relativenumber = false -- Relative line numbers
 vim.opt.cursorline = true -- Highlight current line
 vim.opt.scrolloff = 20 -- Keep 10 lines above/below cursor
 vim.opt.wrap = false -- Don't wrap lines
@@ -44,6 +44,7 @@ vim.opt.synmaxcol = 300 -- Syntax highlighting limit
 vim.opt.list = false -- Don't show special characters like tab
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" } -- chars to replace special characters with
 vim.opt.inccommand = "split" -- Preview substitutions
+vim.opt.winborder = "single" -- Window borders
 
 -- File handling
 vim.opt.backup = false -- Don't Create backup files
@@ -68,12 +69,6 @@ vim.opt.mouse = "a" -- Enable mouse support
 vim.opt.clipboard = "unnamedplus" -- Use system clipboard
 vim.opt.modifiable = true -- Allow buffer modifications
 vim.opt.encoding = "UTF-8" -- Set encoding
-
--- Folding settings
-vim.opt.foldmethod = "expr" -- Use expression for folding
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- Use treesitter for folding
-vim.opt.foldlevel = 99 -- Start with all folds open
-vim.opt.fillchars = { fold = " " }
 
 -- Split behavior
 vim.opt.splitbelow = true -- Horizontal splits go below

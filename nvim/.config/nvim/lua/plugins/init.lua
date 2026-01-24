@@ -37,9 +37,6 @@ require("lazy").setup({
 	-- Leap
 	require("plugins.leap"),
 
-	-- Color scheme
-	-- require("plugins.color-schemes.github"),
-
 	-- Status Line
 	-- TODO: Maybe not needed
 	-- require("plugins.lualine"),

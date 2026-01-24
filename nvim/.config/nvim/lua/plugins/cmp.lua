@@ -21,8 +21,6 @@ return {
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 			luasnip.config.setup({})
-
-			-- Load snippets
 			require("snippets")
 
 			cmp.setup({
@@ -49,5 +47,3 @@ return {
 		end,
 	},
 }
-
--- vim: ts=2 sts=2 sw=2 et

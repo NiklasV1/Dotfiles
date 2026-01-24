@@ -36,7 +36,7 @@ require("lazy").setup({
 	-- Leap
 	require("plugins.leap"),
 
-	-- Git change signs
+	-- Git signs
 	require("plugins.gitsigns"),
 
 	-- Keymap helper window

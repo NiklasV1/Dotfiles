@@ -18,8 +18,7 @@ local function setupKeymaps(builtin, borders)
 	end, { desc = "[S]earch [E]rrors" })
 
 	-- Quickfix search
-	vim.keymap.set("n", "<leader>qs", builtin.quickfix, { desc = "[Q]uickfix [S]earch" })
-	vim.keymap.set("n", "<leader>qh", builtin.quickfixhistory, { desc = "[Q]uickfix [H]istory" })
+	vim.keymap.set("n", "<leader>sq", builtin.quickfix, { desc = "[S]earch [Q]uickfix" })
 
 	-- Misc search
 	vim.keymap.set("n", "<leader>sp", builtin.builtin, { desc = "[S]earch [P]ickers" })

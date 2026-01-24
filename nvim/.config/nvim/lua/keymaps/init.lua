@@ -1,3 +1,14 @@
+-- LSP
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
+vim.keymap.set("n", "grn", vim.lsp.buf.rename, { desc = "[R]e[n]ame" })
+vim.keymap.set({ "n", "x" }, "gra", vim.lsp.buf.code_action, { desc = "Code [A]ction" })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "[G]oto [D]efinition" })
+vim.keymap.set("n", "grr", vim.lsp.buf.references, { desc = "[G]oto [R]eferences" })
+vim.keymap.set("n", "gri", vim.lsp.buf.implementation, { desc = "[G]oto [I]mplementation" })
+vim.keymap.set("n", "gri", vim.lsp.buf.type_definition, { desc = "[G]oto [T]ype definition" })
+vim.keymap.set("n", "<leader>si", vim.lsp.buf.incoming_calls, { desc = "[S]earch [I]ncoming" })
+vim.keymap.set("n", "<leader>so", vim.lsp.buf.outgoing_calls, { desc = "[S]earch [O]utgoing" })
+
 -- Common command typos
 vim.api.nvim_create_user_command("W", ":w", {})
 vim.api.nvim_create_user_command("Wa", ":wa", {})

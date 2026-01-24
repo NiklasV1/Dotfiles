@@ -8,7 +8,7 @@ local function setupKeymaps(builtin, borders)
 
 	-- Grep search
 	vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch [G]rep" })
-	vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
+	vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch [W]ord" })
 
 	-- Diagnostics search
 	vim.keymap.set("n", "<leader>se", function()
@@ -51,6 +51,11 @@ local function setupKeymaps(builtin, borders)
 	vim.keymap.set("n", "<leader>sn", function()
 		builtin.find_files({ cwd = vim.fn.stdpath("config") })
 	end, { desc = "[S]earch [N]eovim files" })
+
+	-- Search methods
+	vim.keymap.set("n", "<leader>sm", function()
+		require("telescope.builtin").lsp_document_symbols({ symbols = "method" })
+	end, { desc = "[S]earch [M]ethods" })
 end
 
 return {

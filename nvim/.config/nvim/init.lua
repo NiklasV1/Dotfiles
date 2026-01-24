@@ -93,3 +93,5 @@ require("lazy-install")
 
 -- Load plugins
 require("plugins")
+
+vim.lsp.enable({ "lua_ls" })

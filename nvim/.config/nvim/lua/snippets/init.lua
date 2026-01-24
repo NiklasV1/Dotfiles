@@ -1,18 +1,13 @@
--- NOTE: Setup snippets
 local ls = require("luasnip")
 
 -- Angular snippets
-local angular_snippets = require("snippets.angular")
-ls.add_snippets("typescript", angular_snippets)
+ls.add_snippets("typescript", require("snippets.angular"))
 
 -- Typescript snippets
-local typescript_snippets = require("snippets.typescript")
-ls.add_snippets("typescript", typescript_snippets)
+ls.add_snippets("typescript", require("snippets.typescript"))
 
 -- JSON snippets
-local json_snippets = require("snippets.json")
-ls.add_snippets("json", json_snippets)
+ls.add_snippets("json", require("snippets.json"))
 
 -- Go snippets
-local go_snippets = require("snippets.go")
-ls.add_snippets("go", go_snippets)
+ls.add_snippets("go", require("snippets.go"))

@@ -16,8 +16,7 @@ require("lazy").setup({
 	require("plugins.cmp"),
 
 	-- Auto close brackets
-	-- TODO: Maybe not needed
-	-- require("plugins.autopairs"),
+	require("plugins.autopairs"),
 
 	-- Formatting setup
 	require("plugins.conform"),

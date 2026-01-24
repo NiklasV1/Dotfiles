@@ -39,9 +39,6 @@ require("lazy").setup({
 	-- Git change signs
 	require("plugins.gitsigns"),
 
-	-- Todo comments and notes highlighting
-	require("plugins.todo-comments"),
-
 	-- Keymap helper window
 	require("plugins.which-key"),
 

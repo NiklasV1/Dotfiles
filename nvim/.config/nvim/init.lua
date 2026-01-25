@@ -22,18 +22,19 @@ vim.opt.hlsearch = true -- Highlight search results
 vim.opt.incsearch = true -- Show matches as you type
 
 -- Visual settings
-vim.cmd.colorscheme("retrobox") -- Colorscheme
-vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#ffffff", bg = "#303030" })
-vim.api.nvim_set_hl(0, "TelescopePreviewLine", { fg = "#ffffff", bg = "#303030" })
-vim.api.nvim_set_hl(0, "Visual", { bg = "#404040" })
-vim.cmd("set background=dark") -- Dark mode
+-- vim.cmd.colorscheme("default") -- Colorscheme
+-- vim.cmd("set background=dark") -- Dark mode
+-- vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#ffffff", bg = "#303030" })
+-- vim.api.nvim_set_hl(0, "TelescopePreviewLine", { fg = "#ffffff", bg = "#303030" })
+-- vim.api.nvim_set_hl(0, "Visual", { bg = "#404040" })
+vim.cmd.colorscheme("custom-light") -- Colorscheme
 vim.opt.termguicolors = true -- Enable 24-bit colors
 vim.g.have_nerd_font = true -- Enable nerd font
 vim.opt.signcolumn = "yes" -- Always show sign column
 vim.opt.showmatch = true -- Highlight matching brackets
 vim.opt.matchtime = 2 -- How long to show matching bracket
 vim.opt.cmdheight = 1 -- Command line height
-vim.opt.showmode = false -- Don't show mode in command line
+vim.opt.showmode = true -- Show mode in command line
 vim.opt.pumheight = 10 -- Popup menu height
 vim.opt.pumblend = 0 -- Popup menu transparency | 0 = opaque
 vim.opt.winblend = 0 -- Floating window transparency | 0 = opaque

@@ -45,6 +45,7 @@ vim.opt.list = false -- Don't show special characters like tab
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" } -- chars to replace special characters with
 vim.opt.inccommand = "split" -- Preview substitutions
 vim.opt.winborder = "single" -- Window borders
+vim.opt.laststatus = 3 -- Only one statusline
 
 -- File handling
 vim.opt.backup = false -- Don't Create backup files

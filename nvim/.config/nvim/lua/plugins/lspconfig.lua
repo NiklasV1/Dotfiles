@@ -7,7 +7,6 @@ return {
 			{ "williamboman/mason.nvim", config = true },
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
-			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
 			local home = vim.env.HOME
@@ -56,8 +55,6 @@ return {
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				gopls = {},
-				pyright = {},
 				angularls = {
 					cmd = angularls_new_cmd,
 					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },
@@ -70,27 +67,29 @@ return {
 				-- 	filetypes = { "html", "htmlangular", "htmldjango" },
 				-- 	root_dir = not_in_backend,
 				-- },
-				eslint = {
-					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },
-				},
-				cssls = {},
-				bashls = {
-					filetypes = { "bash", "sh", "zsh" },
-				},
-				typos_lsp = {
-					init_options = {
-						diagnosticSeverity = "Hint",
-					},
-				},
-				-- tsgo = {
-				-- 	init_options = {
-				-- 		preferences = {
-				-- 			importModuleSpecifierPreference = "relative",
-				-- 			importModuleSpecifierEnding = "minimal",
-				-- 		},
-				-- 	},
-				-- },
 			}
+
+			require("mason").setup()
+			require("mason-lspconfig").setup()
+			require("mason-tool-installer").setup({
+				ensure_installed = {
+					-- Lua
+					"lua_ls",
+					"stylua",
+
+					-- Web dev
+					"ts_ls",
+					"html",
+					"cssls",
+					"eslint",
+
+					-- Misc
+					"typos_lsp",
+					"gopls",
+					"pyright",
+					"bashls",
+				},
+			})
 
 			-- Auto-Install servers
 			local ensure_installed = vim.tbl_keys(servers or {})

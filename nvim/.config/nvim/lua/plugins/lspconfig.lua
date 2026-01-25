@@ -58,17 +58,6 @@ return {
 			local servers = {
 				gopls = {},
 				pyright = {},
-				html = {
-					filetypes = { "html", "htmlangular", "htmldjango" },
-				},
-				ts_ls = {
-					init_options = {
-						preferences = {
-							importModuleSpecifierPreference = "relative",
-							importModuleSpecifierEnding = "minimal",
-						},
-					},
-				},
 				angularls = {
 					cmd = angularls_new_cmd,
 					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },

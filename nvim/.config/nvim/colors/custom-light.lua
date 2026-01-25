@@ -198,6 +198,8 @@ hl("DiagnosticError", { link = "ErrorMsg" })
 
 -- Syntax Groups
 hl("Comment", { fg = colors.softthulian500 })
+hl("SpecialComment", { fg = colors.alert600 })
+hl("Todo", { fg = colors.alert600 })
 hl("String", { fg = colors.green700 })
 hl("Character", { link = "String" })
 hl("Number", { fg = colors.lavender600 })

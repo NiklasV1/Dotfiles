@@ -154,6 +154,7 @@ hl("NormalFloat", { link = "Normal" })
 hl("Cursor", { bg = colors.black, fg = colors.white })
 hl("CursorLine", { bg = colors.gray200 })
 hl("Visual", { bg = colors.lightblue100 })
+hl("VisualNOS", { link = "Visual" })
 hl("WinSeparator", { link = "Normal" })
 hl("VertSplit", { link = "WinSeparator" })
 hl("SignColumn", { fg = colors.gray400 })
@@ -183,11 +184,6 @@ hl("Question", { fg = colors.black })
 hl("SpecialKey", { link = "NonText" })
 hl("StatusLine", { fg = colors.white, bg = colors.darkgreen700 })
 hl("StatusLineNC", { link = "StatusLine" })
-
--- Title
--- TabLine
--- TabLineFill
--- TabLineSel
--- Visual
--- VisualNOS
--- WildMenu
+hl("CmpItemKindDefault", { fg = colors.darkgreen700 })
+hl("Title", { fg = colors.black, bold = true })
+hl("TabLineSel", { fg = colors.black, bg = colors.white, bold = true })

@@ -106,6 +106,9 @@ vim.cmd("packadd cfilter")
 -- Keymaps
 require("keymaps")
 
+-- Statusline
+require("statusline")
+
 -- Install plugin manager
 require("lazy-install")
 

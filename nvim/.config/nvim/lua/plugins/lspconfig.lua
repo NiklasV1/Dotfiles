@@ -12,7 +12,7 @@ local tools = {
 	"angularls",
 	"tailwindcss",
 	"eslint",
-	-- "prettierd",
+	"prettierd",
 
 	-- Misc
 	"typos_lsp",

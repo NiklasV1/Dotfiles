@@ -12,6 +12,7 @@ end
 local colors = {
 	yellow50 = "#fffbdb",
 	yellow100 = "#fff7bd",
+	yellow150 = "#fff399",
 	yellow200 = "#ffef75",
 	yellow300 = "#ffe733",
 	yellow400 = "#efd500",
@@ -76,50 +77,6 @@ local colors = {
 	darksage800 = "#2a372b",
 	darksage900 = "#141a15",
 	darksage950 = "#0b0e0b",
-	sage50 = "#f1f3f2",
-	sage100 = "#e3e8e5",
-	sage200 = "#c7d1ca",
-	sage300 = "#abbab0",
-	sage400 = "#8da093",
-	sage500 = "#718979",
-	sage600 = "#5a6d60",
-	sage700 = "#435147",
-	sage800 = "#2e3831",
-	sage900 = "#171c19",
-	sage950 = "#0c0e0c",
-	mint50 = "#f1f8f6",
-	mint100 = "#e7f3ef",
-	mint200 = "#cbe6dc",
-	mint300 = "#b4dbcd",
-	mint400 = "#8dc8b3",
-	mint500 = "#67b699",
-	mint600 = "#4a9b7d",
-	mint700 = "#38755f",
-	mint800 = "#244c3d",
-	mint900 = "#12261f",
-	mint950 = "#0a1511",
-	darkmint50 = "#eef6f7",
-	darkmint100 = "#dcecef",
-	darkmint200 = "#b6d8dc",
-	darkmint300 = "#94c5cc",
-	darkmint400 = "#6eb1ba",
-	darkmint500 = "#4f9ca6",
-	darkmint600 = "#3d7880",
-	darkmint700 = "#2e5b61",
-	darkmint800 = "#1f3e42",
-	darkmint900 = "#0f1d1f",
-	darkmint950 = "#081011",
-	darkblue50 = "#ecf3f8",
-	darkblue100 = "#d9e7f2",
-	darkblue200 = "#b4cfe4",
-	darkblue300 = "#8eb7d7",
-	darkblue400 = "#699fc9",
-	darkblue500 = "#4388bc",
-	darkblue600 = "#366c96",
-	darkblue700 = "#285170",
-	darkblue800 = "#1b364b",
-	darkblue900 = "#0d1b26",
-	darkblue950 = "#070e13",
 	lightblue50 = "#eff4fa",
 	lightblue100 = "#e0e8f6",
 	lightblue200 = "#c4d4ed",
@@ -131,17 +88,6 @@ local colors = {
 	lightblue800 = "#1a3157",
 	lightblue900 = "#0d192b",
 	lightblue950 = "#060b14",
-	darklavender50 = "#f2eff5",
-	darklavender100 = "#e8e2ee",
-	darklavender200 = "#d1c6dc",
-	darklavender300 = "#b8a6c9",
-	darklavender400 = "#a18ab7",
-	darklavender500 = "#8b6da6",
-	darklavender600 = "#74578f",
-	darklavender700 = "#5c4571",
-	darklavender800 = "#3e2e4c",
-	darklavender900 = "#1f1726",
-	darklavender950 = "#0f0c13",
 	lavender50 = "#f4f2f8",
 	lavender100 = "#eae5f1",
 	lavender200 = "#d5cae2",
@@ -153,17 +99,6 @@ local colors = {
 	lavender800 = "#3b2b4f",
 	lavender900 = "#1d1628",
 	lavender950 = "#0f0b14",
-	softlavender50 = "#f4f3f6",
-	softlavender100 = "#e5e4ec",
-	softlavender200 = "#cccad9",
-	softlavender300 = "#b4b1c7",
-	softlavender400 = "#9591b0",
-	softlavender500 = "#79739b",
-	softlavender600 = "#5e5a7d",
-	softlavender700 = "#48445f",
-	softlavender800 = "#2f2d3e",
-	softlavender900 = "#191721",
-	softlavender950 = "#0b0b0f",
 	alert50 = "#ffe5e8",
 	alert100 = "#ffccd1",
 	alert200 = "#ff9ea8",
@@ -175,17 +110,6 @@ local colors = {
 	alert800 = "#6b000b",
 	alert900 = "#380006",
 	alert950 = "#190003",
-	darkthulian50 = "#fbeff2",
-	darkthulian100 = "#f7dee5",
-	darkthulian200 = "#edbac8",
-	darkthulian300 = "#e599af",
-	darkthulian400 = "#dc7592",
-	darkthulian500 = "#d45478",
-	darkthulian600 = "#c8335d",
-	darkthulian700 = "#962646",
-	darkthulian800 = "#661a2f",
-	darkthulian900 = "#310c17",
-	darkthulian950 = "#18060b",
 	thulian50 = "#fdedf2",
 	thulian100 = "#fbdfe8",
 	thulian200 = "#f6bbcd",
@@ -223,21 +147,26 @@ local colors = {
 	white = "#ffffff",
 }
 
+-- Editor interface
 hl("Normal", { bg = colors.white, fg = colors.black })
 hl("Cursor", { bg = colors.black, fg = colors.white })
-hl("Visual", { bg = colors.lightblue200, fg = colors.black })
+hl("CursorLine", { bg = colors.gray200 })
+hl("Visual", { bg = colors.lightblue100 })
+hl("ErrorMsg", { fg = colors.alert600 })
+hl("WinSeparator", { link = "Normal" })
+hl("VertSplit", { link = "WinSeparator" })
+hl("SignColumn", { fg = colors.gray400 })
+hl("LineNr", { fg = colors.gray400 })
+hl("Search", { bg = colors.yellow150 })
+hl("CurSearch", { bg = colors.yellow300, fg = colors.black })
+hl("IncSearch", { link = "CurSearch" })
+hl("CursorLineNr", { fg = colors.black, bold = true })
+hl("MatchParen", { fg = colors.white, bg = colors.thulian600 })
+hl("ModeMsg", { fg = colors.black })
+hl("DiffAdd", { fg = colors.blackm, bg = colors.green200 })
+hl("DiffChange", { fg = colors.blackm, bg = colors.yellow150 })
+hl("DiffDelete", { fg = colors.blackm, bg = colors.alert100 })
 
--- Cursor
--- CursorLine
--- ErrorMsg
--- WinSeparator
--- VertSplit
--- SignColumn
--- IncSearch
--- LineNr
--- CursorLineNr
--- MatchParen
--- ModeMsg
 -- MoreMsg
 -- NonText
 -- Normal
@@ -248,7 +177,6 @@ hl("Visual", { bg = colors.lightblue200, fg = colors.black })
 -- PmenuSbar
 -- PmenuThumb
 -- Question
--- Search
 -- SpecialKey
 -- StatusLine
 -- StatusLineNC

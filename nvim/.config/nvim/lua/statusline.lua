@@ -37,6 +37,10 @@ local function statusline()
 		"%#StatusLine#",
 		" %{v:lua.sl_gitBranch()} | ",
 		"%t",
+		"%=",
+		"%{&fileencoding?&fileencoding:&encoding} | ",
+		"%y | ",
+		"%p%% | %l:%c ",
 	})
 end
 

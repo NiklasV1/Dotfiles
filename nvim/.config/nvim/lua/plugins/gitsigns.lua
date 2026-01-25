@@ -17,5 +17,3 @@ return {
 		require("keymaps.gitsigns").setup(require("gitsigns"))
 	end,
 }
-
--- vim: ts=2 sts=2 sw=2 et

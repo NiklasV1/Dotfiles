@@ -63,10 +63,6 @@ return {
 						new_config.cmd = angularls_new_cmd
 					end,
 				},
-				-- tailwindcss = {
-				-- 	filetypes = { "html", "htmlangular", "htmldjango" },
-				-- 	root_dir = not_in_backend,
-				-- },
 			}
 
 			require("mason").setup()
@@ -81,7 +77,9 @@ return {
 					"ts_ls",
 					"html",
 					"cssls",
+					"tailwindcss",
 					"eslint",
+					"prettierd",
 
 					-- Misc
 					"typos_lsp",

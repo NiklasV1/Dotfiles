@@ -149,10 +149,11 @@ local colors = {
 
 -- Editor interface
 hl("Normal", { bg = colors.white, fg = colors.black })
+hl("NormalNC", { link = "Normal" })
+hl("NormalFloat", { link = "Normal" })
 hl("Cursor", { bg = colors.black, fg = colors.white })
 hl("CursorLine", { bg = colors.gray200 })
 hl("Visual", { bg = colors.lightblue100 })
-hl("ErrorMsg", { fg = colors.alert600 })
 hl("WinSeparator", { link = "Normal" })
 hl("VertSplit", { link = "WinSeparator" })
 hl("SignColumn", { fg = colors.gray400 })
@@ -163,28 +164,30 @@ hl("IncSearch", { link = "CurSearch" })
 hl("CursorLineNr", { fg = colors.black, bold = true })
 hl("MatchParen", { fg = colors.white, bg = colors.thulian600 })
 hl("ModeMsg", { fg = colors.black })
-hl("DiffAdd", { fg = colors.blackm, bg = colors.green200 })
-hl("DiffChange", { fg = colors.blackm, bg = colors.yellow150 })
-hl("DiffDelete", { fg = colors.blackm, bg = colors.alert100 })
+hl("DiffAdd", { fg = colors.black, bg = colors.green200 })
+hl("DiffChange", { fg = colors.black, bg = colors.yellow150 })
+hl("DiffDelete", { fg = colors.black, bg = colors.alert100 })
+hl("OkMsg", { fg = colors.black })
+hl("WarningMsg", { fg = colors.yellow500 })
+hl("ErrorMsg", { fg = colors.alert600 })
+hl("MoreMsg", { fg = colors.black })
+hl("FloatBorder", { link = "NormalFloat" })
+hl("FloatShadow", { bg = colors.gray500 })
+hl("FloatShadowThrough", { link = "FloatShadow" })
+hl("NonText", { fg = colors.gray400 })
+hl("Pmenu", { fg = colors.black, bg = colors.gray200 })
+hl("PmenuSel", { fg = colors.white, bg = colors.black })
+hl("PmenuSbar", { link = "Pmenu" })
+hl("PmenuSbar", { fg = colors.black, bg = colors.gray300 })
+hl("Question", { fg = colors.black })
+hl("SpecialKey", { link = "NonText" })
+hl("StatusLine", { fg = colors.white, bg = colors.darkgreen700 })
+hl("StatusLineNC", { link = "StatusLine" })
 
--- MoreMsg
--- NonText
--- Normal
--- NormalFloat
--- FloatBorder
--- Pmenu
--- PmenuSel
--- PmenuSbar
--- PmenuThumb
--- Question
--- SpecialKey
--- StatusLine
--- StatusLineNC
 -- Title
 -- TabLine
 -- TabLineFill
 -- TabLineSel
 -- Visual
 -- VisualNOS
--- WarningMsg
 -- WildMenu

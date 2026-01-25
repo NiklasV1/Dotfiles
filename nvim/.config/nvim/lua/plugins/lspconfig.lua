@@ -1,6 +1,6 @@
 -- For configs see: https://github.com/neovim/nvim-lspconfig/tree/master/lsp
 
-local ensure_installed = {
+local tools = {
 	-- Lua
 	"lua_ls",
 	"stylua",
@@ -27,12 +27,14 @@ return {
 		{ "williamboman/mason.nvim", config = true },
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		"hrsh7th/cmp-nvim-lsp",
 	},
 	config = function()
+		-- Debugging
+		-- vim.lsp.set_log_level("debug")
+
 		require("mason").setup()
 		require("mason-lspconfig").setup()
-		require("mason-tool-installer").setup({
-			ensure_installed = ensure_installed,
-		})
+		require("mason-tool-installer").setup({ ensure_installed = tools })
 	end,
 }

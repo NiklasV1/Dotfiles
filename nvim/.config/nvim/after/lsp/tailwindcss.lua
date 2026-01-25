@@ -24,6 +24,6 @@ end
 
 ---@type vim.lsp.Config
 return {
-	filetypes = { "html", "htmlangular", "htmldjango" },
+	filetypes = { "html", "htmlangular", "htmldjango", "css", "scss" },
 	root_dir = findTailwindRootDir,
 }

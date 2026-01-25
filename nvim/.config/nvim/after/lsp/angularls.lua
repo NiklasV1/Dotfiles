@@ -1,7 +1,9 @@
-local home = vim.env.HOME
-local languageServerPath = home .. "/.nvm/versions/node/v22.14.0/lib/node_modules/@angular/language-server/bin/ngserver"
-local typescriptPath = home .. "/.nvm/versions/node/v22.14.0/lib/node_modules/typescript/lib"
-local angularLanguageServicePath = home .. "/.nvm/versions/node/v22.14.0/lib/node_modules/@angular/language-service"
+local fallbackNodeVersion = vim.env.HOME .. "/.nvm/versions/node/v22.14.0"
+local nodePath = vim.fn.glob(vim.env.HOME .. "/.nvm/versions/node/v22.*", true, true)[1] or fallbackNodeVersion
+
+local languageServerPath = nodePath .. "/lib/node_modules/@angular/language-server/bin/ngserver"
+local typescriptPath = nodePath .. "/lib/node_modules/typescript/lib"
+local angularLanguageServicePath = nodePath .. "/lib/node_modules/@angular/language-service"
 
 local angularls_new_cmd = {
 	languageServerPath,

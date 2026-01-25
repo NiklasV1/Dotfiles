@@ -15,6 +15,9 @@ require("lazy").setup({
 	-- Autocompletion
 	require("plugins.cmp"),
 
+	-- Improved LSP capavilities
+	require("plugins.cmp-nvim-lsp"),
+
 	-- Auto close brackets
 	require("plugins.autopairs"),
 

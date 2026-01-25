@@ -82,6 +82,23 @@ vim.g.maplocalleader = " "
 vim.opt.redrawtime = 10000
 vim.opt.maxmempattern = 20000
 
+-- Diagnostic settings
+vim.diagnostic.config({
+	signs = true,
+	underline = true,
+	severity_sort = true,
+	update_in_insert = false,
+	float = {
+		scope = "line",
+		source = "if_many",
+		border = "single",
+	},
+	virtual_text = {
+		source = "if_many",
+		spacing = 2,
+	},
+})
+
 -- Cfilter package for quickfix filtering
 vim.cmd("packadd cfilter")
 

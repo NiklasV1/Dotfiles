@@ -10,26 +10,6 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
-			vim.diagnostic.config({
-				signs = true,
-				underline = true,
-				severity_sort = true,
-				update_in_insert = false,
-				float = {
-					scope = "line",
-					source = "if_many",
-					border = "single",
-				},
-				virtual_text = {
-					source = "if_many",
-					spacing = 2,
-				},
-			})
-
-			-- TODO: find out if this still works
-			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
-
 			local home = vim.env.HOME
 			local languageServerPath = home
 				.. "/.nvm/versions/node/v22.14.0/lib/node_modules/@angular/language-server/bin/ngserver"
@@ -79,13 +59,9 @@ return {
 				gopls = {},
 				pyright = {},
 				html = {
-					-- capabilities = capabilities,
 					filetypes = { "html", "htmlangular", "htmldjango" },
 				},
 				ts_ls = {
-					-- Disabled for now
-					-- filetypes = {},
-					-- capabilities = capabilities,
 					init_options = {
 						preferences = {
 							importModuleSpecifierPreference = "relative",
@@ -94,7 +70,6 @@ return {
 					},
 				},
 				angularls = {
-					-- capabilities = capabilities,
 					cmd = angularls_new_cmd,
 					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },
 					root_dir = not_in_backend,
@@ -107,12 +82,10 @@ return {
 				-- 	root_dir = not_in_backend,
 				-- },
 				eslint = {
-					-- capabilities = capabilities,
 					filetypes = { "typescript", "html", "htmlangular", "htmldjango" },
 				},
 				cssls = {},
 				bashls = {
-					-- capabilities = capabilities,
 					filetypes = { "bash", "sh", "zsh" },
 				},
 				typos_lsp = {

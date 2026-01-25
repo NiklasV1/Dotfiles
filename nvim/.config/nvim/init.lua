@@ -94,4 +94,7 @@ require("lazy-install")
 -- Load plugins
 require("plugins")
 
+-- Load autocommands
+require("autocommands")
+
 vim.lsp.enable({ "lua_ls" })

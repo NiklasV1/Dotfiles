@@ -19,7 +19,7 @@ return {
 			htmlangular = { prettier, stop_after_first = true },
 			python = { "autopep8" },
 			json = { "jq" },
-			markdown = { prettier, stop_after_first = true },
+			markdown = { "prettier", stop_after_first = true },
 			javascript = { prettier, stop_after_first = true },
 			sql = { "sql-formatter" },
 		},

@@ -152,7 +152,7 @@ hl("Normal", { bg = colors.white, fg = colors.black })
 hl("NormalNC", { link = "Normal" })
 hl("NormalFloat", { link = "Normal" })
 hl("Cursor", { bg = colors.black, fg = colors.white })
-hl("CursorLine", { bg = colors.gray200 })
+hl("CursorLine", { bg = colors.gray100 })
 hl("Visual", { bg = colors.lightblue100 })
 hl("VisualNOS", { link = "Visual" })
 hl("WinSeparator", { link = "Normal" })
@@ -184,6 +184,7 @@ hl("StatusLineNC", { link = "StatusLine" })
 hl("CmpItemKindDefault", { fg = colors.darkgreen700 })
 hl("Title", { fg = colors.black, bold = true })
 hl("TabLineSel", { fg = colors.black, bg = colors.white, bold = true })
+hl("Directory", { fg = colors.black })
 
 -- Git
 hl("DiffAdd", { fg = colors.black, bg = colors.green200 })
@@ -212,13 +213,11 @@ hl("Number", { fg = colors.lavender600 })
 hl("Float", { link = "Number" })
 hl("Boolean", { fg = colors.lavender600 })
 hl("Delimiter", { fg = colors.gray500 })
-hl("Constant", { fg = colors.softthulian600 })
+hl("Constant", { fg = colors.lavender600 })
 hl("Function", { fg = colors.lightblue600 })
 hl("Identifier", { fg = colors.lightblue600 })
 hl("Type", { fg = colors.softthulian600 })
 hl("Special", { fg = colors.softthulian600 })
-hl("@tag.html", { fg = colors.lightblue600 })
-hl("@tag.delimiter.html", { link = "Delimiter" })
 hl("Statement", { fg = colors.black })
 hl("Operator", { link = "Statement" })
 hl("Keyword", { link = "Statement" })
@@ -226,6 +225,18 @@ hl("Exception", { link = "Statement" })
 hl("Conditional", { fg = colors.black })
 hl("Repeat", { link = "Conditional" })
 hl("Label", { link = "Conditional" })
+
+-- Typescript
+hl("@keyword.jsdoc", { link = "SpecialComment" })
+hl("@variable.member.typescript", { link = "Identifier" })
+
+-- HTML
+hl("@tag.html", { link = "Identifier" })
+hl("@tag.delimiter.html", { link = "Delimiter" })
+
+-- Angular
+hl("@tag.angular", { link = "@tag.html" })
+hl("@tag.delimiter.angular", { link = "@tag.delimiter.html" })
 
 -- Markdown
 hl("@markup.list.checked", { fg = colors.black, bg = colors.green300 })

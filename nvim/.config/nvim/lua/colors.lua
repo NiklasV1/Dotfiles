@@ -42,5 +42,5 @@ return {
 	fgLight2 = "#e9e9e9",
 
 	-- NOTE: Theme palette default values
-	palette = require("github-theme.palette.github_light_default").palette,
+	-- palette = require("github-theme.palette.github_light_default").palette,
 }

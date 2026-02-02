@@ -31,7 +31,7 @@ return {
 	},
 	config = function()
 		-- Debugging
-		-- vim.lsp.set_log_level("debug")
+		vim.lsp.set_log_level("error")
 
 		require("mason").setup()
 		require("mason-lspconfig").setup()

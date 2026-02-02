@@ -229,6 +229,7 @@ hl("Label", { link = "Conditional" })
 -- Typescript
 hl("@keyword.jsdoc", { link = "SpecialComment" })
 hl("@variable.member.typescript", { link = "Identifier" })
+-- TODO: Increase priority for treesitter constant group
 
 -- HTML
 hl("@tag.html", { link = "Identifier" })

@@ -51,12 +51,6 @@ vim.keymap.set("n", "<leader>yf", function()
 	vim.cmd('let @+ = expand("%:.")')
 end, { desc = "[Y]ank [F]ilename" })
 
--- Notes
-vim.keymap.set("n", "<leader>N", function()
-	local currentNotePath = "~/Notes/Daily-Notes/" .. os.date("%d-%m-%Y") .. ".md"
-	vim.cmd("edit " .. currentNotePath)
-end, { desc = "[N]otes" })
-
 -- Quickfix list
 vim.keymap.set("n", "<leader>qs", require("utils.quickfix.lists").select, { desc = "[Q]uickfix [S]elect" })
 vim.keymap.set("n", "<leader>qn", "<Cmd>cnewer<CR>", { desc = "[Q]uickfix [N]ext" })
@@ -68,6 +62,9 @@ vim.keymap.set("n", "<leader>qc", "<Cmd>cclose<CR>", { desc = "[Q]uickfix [C]los
 
 -- Search keymaps
 require("keymaps.search")
+
+-- Note keymaps
+require("keymaps.notes")
 
 -- Execute keymap
 require("keymaps.execute")

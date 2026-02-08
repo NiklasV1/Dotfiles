@@ -11,40 +11,6 @@ local function buffer_diagnostics_to_quickfix(title, severity)
 	vim.cmd("bot copen")
 end
 
-local function run_grep(query, case_sensitive, files)
-	if not query or query == "" then
-		print("No query provided.")
-		return
-	end
-
-	vim.cmd("stopinsert")
-
-	-- Parts of the ripgrep command
-	local parts = { "rg", "-H", "--no-heading", "--vimgrep", "--follow" }
-	local buffer_text = ""
-
-	if case_sensitive then
-		table.insert(parts, "--case-sensitive")
-	else
-		table.insert(parts, "--smart-case")
-	end
-
-	table.insert(parts, vim.fn.shellescape(query))
-
-	if files and #files > 0 then
-		table.insert(parts, table.concat(files, " "))
-		buffer_text = " [buffers]"
-	end
-
-	local cmd = table.concat(parts, " ")
-
-	local results = vim.fn.systemlist(cmd)
-	local title = string.format("Search: %s%s", query, buffer_text)
-
-	vim.fn.setqflist({}, " ", { title = title, lines = results })
-	vim.cmd("bot copen")
-end
-
 -- Search diagnostics
 vim.keymap.set("n", "<leader>sd", function()
 	buffer_diagnostics_to_quickfix("Diagnostics", vim.diagnostic.severity.HINT)
@@ -66,7 +32,7 @@ vim.keymap.set("n", "<leader>sb", function()
 
 	require("utils.input-window").create_input_window("Search buffer", nil, function(query)
 		if query and query ~= "" then
-			run_grep(query, false, { buffer })
+			require("utils.grep").run_grep(query, false, { buffer }, "Current")
 		else
 			print("No search query.")
 		end
@@ -92,7 +58,7 @@ vim.keymap.set("n", "<leader>so", function()
 
 	require("utils.input-window").create_input_window("Search open buffers", nil, function(query)
 		if query and query ~= "" then
-			run_grep(query, false, buffers)
+			require("utils.grep").run_grep(query, false, buffers, "Buffers")
 		else
 			print("No search query.")
 		end
@@ -103,7 +69,7 @@ end, { desc = "[S]earch [O]pen buffers" })
 vim.keymap.set("n", "<leader>sg", function()
 	require("utils.input-window").create_input_window("Search all files", nil, function(query)
 		if query and query ~= "" then
-			run_grep(query, false, nil)
+			require("utils.grep").run_grep(query, false, nil, "All")
 		else
 			print("No search query.")
 		end
@@ -114,7 +80,7 @@ end, { desc = "[S]earch [G]rep" })
 vim.keymap.set("n", "<leader>sw", function()
 	local word = vim.fn.expand("<cword>")
 	if word and word ~= "" then
-		run_grep(word, true, nil) -- case-sensitive
+		require("utils.grep").run_grep(word, true, nil, "Word") -- case-sensitive
 	else
 		print("No word under cursor.")
 	end
@@ -125,7 +91,7 @@ vim.keymap.set("v", "<leader>sv", function()
 	vim.cmd('normal! "vy')
 	local selection = vim.fn.getreg("v")
 	if selection and selection ~= "" then
-		run_grep(selection, true, nil) -- case-sensitive
+		require("utils.grep").run_grep(selection, true, nil, "Selection") -- case-sensitive
 	else
 		print("No selection.")
 	end

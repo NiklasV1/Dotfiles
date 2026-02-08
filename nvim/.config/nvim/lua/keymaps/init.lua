@@ -6,8 +6,6 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "[G]oto [D]efinition"
 vim.keymap.set("n", "grr", require("utils.lsp-utils").lsp_references_deduplicated, { desc = "[G]oto [R]eferences" })
 vim.keymap.set("n", "gri", vim.lsp.buf.implementation, { desc = "[G]oto [I]mplementation" })
 vim.keymap.set("n", "gri", vim.lsp.buf.type_definition, { desc = "[G]oto [T]ype definition" })
-vim.keymap.set("n", "<leader>si", vim.lsp.buf.incoming_calls, { desc = "[S]earch [I]ncoming" })
-vim.keymap.set("n", "<leader>so", vim.lsp.buf.outgoing_calls, { desc = "[S]earch [O]utgoing" })
 
 -- Common command typos
 vim.api.nvim_create_user_command("W", ":w", {})
@@ -60,11 +58,13 @@ vim.keymap.set("n", "<leader>N", function()
 end, { desc = "[N]otes" })
 
 -- Quickfix list
-vim.keymap.set("n", "<leader>qd", vim.diagnostic.setqflist, { desc = "[Q]uickfix [D]iagnostics" })
 vim.keymap.set("n", "<leader>qf", "<Cmd>cfirst<CR>", { desc = "[Q]uickfix [F]irst" })
 vim.keymap.set("n", "<leader>ql", "<Cmd>clast<CR>", { desc = "[Q]uickfix [L]ast" })
-vim.keymap.set("n", "<leader>qo", "<Cmd>copen<CR>", { desc = "[Q]uickfix [O]pen" })
+vim.keymap.set("n", "<leader>qo", "<Cmd>bot copen<CR>", { desc = "[Q]uickfix [O]pen" })
 vim.keymap.set("n", "<leader>qc", "<Cmd>cclose<CR>", { desc = "[Q]uickfix [C]lose" })
+
+-- Search keymaps
+require("keymaps.search")
 
 -- Execute keymap
 require("keymaps.execute")

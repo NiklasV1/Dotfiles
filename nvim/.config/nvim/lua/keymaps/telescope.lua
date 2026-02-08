@@ -9,13 +9,6 @@ local function setupKeymaps(builtin, borders)
 	vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch [G]rep" })
 	vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch [W]ord" })
 
-	-- Diagnostics search
-	vim.keymap.set("n", "<leader>se", function()
-		builtin.diagnostics({
-			severity = "Error",
-		})
-	end, { desc = "[S]earch [E]rrors" })
-
 	-- Quickfix search
 	vim.keymap.set("n", "<leader>sq", builtin.quickfix, { desc = "[S]earch [Q]uickfix" })
 

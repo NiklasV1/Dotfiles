@@ -26,7 +26,7 @@ end
 local function on_list_filtered(options)
 	options.items = filterDuplicates(options.items)
 	vim.fn.setqflist({}, " ", options)
-	vim.cmd("copen")
+	vim.cmd("bot copen")
 end
 
 local function lsp_references_deduplicated()

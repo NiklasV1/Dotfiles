@@ -191,8 +191,10 @@ hl("DiffAdd", { fg = colors.black, bg = colors.green200 })
 hl("DiffChange", { fg = colors.black, bg = colors.yellow150 })
 hl("DiffDelete", { fg = colors.black, bg = colors.alert100 })
 hl("Added", { fg = colors.green700 })
-hl("Changed", { fg = colors.yellow500 })
+hl("Changed", { fg = colors.lightblue600 })
 hl("Removed", { fg = colors.alert700 })
+hl("GitSignsDeleteInline", { fg = colors.black, bg = colors.alert200 })
+hl("GitSignsAddInline", { fg = colors.black, bg = colors.green400 })
 
 -- Diagnostics
 hl("DiagnosticUnnecessary", { fg = colors.gray500 })

@@ -3,7 +3,6 @@ local function setupKeymaps(builtin, borders)
 	vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 
 	-- File search
-	vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
 	vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Search open buffers" })
 
 	-- Grep search
@@ -38,19 +37,6 @@ local function setupKeymaps(builtin, borders)
 			},
 		}))
 	end, { desc = "[/] Fuzzily search in current buffer" })
-
-	-- Search open files
-	vim.keymap.set("n", "<leader>s/", function()
-		builtin.live_grep({
-			grep_open_files = true,
-			prompt_title = "Live Grep in Open Files",
-		})
-	end, { desc = "[S]earch [/] in Open Files" })
-
-	-- Search neovim config
-	vim.keymap.set("n", "<leader>sn", function()
-		builtin.find_files({ cwd = vim.fn.stdpath("config") })
-	end, { desc = "[S]earch [N]eovim files" })
 
 	-- Search methods
 	vim.keymap.set("n", "<leader>sm", function()

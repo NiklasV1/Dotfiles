@@ -9,6 +9,9 @@ require("lazy").setup({
 	-- Telescope | Navigation
 	require("plugins.telescope"),
 
+	-- Telescope | Navigation
+	require("plugins.fff"),
+
 	-- LSP Config
 	require("plugins.lspconfig"),
 

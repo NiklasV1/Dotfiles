@@ -9,6 +9,7 @@ return {
 		config = function()
 			local fff = require("fff")
 			fff.setup({
+				base_path = vim.fn.getcwd(),
 				prompt = "> ",
 				title = "Files",
 				max_threads = 8,

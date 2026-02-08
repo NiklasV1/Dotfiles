@@ -135,7 +135,10 @@ source <(kubectl completion zsh)
 export KUBECONFIG="$(find -L ~/.kube/config ~/.kube/config.d -type f 2>/dev/null | sort | paste -s -d :)"
 
 # Mise
-eval "$(/home/niklasv/.local/bin/mise activate zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
+
+
+export PATH=${PATH}:~/bin
 
 # SECTION: Aliases
 
@@ -179,7 +182,6 @@ alias rxe="rushx test:e2e"
 alias rb="rush update && rush build-only"
 alias rsf="rushx build && rushx start:feat"
 alias vibe="opencode"
-alias backend-mcp-server="cd /home/niklasv/Programming/snapaddy-backend/packages/tools/backend-mcp-server && pnpm start"
 
 # Tmuxinator
 tmux_environments=(~/.config/tmuxinator/*.yml(:t:r))

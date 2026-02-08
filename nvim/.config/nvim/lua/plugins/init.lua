@@ -6,10 +6,7 @@ require("lazy").setup({
 	-- Treesitter | AST
 	require("plugins.treesitter"),
 
-	-- Telescope | Navigation
-	require("plugins.telescope"),
-
-	-- Telescope | Navigation
+	-- File picker
 	require("plugins.fff"),
 
 	-- Better quickfix

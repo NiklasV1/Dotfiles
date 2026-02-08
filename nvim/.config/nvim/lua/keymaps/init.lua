@@ -58,6 +58,9 @@ vim.keymap.set("n", "<leader>N", function()
 end, { desc = "[N]otes" })
 
 -- Quickfix list
+vim.keymap.set("n", "<leader>qs", require("utils.quickfix.lists").select, { desc = "[Q]uickfix [S]elect" })
+vim.keymap.set("n", "<leader>qn", "<Cmd>cnewer<CR>", { desc = "[Q]uickfix [N]ext" })
+vim.keymap.set("n", "<leader>qp", "<Cmd>colder<CR>", { desc = "[Q]uickfix [P]revious" })
 vim.keymap.set("n", "<leader>qf", "<Cmd>cfirst<CR>", { desc = "[Q]uickfix [F]irst" })
 vim.keymap.set("n", "<leader>ql", "<Cmd>clast<CR>", { desc = "[Q]uickfix [L]ast" })
 vim.keymap.set("n", "<leader>qo", "<Cmd>bot copen<CR>", { desc = "[Q]uickfix [O]pen" })

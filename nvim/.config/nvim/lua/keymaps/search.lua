@@ -131,6 +131,20 @@ vim.keymap.set("v", "<leader>sv", function()
 	end
 end, { desc = "[S]earch [V]isual selection" })
 
--- TODO: Search all methods
+-- Search methods
+vim.keymap.set("n", "<leader>sm", function()
+	require("utils.quickfix.methods").get_symbols(vim.lsp.protocol.SymbolKind.Method)
+end, { desc = "[S]earch [M]ethods" })
 
--- TODO: Search help tags
+-- Search buffer names
+vim.keymap.set(
+	"n",
+	"<leader><leader>",
+	require("utils.quickfix.buffers").to_qflist,
+	{ desc = "List of current buffers" }
+)
+
+-- TODO: Search keymaps
+
+-- Search help tags
+vim.keymap.set("n", "<leader>sh", require("utils.quickfix.helptags").to_qflist, { desc = "[S]earch [H]elp" })

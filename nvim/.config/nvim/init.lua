@@ -101,6 +101,81 @@ vim.diagnostic.config({
 	},
 })
 
+-- Override setqflist to always add to history instead of replacing
+-- Vim maintains its own limit (10 lists by default)
+local original_setqflist = vim.fn.setqflist
+---@diagnostic disable-next-line: duplicate-set-field
+vim.fn.setqflist = function(list, action, what)
+	-- Convert 'r' (replace) to ' ' (add new) to maintain history
+	-- When vim's internal limit is reached, it automatically drops the oldest
+	-- EXCEPT: when updating properties of current list (empty list with 'what' parameter)
+	if action == "r" then
+		-- If it's just updating properties (empty list + what), allow the replace
+		if not (#list == 0 and what) then
+			action = " "
+		end
+	end
+
+	-- Call original function
+	if what then
+		return original_setqflist(list, action, what)
+	else
+		return original_setqflist(list, action)
+	end
+end
+
+-- Custom quickfix formatting function
+function _G.qftf(info)
+	local items
+	local ret = {}
+
+	if info.quickfix == 1 then
+		items = vim.fn.getqflist({ id = info.id, items = 0 }).items
+	else
+		items = vim.fn.getloclist(info.winid, { id = info.id, items = 0 }).items
+	end
+
+	local limit = 50
+	local fnameFmt1, fnameFmt2 = "%-" .. limit .. "s", "…%." .. (limit - 1) .. "s"
+	local validFmt = "%s │%5d:%-3d│ %s"
+
+	for i = info.start_idx, info.end_idx do
+		local e = items[i]
+		local fname = ""
+		local str
+
+		-- Handle both valid and invalid entries with formatting
+		-- Invalid entries (e.valid == 0) are often entries without a file
+		if e.bufnr > 0 then
+			fname = vim.fn.bufname(e.bufnr)
+		end
+
+		if fname == "" or fname == nil then
+			-- Use placeholder for entries without a file (built-in vim keymaps, etc.)
+			fname = "[vim]"
+		else
+			-- Just get the basename (paths should already be absolute from keymaps_qf.lua)
+			fname = vim.fn.fnamemodify(fname, ":t")
+		end
+
+		-- Truncate if still too long
+		if #fname <= limit then
+			fname = fnameFmt1:format(fname)
+		else
+			fname = fnameFmt2:format(fname:sub(1 - limit))
+		end
+
+		local lnum = e.lnum > 99999 and -1 or e.lnum
+		local col = e.col > 999 and -1 or e.col
+		str = validFmt:format(fname, lnum, col, e.text)
+
+		table.insert(ret, str)
+	end
+	return ret
+end
+
+vim.o.qftf = "{info -> v:lua._G.qftf(info)}"
+
 -- Cfilter package for quickfix filtering
 vim.cmd("packadd cfilter")
 

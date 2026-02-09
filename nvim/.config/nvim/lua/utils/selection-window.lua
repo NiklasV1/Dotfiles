@@ -92,7 +92,7 @@ M.select = function(items, opts, on_choice)
 	vim.api.nvim_win_set_cursor(win, { 1, 0 })
 	current.win = win
 
-	-- Keymaps
+	-- Set keymaps
 	local function map(lhs, fn)
 		vim.keymap.set("n", lhs, fn, { buffer = buf, nowait = true })
 	end

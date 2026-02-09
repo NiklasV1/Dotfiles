@@ -30,7 +30,7 @@ vim.keymap.set("n", "<leader>sb", function()
 		return
 	end
 
-	require("utils.input-window").create_input_window("Search buffer", nil, function(query)
+	vim.ui.input({ prompt = "Search buffer" }, function(query)
 		if query and query ~= "" then
 			require("utils.grep").run_grep(query, false, { buffer }, "Current", false)
 		else
@@ -56,7 +56,7 @@ vim.keymap.set("n", "<leader>so", function()
 		return
 	end
 
-	require("utils.input-window").create_input_window("Search open buffers", nil, function(query)
+	vim.ui.input({ prompt = "Search open buffers" }, function(query)
 		if query and query ~= "" then
 			require("utils.grep").run_grep(query, false, buffers, "Buffers", false)
 		else
@@ -67,7 +67,7 @@ end, { desc = "[S]earch [O]pen buffers" })
 
 -- Search all files
 vim.keymap.set("n", "<leader>sg", function()
-	require("utils.input-window").create_input_window("Search all files", nil, function(query)
+	vim.ui.input({ prompt = "Search all files" }, function(query)
 		if query and query ~= "" then
 			require("utils.grep").run_grep(query, false, nil, "All", false)
 		else
@@ -78,7 +78,7 @@ end, { desc = "[S]earch [G]rep" })
 
 -- Search all files with regex
 vim.keymap.set("n", "<leader>sr", function()
-	require("utils.input-window").create_input_window("Search regex", nil, function(query)
+	vim.ui.input({ prompt = "Search regex" }, function(query)
 		if query and query ~= "" then
 			require("utils.grep").run_grep(query, false, nil, "Regex", true)
 		else

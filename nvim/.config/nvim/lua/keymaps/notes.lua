@@ -23,21 +23,21 @@ end, { desc = "[N]otes [D]aily" })
 
 -- Create inbox note
 vim.keymap.set("n", "<leader>ni", function()
-	require("utils.input-window").create_input_window("Create inbox note", nil, function(name)
+	vim.ui.input({ prompt = "Create inbox note" }, function(name)
 		create_note(name, "~/Notes/\\$1_in")
 	end)
 end, { desc = "[N]otes [I]nbox" })
 
 -- Create knowledge note
 vim.keymap.set("n", "<leader>nk", function()
-	require("utils.input-window").create_input_window("Create knowledge note", nil, function(name)
+	vim.ui.input({ prompt = "Create knowledge note" }, function(name)
 		create_note(name, "~/Notes")
 	end)
 end, { desc = "[N]otes [K]nowledge" })
 
 -- Search notes
 vim.keymap.set("n", "<leader>ng", function()
-	require("utils.input-window").create_input_window("Search notes", nil, function(query)
+	vim.ui.input({ prompt = "Search notes" }, function(query)
 		require("utils.grep").run_grep(query, false, { "~/Notes/**" }, "Notes", false)
 	end)
 end, { desc = "[N]otes [G]rep" })

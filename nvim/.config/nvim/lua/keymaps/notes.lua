@@ -38,7 +38,7 @@ end, { desc = "[N]otes [K]nowledge" })
 -- Search notes
 vim.keymap.set("n", "<leader>ng", function()
 	require("utils.input-window").create_input_window("Search notes", nil, function(query)
-		require("utils.grep").run_grep(query, false, { "~/Notes/**" }, "Notes")
+		require("utils.grep").run_grep(query, false, { "~/Notes/**" }, "Notes", false)
 	end)
 end, { desc = "[N]otes [G]rep" })
 

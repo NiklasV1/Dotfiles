@@ -32,7 +32,7 @@ vim.keymap.set("n", "<leader>sb", function()
 
 	require("utils.input-window").create_input_window("Search buffer", nil, function(query)
 		if query and query ~= "" then
-			require("utils.grep").run_grep(query, false, { buffer }, "Current")
+			require("utils.grep").run_grep(query, false, { buffer }, "Current", false)
 		else
 			print("No search query.")
 		end
@@ -58,7 +58,7 @@ vim.keymap.set("n", "<leader>so", function()
 
 	require("utils.input-window").create_input_window("Search open buffers", nil, function(query)
 		if query and query ~= "" then
-			require("utils.grep").run_grep(query, false, buffers, "Buffers")
+			require("utils.grep").run_grep(query, false, buffers, "Buffers", false)
 		else
 			print("No search query.")
 		end
@@ -69,18 +69,29 @@ end, { desc = "[S]earch [O]pen buffers" })
 vim.keymap.set("n", "<leader>sg", function()
 	require("utils.input-window").create_input_window("Search all files", nil, function(query)
 		if query and query ~= "" then
-			require("utils.grep").run_grep(query, false, nil, "All")
+			require("utils.grep").run_grep(query, false, nil, "All", false)
 		else
 			print("No search query.")
 		end
 	end)
 end, { desc = "[S]earch [G]rep" })
 
+-- Search all files with regex
+vim.keymap.set("n", "<leader>sr", function()
+	require("utils.input-window").create_input_window("Search regex", nil, function(query)
+		if query and query ~= "" then
+			require("utils.grep").run_grep(query, false, nil, "Regex", true)
+		else
+			print("No search query.")
+		end
+	end)
+end, { desc = "[S]earch [R]egex" })
+
 -- Search word under cursor
 vim.keymap.set("n", "<leader>sw", function()
 	local word = vim.fn.expand("<cword>")
 	if word and word ~= "" then
-		require("utils.grep").run_grep(word, true, nil, "Word") -- case-sensitive
+		require("utils.grep").run_grep(word, true, nil, "Word", false) -- case-sensitive
 	else
 		print("No word under cursor.")
 	end
@@ -91,7 +102,7 @@ vim.keymap.set("v", "<leader>sv", function()
 	vim.cmd('normal! "vy')
 	local selection = vim.fn.getreg("v")
 	if selection and selection ~= "" then
-		require("utils.grep").run_grep(selection, true, nil, "Selection") -- case-sensitive
+		require("utils.grep").run_grep(selection, true, nil, "Selection", false) -- case-sensitive
 	else
 		print("No selection.")
 	end

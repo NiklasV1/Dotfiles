@@ -1,6 +1,6 @@
-local U = {}
+local M = {}
 
-U.get_symbols = function(symbol_kind)
+M.get_symbols = function(symbol_kind)
 	local params = { textDocument = vim.lsp.util.make_text_document_params() }
 
 	vim.lsp.buf_request(0, "textDocument/documentSymbol", params, function(err, result, _, _)
@@ -45,4 +45,4 @@ U.get_symbols = function(symbol_kind)
 	end)
 end
 
-return U
+return M

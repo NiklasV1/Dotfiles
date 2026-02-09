@@ -1,6 +1,6 @@
-local U = {}
+local M = {}
 
-U.create_input_window = function(prompt, default, on_submit)
+M.create_input_window = function(prompt, default, on_submit)
 	local buf = vim.api.nvim_create_buf(false, true)
 	local width = 60
 	local height = 1
@@ -41,4 +41,4 @@ U.create_input_window = function(prompt, default, on_submit)
 	end, { buffer = buf })
 end
 
-return U
+return M

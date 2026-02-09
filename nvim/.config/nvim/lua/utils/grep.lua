@@ -1,6 +1,6 @@
 local M = {}
 
-M.run_grep = function(query, case_sensitive, files, tag)
+M.run_grep = function(query, case_sensitive, files, tag, is_regex)
 	if not query or query == "" then
 		print("No query provided.")
 		return
@@ -11,6 +11,10 @@ M.run_grep = function(query, case_sensitive, files, tag)
 	-- Parts of the ripgrep command
 	local parts = { "rg", "-H", "--no-heading", "--vimgrep", "--follow" }
 	local tag_text = ""
+
+	if not is_regex then
+		table.insert(parts, "--fixed-strings")
+	end
 
 	if tag and tag ~= "" then
 		tag_text = string.format(" [%s]", tag)

@@ -176,6 +176,9 @@ end
 
 vim.o.qftf = "{info -> v:lua._G.qftf(info)}"
 
+-- Override ui select with custom implementation
+vim.ui.select = require("utils.selection-window").select
+
 -- Cfilter package for quickfix filtering
 vim.cmd("packadd cfilter")
 

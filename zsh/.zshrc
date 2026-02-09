@@ -188,14 +188,14 @@ tmux_environments=(~/.config/tmuxinator/*.yml(:t:r))
 # Tmux environment selectors
 up() {
   local env
-  env=$(print -l $tmux_environments | fzf)
+  env=$(print -l $tmux_environments | fzf --color light)
   if [[ -n "$env" ]]; then
     tmuxinator start $env
   fi
 }
 down() {
   local env
-  env=$(print -l $tmux_environments | fzf)
+  env=$(print -l $tmux_environments | fzf --color light)
   if [[ -n "$env" ]]; then
     tmuxinator stop $env
   fi

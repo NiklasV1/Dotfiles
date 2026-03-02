@@ -21,6 +21,11 @@ vim.keymap.set("n", "<leader>nd", function()
 	vim.cmd("edit " .. currentNotePath)
 end, { desc = "[N]otes [D]aily" })
 
+-- Code review guide
+vim.keymap.set("n", "<leader>nr", function()
+	vim.cmd("edit " .. "~/Notes/code_review.md")
+end, { desc = "[N]otes [R]eview" })
+
 -- Create inbox note
 vim.keymap.set("n", "<leader>ni", function()
 	vim.ui.input({ prompt = "Create inbox note" }, function(name)

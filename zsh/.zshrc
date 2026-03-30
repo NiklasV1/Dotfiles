@@ -203,3 +203,6 @@ down() {
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
+
+# opencode
+export PATH=/home/niklas/.opencode/bin:$PATH

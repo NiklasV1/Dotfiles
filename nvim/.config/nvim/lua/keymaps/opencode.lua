@@ -1,41 +1,56 @@
-local executeCommands = require("utils.utils").executeCommands
+local M = {}
 
--- Commands
-local OPENCODE_RUN = "opencode --prompt"
-local CURRENT_FILE = "Please take a look at this file: @"
-local DIVIDER = "  Prompt: "
+M.setup = function(opencode)
+	-- Basic keymaps
+	vim.keymap.set({ "n", "x" }, "<leader>oa", function()
+		opencode.ask("@this: ", { submit = true })
+	end, { desc = "Ask opencode" })
 
-local function runOpencode(prompt)
-	local command = OPENCODE_RUN .. " " .. vim.fn.shellescape(prompt)
-	executeCommands({ command })
+	vim.keymap.set({ "n", "x" }, "<leader>ox", function()
+		opencode.select()
+	end, { desc = "Execute opencode action" })
+
+	-- Basic predefined prompts
+	vim.keymap.set({ "n", "x" }, "<leader>oe", function()
+		opencode.prompt("explain", { submit = true })
+	end, { desc = "Explain" })
+
+	vim.keymap.set({ "n", "x" }, "<leader>oi", function()
+		opencode.prompt("implement", { submit = true })
+	end, { desc = "Implement" })
+
+	vim.keymap.set({ "n", "x" }, "<leader>or", function()
+		opencode.prompt("review", { submit = true })
+	end, { desc = "Review" })
+
+	vim.keymap.set({ "n", "x" }, "<leader>ot", function()
+		opencode.prompt("test", { submit = true })
+	end, { desc = "Test" })
+
+	vim.keymap.set({ "n", "x" }, "<leader>od", function()
+		opencode.prompt("document", { submit = true })
+	end, { desc = "Document" })
+
+	vim.keymap.set({ "n", "x" }, "<leader>oE", function()
+		opencode.prompt("diagnostics", { submit = true })
+	end, { desc = "Explain diagnostics" })
+
+	vim.keymap.set({ "n", "x" }, "<leader>of", function()
+		opencode.prompt("fix", { submit = true })
+	end, { desc = "Fix diagnostics" })
+
+	-- Session handling
+	vim.keymap.set({ "n", "x" }, "<leader>osn", function()
+		opencode.command("session.new")
+	end, { desc = "New session" })
+
+	-- Not sure how useful these are: maybe remove later
+	vim.keymap.set({ "n", "x" }, "go", function()
+		return opencode.operator("@this ")
+	end, { desc = "Add range to opencode", expr = true })
+	vim.keymap.set("n", "goo", function()
+		return opencode.operator("@this ") .. "_"
+	end, { desc = "Add line to opencode", expr = true })
 end
 
--- Command functions
-local function runPrompt()
-	vim.ui.input({ prompt = "Prompt" }, function(prompt)
-		if prompt and prompt ~= "" then
-			runOpencode(prompt)
-		else
-			print("No prompt.")
-		end
-	end)
-end
-
-local function runPromptOnCurrentFile()
-	vim.ui.input({ prompt = "Prompt current file" }, function(prompt)
-		if prompt and prompt ~= "" then
-			local currentFilePrompt = CURRENT_FILE .. vim.fn.expand("%")
-			runOpencode(currentFilePrompt .. DIVIDER .. prompt)
-		else
-			print("No prompt.")
-		end
-	end)
-end
-
--- Keybinds
-local function loadKeybinds()
-	vim.keymap.set("n", "<leader>op", runPrompt, { desc = "[O]pencode [P]rompt" })
-	vim.keymap.set("n", "<leader>of", runPromptOnCurrentFile, { desc = "[O]pencode [F]ile" })
-end
-
-loadKeybinds()
+return M

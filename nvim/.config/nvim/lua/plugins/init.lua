@@ -51,6 +51,9 @@ require("lazy").setup({
 	-- Filetree
 	require("plugins.neo-tree"),
 
+	-- Opencode
+	require("plugins.opencode"),
+
 	-- {
 	-- 	"norcalli/nvim-colorizer.lua",
 	-- 	config = function()

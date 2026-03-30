@@ -181,7 +181,7 @@ alias rxt="rushx _phase:test"
 alias rxe="rushx test:e2e"
 alias rb="rush update && rush build-only"
 alias rsf="rushx build && rushx start:feat"
-alias vibe="opencode"
+alias vibe="opencode --continue --hostname 127.0.0.1 --port 4096"
 
 # Tmuxinator
 tmux_environments=(~/.config/tmuxinator/*.yml(:t:r))

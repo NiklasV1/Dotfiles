@@ -83,3 +83,6 @@ require("keymaps.telepresence")
 
 -- Golang keymaps
 require("keymaps.go")
+
+-- Opencode keymaps
+require("keymaps.opencode")

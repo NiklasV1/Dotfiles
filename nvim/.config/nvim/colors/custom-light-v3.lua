@@ -81,27 +81,12 @@ hl("NormalFloat", { link = "Normal" })
 hl("Cursor", { bg = colors.gray900, fg = colors.gray050 })
 hl("CursorLine", { bg = colors.gray100 })
 
-hl("Visual", { bg = colors.blue050 })
-hl("VisualNOS", { link = "Visual" })
-
 hl("WinSeparator", { link = "Normal" })
 hl("VertSplit", { link = "WinSeparator" })
 
 hl("SignColumn", { fg = colors.gray500 })
 hl("LineNr", { fg = colors.gray500 })
 hl("CursorLineNr", { fg = colors.gray900 })
-
-hl("Search", { bg = colors.yellow150 })
-hl("CurSearch", { bg = colors.yellow300, fg = colors.gray900 })
-hl("IncSearch", { link = "CurSearch" })
-
-hl("MatchParen", { fg = colors.gray900, bg = colors.blue100 })
-
-hl("ModeMsg", { fg = colors.gray900 })
-hl("OkMsg", { fg = colors.gray900 })
-hl("MoreMsg", { fg = colors.gray900 })
-hl("WarningMsg", { fg = colors.yellow600, bold = true })
-hl("ErrorMsg", { fg = colors.red500, bold = true })
 
 hl("FloatBorder", { link = "NormalFloat" })
 hl("FloatShadow", { bg = colors.gray500 })
@@ -117,12 +102,23 @@ hl("PmenuSbar", { fg = colors.gray900, bg = colors.gray300 })
 hl("StatusLine", { fg = colors.gray900, bg = colors.gray200 })
 hl("StatusLineNC", { link = "StatusLine" })
 hl("StatusLineAlt", { fg = colors.gray050, bg = colors.blue700 })
+hl("ModeMsg", { fg = colors.gray900 })
 
 hl("CmpItemKindDefault", { fg = colors.blue700 })
 hl("Question", { fg = colors.gray900 })
 hl("Title", { fg = colors.gray900, bold = true })
 hl("TabLineSel", { fg = colors.gray900, bg = colors.gray050, bold = true })
 hl("Directory", { fg = colors.gray900 })
+
+-- Search
+hl("Search", { bg = colors.yellow150 })
+hl("CurSearch", { bg = colors.yellow300, fg = colors.gray900 })
+hl("IncSearch", { link = "CurSearch" })
+
+-- Selection
+hl("Visual", { bg = colors.blue050 })
+hl("VisualNOS", { link = "Visual" })
+hl("MatchParen", { fg = colors.gray900, bg = colors.blue100 })
 
 -- Git
 hl("DiffAdd", { fg = colors.gray900, bg = colors.green100 })
@@ -136,6 +132,10 @@ hl("GitSignsAddInline", { fg = colors.gray900, bg = colors.green200 })
 hl("NeoTreeGitModified", { fg = colors.blue600 })
 
 -- Diagnostics
+hl("OkMsg", { fg = colors.gray900 })
+hl("MoreMsg", { fg = colors.gray900 })
+hl("WarningMsg", { fg = colors.yellow600, bold = true })
+hl("ErrorMsg", { fg = colors.red500, bold = true })
 hl("DiagnosticUnnecessary", { fg = colors.gray500 })
 hl("DiagnosticInfo", { fg = colors.gray600 })
 hl("DiagnosticOk", { fg = colors.green700 })
@@ -149,6 +149,7 @@ hl("@lsp.mod.declaration.lua", { link = "Declaration" })
 hl("@constructor.typescript", { link = "Declaration" })
 hl("@lsp.mod.declaration.typescript", { link = "Declaration" })
 hl("@tag.html", { link = "Declaration" })
+hl("@tag.angular", { link = "Declaration" })
 hl("@lsp.mod.declaration.javascript", { link = "Declaration" })
 
 -- 2. Strings are green
@@ -160,7 +161,6 @@ hl("Constant", { fg = colors.purple800 })
 hl("Number", { link = "Constant" })
 hl("Boolean", { link = "Constant" })
 hl("Float", { link = "Constant" })
--- hl("@lsp.typemod.variable.readonly.typescript", { link = "Constant" })
 
 -- 4. Comments are dark-red
 hl("Comment", { fg = colors.red800 })

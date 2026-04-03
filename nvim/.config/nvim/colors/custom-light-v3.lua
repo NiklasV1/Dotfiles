@@ -146,7 +146,6 @@ hl("DiagnosticError", { link = "ErrorMsg" })
 -- 1. Declarations are blue
 hl("Declaration", { fg = colors.blue700 })
 hl("@lsp.mod.declaration.lua", { link = "Declaration" })
-hl("@constructor.typescript", { link = "Declaration" })
 hl("@lsp.mod.declaration.typescript", { link = "Declaration" })
 hl("@tag.html", { link = "Declaration" })
 hl("@tag.angular", { link = "Declaration" })
@@ -192,5 +191,5 @@ hl("@variable", { link = "BaseColor" })
 hl("@lsp", { link = "BaseColor" })
 
 -- Markdown
-hl("@markup.list.checked", { fg = colors.gray900, bg = colors.green200 })
-hl("@markup.list.unchecked", { fg = colors.gray900, bg = colors.red200 })
+hl("@markup.list.checked", { fg = colors.green900, bg = colors.green200 })
+hl("@markup.list.unchecked", { fg = colors.red900, bg = colors.red200 })

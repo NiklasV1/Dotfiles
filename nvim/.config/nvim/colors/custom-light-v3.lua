@@ -81,10 +81,10 @@ hl("NormalFloat", { link = "Normal" })
 hl("Cursor", { bg = colors.gray900, fg = colors.gray050 })
 hl("CursorLine", { bg = colors.gray100 })
 
-hl("WinSeparator", { fg = colors.gray200 })
+hl("WinSeparator", { fg = colors.gray400 })
 hl("VertSplit", { link = "WinSeparator" })
 
-hl("FloatBorder", { fg = colors.blue800 })
+hl("FloatBorder", { fg = colors.gray600 })
 hl("FloatShadow", { bg = colors.gray200 })
 hl("FloatShadowThrough", { link = "FloatShadow" })
 

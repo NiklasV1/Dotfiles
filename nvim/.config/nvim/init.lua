@@ -27,7 +27,7 @@ vim.opt.incsearch = true -- Show matches as you type
 -- vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = "#ffffff", bg = "#303030" })
 -- vim.api.nvim_set_hl(0, "TelescopePreviewLine", { fg = "#ffffff", bg = "#303030" })
 -- vim.api.nvim_set_hl(0, "Visual", { bg = "#404040" })
-vim.cmd.colorscheme("custom-light") -- Colorscheme
+vim.cmd.colorscheme("custom-light-v3") -- Colorscheme
 vim.opt.termguicolors = true -- Enable 24-bit colors
 vim.g.have_nerd_font = true -- Enable nerd font
 vim.opt.signcolumn = "yes" -- Always show sign column
@@ -45,7 +45,8 @@ vim.opt.synmaxcol = 300 -- Syntax highlighting limit
 vim.opt.list = false -- Don't show special characters like tab
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" } -- chars to replace special characters with
 vim.opt.inccommand = "split" -- Preview substitutions
-vim.opt.winborder = "single" -- Window borders
+vim.opt.winborder = "bold" -- Window borders
+vim.opt.fillchars = "horiz:━,horizup:┻,horizdown:┳,vert:┃,vertleft:┫,vertright:┣,verthoriz:╋"
 vim.opt.laststatus = 3 -- Only one statusline
 
 -- File handling

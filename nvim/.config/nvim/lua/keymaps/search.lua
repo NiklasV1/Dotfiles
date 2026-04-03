@@ -65,17 +65,6 @@ vim.keymap.set("n", "<leader>so", function()
 	end)
 end, { desc = "[S]earch [O]pen buffers" })
 
--- Search all files
-vim.keymap.set("n", "<leader>sg", function()
-	vim.ui.input({ prompt = "Search all files" }, function(query)
-		if query and query ~= "" then
-			require("utils.grep").run_grep(query, false, nil, "All", false)
-		else
-			print("No search query.")
-		end
-	end)
-end, { desc = "[S]earch [G]rep" })
-
 -- Search all files with regex
 vim.keymap.set("n", "<leader>sr", function()
 	vim.ui.input({ prompt = "Search regex" }, function(query)

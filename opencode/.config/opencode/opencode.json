@@ -11,14 +11,6 @@
       ],
       "enabled": false
     },
-    "snapaddy-backend": {
-      "type": "local",
-      "command": [
-        "node",
-        "/home/niklasv/Programming/snapaddy-backend/packages/tools/backend-mcp-server/dist/main.js"
-      ],
-      "enabled": false
-    },
     "postgres": {
       "type": "local",
       "command": [

@@ -3,7 +3,7 @@ term = "xterm-256color"
 
 [general]
 import = [
-"~/.config/alacritty/themes/github_light_high_contrast.toml",
+"~/.config/alacritty/themes/custom-light.toml",
 ]
 live_config_reload = true
 

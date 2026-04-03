@@ -94,7 +94,7 @@ vim.diagnostic.config({
 	float = {
 		scope = "line",
 		source = "if_many",
-		border = "single",
+		border = "bold",
 	},
 	virtual_text = {
 		source = "if_many",

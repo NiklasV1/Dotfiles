@@ -10,16 +10,16 @@ local hl = function(name, val)
 end
 
 local colors = {
-	gray050 = "#FAF9F7",
-	gray100 = "#E8E6E1",
-	gray200 = "#D3CEC4",
-	gray300 = "#B8B2A7",
-	gray400 = "#A39E93",
-	gray500 = "#857F72",
-	gray600 = "#625D52",
-	gray700 = "#504A40",
-	gray800 = "#423D33",
-	gray900 = "#27241D",
+	gray050 = "#FCFCFC",
+	gray100 = "#E1E1E1",
+	gray200 = "#CFCFCF",
+	gray300 = "#B1B1B1",
+	gray400 = "#9E9E9E",
+	gray500 = "#7E7E7E",
+	gray600 = "#626262",
+	gray700 = "#515151",
+	gray800 = "#3B3B3B",
+	gray900 = "#222222",
 	blue050 = "#E0E8F9",
 	blue100 = "#BED0F7",
 	blue200 = "#98AEEB",
@@ -50,16 +50,16 @@ local colors = {
 	red700 = "#AB091E",
 	red800 = "#8A041A",
 	red900 = "#610316",
-	purple050 = "#F2EBFE",
-	purple100 = "#DAC4FF",
-	purple200 = "#B990FF",
-	purple300 = "#A368FC",
-	purple400 = "#9446ED",
-	purple500 = "#8719E0",
-	purple600 = "#7A0ECC",
-	purple700 = "#690CB0",
-	purple800 = "#580A94",
-	purple900 = "#44056E",
+	purple050 = "#FDEBFF",
+	purple100 = "#F8C4FE",
+	purple200 = "#F48FFF",
+	purple300 = "#F368FC",
+	purple400 = "#ED47ED",
+	purple500 = "#E019D0",
+	purple600 = "#CB10B8",
+	purple700 = "#B30BA3",
+	purple800 = "#960888",
+	purple900 = "#6E0560",
 	yellow050 = "#FFFBEA",
 	yellow100 = "#FFF3C4",
 	yellow150 = "#FEEFB3",
@@ -81,16 +81,16 @@ hl("NormalFloat", { link = "Normal" })
 hl("Cursor", { bg = colors.gray900, fg = colors.gray050 })
 hl("CursorLine", { bg = colors.gray100 })
 
-hl("WinSeparator", { link = "Normal" })
+hl("WinSeparator", { fg = colors.gray200 })
 hl("VertSplit", { link = "WinSeparator" })
+
+hl("FloatBorder", { fg = colors.blue800 })
+hl("FloatShadow", { bg = colors.gray200 })
+hl("FloatShadowThrough", { link = "FloatShadow" })
 
 hl("SignColumn", { fg = colors.gray500 })
 hl("LineNr", { fg = colors.gray500 })
 hl("CursorLineNr", { fg = colors.gray900 })
-
-hl("FloatBorder", { link = "NormalFloat" })
-hl("FloatShadow", { bg = colors.gray500 })
-hl("FloatShadowThrough", { link = "FloatShadow" })
 
 hl("NonText", { fg = colors.gray400 })
 hl("SpecialKey", { link = "NonText" })
@@ -99,9 +99,9 @@ hl("Pmenu", { fg = colors.gray900, bg = colors.gray200 })
 hl("PmenuSel", { fg = colors.gray050, bg = colors.gray900 })
 hl("PmenuSbar", { fg = colors.gray900, bg = colors.gray300 })
 
-hl("StatusLine", { fg = colors.gray900, bg = colors.gray200 })
+hl("StatusLine", { fg = colors.gray900, bg = colors.gray100 })
 hl("StatusLineNC", { link = "StatusLine" })
-hl("StatusLineAlt", { fg = colors.gray050, bg = colors.blue700 })
+hl("StatusLineAlt", { fg = colors.gray050, bg = colors.blue800 })
 hl("ModeMsg", { fg = colors.gray900 })
 
 hl("CmpItemKindDefault", { fg = colors.blue700 })
@@ -121,14 +121,14 @@ hl("VisualNOS", { link = "Visual" })
 hl("MatchParen", { fg = colors.gray900, bg = colors.blue100 })
 
 -- Git
-hl("DiffAdd", { fg = colors.gray900, bg = colors.green100 })
-hl("DiffChange", { fg = colors.gray900, bg = colors.blue100 })
-hl("DiffDelete", { fg = colors.gray900, bg = colors.red100 })
+hl("DiffAdd", { fg = colors.gray900, bg = colors.green050 })
+hl("DiffChange", { fg = colors.gray900, bg = colors.blue050 })
+hl("DiffDelete", { fg = colors.gray900, bg = colors.red050 })
 hl("Added", { fg = colors.green600 })
 hl("Changed", { fg = colors.blue600 })
 hl("Removed", { fg = colors.red600 })
-hl("GitSignsDeleteInline", { fg = colors.gray900, bg = colors.red200 })
-hl("GitSignsAddInline", { fg = colors.gray900, bg = colors.green200 })
+hl("GitSignsDeleteInline", { fg = colors.gray900, bg = colors.red100 })
+hl("GitSignsAddInline", { fg = colors.gray900, bg = colors.green100 })
 hl("NeoTreeGitModified", { fg = colors.blue600 })
 
 -- Diagnostics

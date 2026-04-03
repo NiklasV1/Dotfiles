@@ -85,7 +85,7 @@ M.select = function(items, opts, on_choice)
 		width = width,
 		height = height,
 		style = "minimal",
-		border = "single",
+		border = "bold",
 		title = prompt ~= "" and " " .. prompt .. " " or nil,
 		title_pos = "center",
 	})

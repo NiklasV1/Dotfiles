@@ -48,7 +48,7 @@ M.input = function(opts, on_submit)
 		width = width,
 		height = height,
 		style = "minimal",
-		border = "single",
+		border = "bold",
 		title = prompt ~= "" and " " .. prompt .. " " or nil,
 		title_pos = "center",
 	})

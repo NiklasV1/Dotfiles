@@ -38,7 +38,7 @@ return {
 	opts = {
 		delay = 0,
 		win = {
-			border = "single",
+			border = "bold",
 		},
 		icons = icons,
 		spec = {

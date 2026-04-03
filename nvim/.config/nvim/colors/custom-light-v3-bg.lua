@@ -1,7 +1,7 @@
 -- Reset colors
 vim.cmd("highlight clear")
 vim.opt.background = "light"
-vim.g.colors_name = "custom-light-v3"
+vim.g.colors_name = "custom-light-v3-bg"
 
 ---@param name string
 ---@param val vim.api.keyset.highlight
@@ -192,5 +192,5 @@ hl("@variable", { link = "BaseColor" })
 hl("@lsp", { link = "BaseColor" })
 
 -- Markdown
-hl("@markup.list.checked", { fg = colors.gray900, bg = colors.green200 })
-hl("@markup.list.unchecked", { fg = colors.gray900, bg = colors.red200 })
+hl("@markup.list.checked", { fg = colors.green800, bg = colors.green200 })
+hl("@markup.list.unchecked", { fg = colors.red800, bg = colors.red200 })

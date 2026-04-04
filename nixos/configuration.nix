@@ -15,7 +15,7 @@
 
   boot.initrd.luks.devices."luks-80113675-6c6b-4a0a-8a6f-ed0186ec98ba".device =
     "/dev/disk/by-uuid/80113675-6c6b-4a0a-8a6f-ed0186ec98ba";
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nv-nix"; # Define your hostname.
 
   # Enable flakes
   nix.settings.experimental-features = [

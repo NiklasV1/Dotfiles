@@ -86,6 +86,15 @@
     ];
   };
 
+  # Enable zsh with Oh My Zsh
+  programs.zsh = {
+    enable = true;
+    oh-my-zsh = {
+      enable = true;
+      theme = "robbyrussell";
+    };
+  };
+
   # Install firefox.
   programs.firefox.enable = true;
 

@@ -22,6 +22,7 @@ return {
 			markdown = { "prettier", stop_after_first = true },
 			javascript = { prettier, stop_after_first = true },
 			sql = { "sql-formatter" },
+			nix = { "nixfmt" },
 		},
 	},
 }

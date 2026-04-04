@@ -5,16 +5,16 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-80113675-6c6b-4a0a-8a6f-ed0186ec98ba".device = "/dev/disk/by-uuid/80113675-6c6b-4a0a-8a6f-ed0186ec98ba";
+  boot.initrd.luks.devices."luks-80113675-6c6b-4a0a-8a6f-ed0186ec98ba".device =
+    "/dev/disk/by-uuid/80113675-6c6b-4a0a-8a6f-ed0186ec98ba";
   networking.hostName = "nixos"; # Define your hostname.
 
   # Enable networking
@@ -72,7 +72,10 @@
   users.users.nv = {
     isNormalUser = true;
     description = "nv";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
     ];
   };

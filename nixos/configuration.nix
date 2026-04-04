@@ -94,6 +94,8 @@
     wget
     ripgrep
     fzf
+    unzip
+    lsof
     # Dev setup
     stow
     alacritty
@@ -104,6 +106,10 @@
     lazygit
     opencode
     nerd-fonts.mononoki
+    python314
+    go
+    cargo
+    nodejs_24
     # Misc
     firefox
   ];

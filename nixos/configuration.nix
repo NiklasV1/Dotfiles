@@ -11,7 +11,7 @@
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.configurationLimit = 10;
 
   boot.initrd.luks.devices."luks-80113675-6c6b-4a0a-8a6f-ed0186ec98ba".device =
     "/dev/disk/by-uuid/80113675-6c6b-4a0a-8a6f-ed0186ec98ba";
@@ -22,6 +22,11 @@
     "nix-command"
     "flakes"
   ];
+
+  nix.gc = {
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
 
   # Enable networking
   networking.networkmanager.enable = true;

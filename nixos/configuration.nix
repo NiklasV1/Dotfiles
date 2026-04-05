@@ -60,8 +60,107 @@
     {
       lockAll = true;
       settings = {
+        "org/gnome/mutter" = {
+          dynamic-workspaces = false;
+          overlay-key = "Super_R";
+          workspaces-only-on-primary = true;
+        };
+        "org/gnome/desktop/interface" = {
+          enable-hot-corners = false;
+          gtk-enable-primary-paste = false;
+        };
         "org/gnome/desktop/input-sources" = {
-          xkb-options = [ "caps:escape" ];
+          xkb-options = [
+            "compose:ralt"
+            "caps:escape"
+          ];
+        };
+        "org/gnome/settings-daemon/plugins/media-keys" = {
+          custom-keybindings = [
+            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+          ];
+          search = [ "<Super>d" ];
+          www = [ "<Super>w" ];
+          screensaver = [ "<Super>Escape" ];
+          home = [ "<Super>e" ];
+          help = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+        };
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+          binding = "<Super>Return";
+          command = "alacritty -e zsh";
+          enable-in-lockscreen = false;
+          name = "Terminal";
+        };
+        "org/gnome/desktop/wm/keybindings" = {
+          close = [
+            "<Super>q"
+            "<Alt>F4"
+          ];
+          move-to-side-n = [ "<Super>Up" ];
+          move-to-side-e = [ "<Super>Right" ];
+          move-to-side-s = [ "<Super>Down" ];
+          move-to-side-w = [ "<Super>Left" ];
+          toggle-maximized = [ "<Super>k" ];
+          minimize = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          show-desktop = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          switch-input-source = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          switch-input-source-backward = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          switch-to-workspace-1 = [ "<Super>1" ];
+          switch-to-workspace-2 = [ "<Super>2" ];
+          switch-to-workspace-3 = [ "<Super>3" ];
+          switch-to-workspace-4 = [ "<Super>4" ];
+          switch-to-workspace-5 = [ "<Super>5" ];
+          switch-to-workspace-6 = [ "<Super>6" ];
+          switch-to-workspace-7 = [ "<Super>7" ];
+          switch-to-workspace-8 = [ "<Super>8" ];
+          switch-to-workspace-9 = [ "<Super>9" ];
+          switch-to-workspace-10 = [ "<Super>0" ];
+          move-to-workspace-1 = [ "<Super><Shift>1" ];
+          move-to-workspace-2 = [ "<Super><Shift>2" ];
+          move-to-workspace-3 = [ "<Super><Shift>3" ];
+          move-to-workspace-4 = [ "<Super><Shift>4" ];
+          move-to-workspace-5 = [ "<Super><Shift>5" ];
+          move-to-workspace-6 = [ "<Super><Shift>6" ];
+          move-to-workspace-7 = [ "<Super><Shift>7" ];
+          move-to-workspace-8 = [ "<Super><Shift>8" ];
+          move-to-workspace-9 = [ "<Super><Shift>9" ];
+          move-to-workspace-10 = [ "<Super><Shift>0" ];
+        };
+        "org/gnome/desktop/wm/preferences" = {
+          num-workspaces = pkgs.lib.gvariant.mkUint32 10;
+        };
+        "org/gnome/mutter.wayland/keybindings" = {
+          restore-shortcuts = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+        };
+        "org/gnome/desktop/peripherals/mouse" = {
+          accel-profile = "flat";
+          speed = pkgs.lib.gvariant.mkUint32 0;
+        };
+        "org/gnome/desktop/peripherals/keyboard" = {
+          delay = pkgs.lib.gvariant.mkUint32 300;
+          repeat = true;
+          repeat-interval = pkgs.lib.gvariant.mkUint32 30;
+        };
+        "org/gnome/shell/keybindings" = {
+          show-screenshot-ui = [ "<Super><Shift>s" ];
+          switch-to-application-1 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          switch-to-application-2 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          switch-to-application-3 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          switch-to-application-4 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          switch-to-application-5 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          switch-to-application-6 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          switch-to-application-7 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          switch-to-application-8 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          switch-to-application-9 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          open-new-window-application-1 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          open-new-window-application-2 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          open-new-window-application-3 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          open-new-window-application-4 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          open-new-window-application-5 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          open-new-window-application-6 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          open-new-window-application-7 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          open-new-window-application-8 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
+          open-new-window-application-9 = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;
         };
       };
     }

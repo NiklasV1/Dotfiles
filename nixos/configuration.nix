@@ -127,7 +127,7 @@
           move-to-workspace-10 = [ "<Super><Shift>0" ];
         };
         "org/gnome/desktop/wm/preferences" = {
-          num-workspaces = pkgs.lib.gvariant.mkUint32 10;
+          num-workspaces = pkgs.lib.gvariant.mkInt32 10;
         };
         "org/gnome/mutter.wayland/keybindings" = {
           restore-shortcuts = pkgs.lib.gvariant.mkEmptyArray pkgs.lib.gvariant.type.string;

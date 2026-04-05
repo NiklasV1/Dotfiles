@@ -56,6 +56,17 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
+  programs.dconf.profiles.user.databases = [
+    {
+      lockAll = true;
+      settings = {
+        "org/gnome/desktop/input-sources" = {
+          xkb-options = [ "caps:escape" ];
+        };
+      };
+    }
+  ];
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";

@@ -67,6 +67,7 @@
         };
         "org/gnome/desktop/interface" = {
           enable-hot-corners = false;
+          enable-animations = false;
           gtk-enable-primary-paste = false;
         };
         "org/gnome/desktop/input-sources" = {

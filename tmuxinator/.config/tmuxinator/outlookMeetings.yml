@@ -1,7 +1,5 @@
-# /home/niklasv/.config/tmuxinator/settingsUi.yml
-
-name: settings-ui
-root: ~/Programming/snapaddy-settings-ui/
+name: outlook-meetings
+root: ~/Programming/meetings-outlook-integration/
 
 startup_window: Editor
 on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node22.zsh && lazygit
@@ -9,4 +7,4 @@ on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node22.zsh && lazy
 windows:
   - Editor: nvim
   - Terminal:
-  - Server: npm ci && npm run start
+  - Server: 

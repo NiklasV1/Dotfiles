@@ -173,13 +173,13 @@ alias yesterday="nvim ~/Notes/Daily-Notes/$(date --date="yesterday" +%d-%m-%Y).m
 alias krokodil=~/Scripts/start-day.sh
 # Rush
 alias featstart="rushx build && rushx start:feat"
-alias fullrush="rush update && rush build-only && rush gen:code"
-alias rushpart="rush update && rush build-only && rush start:partial"
-alias rushto="rush update && rush build-only --to ."
+alias fullrush="rush install && rush build-only && rush gen:code"
+alias rushpart="rush install && rush build-only && rush start:partial"
+alias rushto="rush install && rush build-only --to ."
 alias rxb="rushto"
 alias rxt="rushx _phase:test"
 alias rxe="rushx test:e2e"
-alias rb="rush update && rush build-only"
+alias rb="rush install && rush build-only"
 alias rsf="rushx build && rushx start:feat"
 alias vibe="opencode --continue --hostname 127.0.0.1 --port 4096"
 
@@ -206,3 +206,6 @@ down() {
 
 # opencode
 export PATH=/home/niklas/.opencode/bin:$PATH
+
+# opencode
+export PATH=/home/niklasv/.opencode/bin:$PATH

@@ -17,7 +17,7 @@ return {
 			},
 			preview = {
 				winblend = 0, -- no transparency on preview window
-				border = "bold",
+				border = "rounded",
 				win_height = 20,
 			},
 			filter = {

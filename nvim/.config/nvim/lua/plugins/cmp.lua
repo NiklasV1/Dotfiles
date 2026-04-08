@@ -30,8 +30,8 @@ return {
 			},
 			completion = { completeopt = "menu,menuone,noinsert" },
 			window = {
-				completion = { border = "bold", winhighlight = "Normal:CmpNormal", scrollbar = false },
-				documentation = { border = "bold" },
+				completion = { border = "rounded", winhighlight = "Normal:CmpNormal", scrollbar = false },
+				documentation = { border = "rounded" },
 			},
 			mapping = cmp.mapping.preset.insert(require("keymaps.cmp").setup(cmp, luasnip)),
 			sources = {

@@ -45,7 +45,7 @@ vim.opt.synmaxcol = 300 -- Syntax highlighting limit
 vim.opt.list = false -- Don't show special characters like tab
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" } -- chars to replace special characters with
 vim.opt.inccommand = "split" -- Preview substitutions
-vim.opt.winborder = "bold" -- Window borders
+vim.opt.winborder = "rounded" -- Window borders
 vim.opt.fillchars = "horiz:━,horizup:┻,horizdown:┳,vert:┃,vertleft:┫,vertright:┣,verthoriz:╋"
 vim.opt.laststatus = 3 -- Only one statusline
 
@@ -94,7 +94,7 @@ vim.diagnostic.config({
 	float = {
 		scope = "line",
 		source = "if_many",
-		border = "bold",
+		border = "rounded",
 	},
 	virtual_text = {
 		source = "if_many",

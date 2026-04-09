@@ -145,11 +145,10 @@ hl("DiagnosticError", { link = "ErrorMsg" })
 
 -- 1. Declarations are blue
 hl("Declaration", { fg = colors.blue700 })
-hl("@lsp.mod.declaration.lua", { link = "Declaration" })
-hl("@lsp.mod.declaration.typescript", { link = "Declaration" })
+hl("@lsp.mod.declaration", { link = "Declaration" })
+hl("@private-property-declaration", { link = "Declaration" })
 hl("@tag.html", { link = "Declaration" })
 hl("@tag.angular", { link = "Declaration" })
-hl("@lsp.mod.declaration.javascript", { link = "Declaration" })
 
 -- 2. Strings are green
 hl("String", { fg = colors.green700 })

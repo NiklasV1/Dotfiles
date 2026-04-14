@@ -86,3 +86,6 @@ require("keymaps.go")
 
 -- Opencode keymaps
 require("keymaps.opencode")
+
+-- Markdown keymaps
+require("keymaps.markdown")

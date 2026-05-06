@@ -149,6 +149,7 @@ hl("@lsp.mod.declaration", { link = "Declaration" })
 hl("@private-property-declaration", { link = "Declaration" })
 hl("@tag.html", { link = "Declaration" })
 hl("@tag.angular", { link = "Declaration" })
+hl("@tag.astro", { link = "Declaration" })
 
 -- 2. Strings are green
 hl("String", { fg = colors.green700 })

@@ -1,5 +1,3 @@
-local prettier = "prettierd"
-
 return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
@@ -12,15 +10,15 @@ return {
 		},
 		formatters_by_ft = {
 			lua = { "stylua" },
-			typescript = { prettier, stop_after_first = true },
-			css = { prettier, stop_after_first = true },
-			scss = { prettier, stop_after_first = true },
-			html = { prettier, stop_after_first = true },
-			htmlangular = { prettier, stop_after_first = true },
+			typescript = { "prettierd", "prettier", stop_after_first = true },
+			css = { "prettierd", "prettier", stop_after_first = true },
+			scss = { "prettierd", "prettier", stop_after_first = true },
+			html = { "prettierd", "prettier", stop_after_first = true },
+			htmlangular = { "prettierd", "prettier", stop_after_first = true },
 			python = { "autopep8" },
 			json = { "jq" },
-			markdown = { "prettier", stop_after_first = true },
-			javascript = { prettier, stop_after_first = true },
+			markdown = { "prettierd", "prettier", stop_after_first = true },
+			javascript = { "prettierd", "prettier", stop_after_first = true },
 			sql = { "sql-formatter" },
 			nix = { "nixfmt" },
 		},

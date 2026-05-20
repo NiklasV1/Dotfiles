@@ -14,7 +14,9 @@ return {
 	-- Console log: console.log('x', x)
 	s("cons", {
 		t("console.log('"),
-		f(function(args) return args[1][1] end, { 1 }),
+		f(function(args)
+			return args[1][1]
+		end, { 1 }),
 		t("', "),
 		i(1, "value"),
 		t(");"),
@@ -52,47 +54,81 @@ return {
 	-- Method definition
 	s(
 		"meth",
-		fmt([[|name/(|arg/: |argType/): |returnType/ {
+		fmt(
+			[[|name/(|arg/: |argType/): |returnType/ {
 	|body/
-}]], {
-			name = i(1, "methodName"),
-			arg = i(2, "arg"),
-			argType = i(3, "ArgType"),
-			returnType = i(4, "ReturnType"),
-			body = i(0),
-		}, { delimiters = "|/" })
+}]],
+			{
+				name = i(1, "methodName"),
+				arg = i(2, "arg"),
+				argType = i(3, "ArgType"),
+				returnType = i(4, "ReturnType"),
+				body = i(0),
+			},
+			{ delimiters = "|/" }
+		)
 	),
 
 	-- Type definition
 	s(
 		"type",
-		fmt([[type |name/ = {
+		fmt(
+			[[type |name/ = {
 	|field/: |fieldType/;
-}]], {
-			name = i(1, "Name"),
-			field = i(2, "field"),
-			fieldType = i(3, "FieldType"),
-		}, { delimiters = "|/" })
+}]],
+			{
+				name = i(1, "Name"),
+				field = i(2, "field"),
+				fieldType = i(3, "FieldType"),
+			},
+			{ delimiters = "|/" }
+		)
 	),
 
 	-- Enum definition
 	s(
 		"enum",
-		fmt([[enum |name/ {
+		fmt(
+			[[enum |name/ {
 	|value/,
-}]], {
-			name = i(1, "Name"),
-			value = i(2, "VALUE"),
-		}, { delimiters = "|/" })
+}]],
+			{
+				name = i(1, "Name"),
+				value = i(2, "VALUE"),
+			},
+			{ delimiters = "|/" }
+		)
 	),
 
 	-- ICONS const definition
 	s(
 		"icons",
-		fmt([[protected readonly ICONS = {
+		fmt(
+			[[protected readonly ICONS = {
 	|body/
-} as const;]], {
-			body = i(0),
-		}, { delimiters = "|/" })
+} as const;]],
+			{
+				body = i(0),
+			},
+			{ delimiters = "|/" }
+		)
+	),
+
+	-- try/catch block
+	s(
+		"tryc",
+		fmt(
+			[[try {
+	|body/
+} catch (|err/) {
+	|handler/
+}]],
+			{
+				body = i(1),
+				err = i(2, "err"),
+				handler = i(0),
+			},
+			{ delimiters = "|/" }
+		)
 	),
 }

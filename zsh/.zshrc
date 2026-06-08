@@ -209,3 +209,6 @@ export PATH=/home/niklas/.opencode/bin:$PATH
 
 # opencode
 export PATH=/home/niklasv/.opencode/bin:$PATH
+
+# Wrap npm/pnpm registry auth via 1Password (op run)
+[ -f "$HOME/.config/zsh/npm-op.zsh" ] && source "$HOME/.config/zsh/npm-op.zsh"

@@ -3,7 +3,7 @@
 # Load nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-nvm use 20
+nvm use 22
 
 # Login to AWS if needed
 aws sts get-caller-identity --no-cli-pager

@@ -1,0 +1,10 @@
+name: website
+root: ~/Programming/snapaddy-website-astro/
+
+startup_window: Editor
+on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node22.zsh && lazygit
+
+windows:
+  - Editor: nvim
+  - Terminal:
+  - Server: 

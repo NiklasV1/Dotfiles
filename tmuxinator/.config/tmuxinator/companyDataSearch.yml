@@ -1,0 +1,10 @@
+name: company-data
+root: ~/Programming/snapaddy-company-data-search/
+
+startup_window: Editor
+on_project_first_start: lazygit
+
+windows:
+  - Editor: nvim
+  - Terminal:
+  - Server:

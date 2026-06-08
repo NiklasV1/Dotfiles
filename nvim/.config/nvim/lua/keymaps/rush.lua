@@ -88,6 +88,6 @@ local rushCommandAutoGroup = vim.api.nvim_create_augroup("rushCommandAutoGroup",
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = { "typescript", "javascript" },
 	group = rushCommandAutoGroup,
-	desc = "Apply jest commands to typescript files",
+	desc = "Apply rush commands to typescript files",
 	callback = loadKeybinds,
 })

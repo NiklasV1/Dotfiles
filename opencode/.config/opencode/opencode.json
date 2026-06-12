@@ -11,6 +11,16 @@
       ],
       "enabled": false
     },
+    "translation-editor": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@snapaddy/i18n-cli",
+        "mcp"
+      ],
+      "enabled": false
+    },
     "angular": {
       "type": "local",
       "command": [

@@ -11,6 +11,27 @@
       ],
       "enabled": false
     },
+    "angular": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@angular/cli",
+        "mcp",
+        "--experimental-tool"
+      ],
+      "enabled": false
+    },
+    "chrome": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--no-usage-statistics"
+      ],
+      "enabled": false
+    },
     "postgres": {
       "type": "local",
       "command": [

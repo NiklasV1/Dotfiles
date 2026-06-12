@@ -12,11 +12,11 @@ local START_FEATURE = "rushx start:feat"
 
 -- Command functions
 local function rushBuild()
-	executeCommands({ INSTALL, BUILD_ONLY })
+	executeCommands({ INSTALL, BUILD_ONLY }, "", "zsh")
 end
 
 local function rushFull()
-	executeCommands({ INSTALL, BUILD_ONLY, GEN_CODE, BUILD_ONLY })
+	executeCommands({ INSTALL, BUILD_ONLY, GEN_CODE, BUILD_ONLY }, "", "zsh")
 end
 
 local function rushXBuild()

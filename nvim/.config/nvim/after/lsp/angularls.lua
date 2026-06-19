@@ -1,9 +1,10 @@
-local fallbackNodeVersion = vim.env.HOME .. "/.nvm/versions/node/v22.14.0"
-local nodePath = vim.fn.glob(vim.env.HOME .. "/.nvm/versions/node/v22.*", true, true)[1] or fallbackNodeVersion
+local masonPath =
+	vim.fs.joinpath(vim.fn.stdpath("data"), "mason", "packages", "angular-language-server", "node_modules")
 
-local languageServerPath = nodePath .. "/lib/node_modules/@angular/language-server/bin/ngserver"
-local typescriptPath = nodePath .. "/lib/node_modules/typescript/lib"
-local angularLanguageServicePath = nodePath .. "/lib/node_modules/@angular/language-service"
+local languageServerPath = vim.fs.joinpath(masonPath, "@angular", "language-server", "bin", "ngserver")
+local typescriptPath = vim.fs.joinpath(masonPath, "@angular", "language-server", "node_modules", "typescript", "lib")
+local angularLanguageServicePath =
+	vim.fs.joinpath(masonPath, "@angular", "language-server", "node_modules", "@angular", "language-service")
 
 local angularls_new_cmd = {
 	languageServerPath,

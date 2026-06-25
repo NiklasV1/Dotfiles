@@ -15,7 +15,15 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 		end, { desc = "[A]ngular [T]emplate" })
 
 		vim.keymap.set("n", "<leader>as", function()
-			vim.cmd([[edit %:h/%:t:r.css]])
+			local base = vim.fn.expand("%:p:h") .. "/" .. vim.fn.expand("%:t:r")
+			local scss_file = base .. ".scss"
+			local css_file = base .. ".css"
+
+			if vim.fn.filereadable(scss_file) == 1 then
+				vim.cmd.edit(vim.fn.fnameescape(scss_file))
+			else
+				vim.cmd.edit(vim.fn.fnameescape(css_file))
+			end
 		end, { desc = "[A]ngular [S]tyle" })
 	end,
 })

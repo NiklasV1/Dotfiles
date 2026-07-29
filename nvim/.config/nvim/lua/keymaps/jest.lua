@@ -4,7 +4,7 @@ local goToFeaturePath = require("utils.work-utils").goToFeaturePath
 -- Commands
 local END_TO_END = "pnpm test:e2e"
 local UNIT_TESTS = "pnpm test"
-local CURRENT_TEST = "pnpm exec jest -- --testMatch='**/%:t'"
+local CURRENT_TEST = "pnpm exec jest %:t:r.js"
 
 -- Command functions
 local function jestEndToEnd()

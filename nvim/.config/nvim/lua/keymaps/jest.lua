@@ -2,9 +2,9 @@ local executeCommands = require("utils.utils").executeCommands
 local goToFeaturePath = require("utils.work-utils").goToFeaturePath
 
 -- Commands
-local END_TO_END = "npm exec jest -- --test-path-pattern='[.]e2e-spec[.]js$'"
-local UNIT_TESTS = "npm exec jest -- --test-path-pattern='[.]spec[.]js$'"
-local CURRENT_TEST = "npm exec jest -- --testMatch='**/%:t'"
+local END_TO_END = "pnpm test:e2e"
+local UNIT_TESTS = "pnpm test"
+local CURRENT_TEST = "pnpm exec jest -- --testMatch='**/%:t'"
 
 -- Command functions
 local function jestEndToEnd()

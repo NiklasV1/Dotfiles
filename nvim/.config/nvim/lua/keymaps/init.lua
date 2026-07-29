@@ -79,7 +79,10 @@ require("keymaps.execute")
 require("keymaps.angular")
 
 -- Rush keymaps
-require("keymaps.rush")
+-- require("keymaps.rush")
+
+-- Pnpm keymaps
+require("keymaps.pnpm")
 
 -- Jest keymaps
 require("keymaps.jest")

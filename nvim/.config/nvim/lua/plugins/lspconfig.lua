@@ -6,8 +6,8 @@ local tools = {
 	"stylua",
 
 	-- Web dev
-	-- "ts_ls",
-	"tsgo",
+	"ts_ls",
+	-- "tsgo",
 	"html",
 	"cssls",
 	"angularls",

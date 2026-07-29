@@ -171,16 +171,7 @@ alias dailyDown="tmuxinator stop daily-notes"
 alias yesterday="nvim ~/Notes/Daily-Notes/$(date --date="yesterday" +%d-%m-%Y).md"
 # Start day
 alias krokodil=~/Scripts/start-day.sh
-# Rush
-alias featstart="rushx build && rushx start:feat"
-alias fullrush="rush install && rush build-only && rush gen:code"
-alias rushpart="rush install && rush build-only && rush start:partial"
-alias rushto="rush install && rush build-only --to ."
-alias rxb="rushto"
-alias rxt="rushx _phase:test"
-alias rxe="rushx test:e2e"
-alias rb="rush install && rush build-only"
-alias rsf="rushx build && rushx start:feat"
+
 alias vibe="opencode --continue --hostname 127.0.0.1 --port 4096"
 
 # Tmuxinator
@@ -210,5 +201,14 @@ export PATH=/home/niklas/.opencode/bin:$PATH
 # opencode
 export PATH=/home/niklasv/.opencode/bin:$PATH
 
+export NPM_GITHUB_TOKEN=""
+export NPM_FONTAWESOME_TOKEN="" 
+export NPM_MOBISCROLL_TOKEN="" 
+export NPM_TASKFORCE_TOKEN="" 
+export NPM_CAPAWESOME_TOKEN="" 
+
+
 # Wrap npm/pnpm registry auth via 1Password (op run)
 [ -f "$HOME/.config/zsh/npm-op.zsh" ] && source "$HOME/.config/zsh/npm-op.zsh"
+
+export NX_TUI=false

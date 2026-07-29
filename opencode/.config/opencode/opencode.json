@@ -14,10 +14,7 @@
     "translation-editor": {
       "type": "local",
       "command": [
-        "npx",
-        "-y",
-        "@snapaddy/i18n-cli",
-        "mcp"
+        "/home/niklasv/translation-mcp.zsh"
       ],
       "enabled": false
     },

@@ -4,7 +4,7 @@ name: user-registration
 root: ~/Programming/snapaddy-user-registration/
 
 startup_window: Editor
-on_project_first_start: . ~/.config/tmuxinator/scripts/shared/node22.zsh && lazygit
+on_project_first_start: lazygit
 
 windows:
   - Editor: nvim

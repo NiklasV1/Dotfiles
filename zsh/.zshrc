@@ -80,10 +80,6 @@ set -o vi
 
 source $HOME/.sdkman/bin/sdkman-init.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -164,7 +160,7 @@ alias npmstart="npm install && npm run start"
 # Python
 alias python="python3"
 # Navigation
-alias backend="cd $HOME/Programming/snapaddy-backend/packages/server && nvm use 20"
+alias backend="cd $HOME/Programming/snapaddy-backend/packages/server"
 # Daily notes
 alias daily="tmuxinator start daily-notes"
 alias dailyDown="tmuxinator stop daily-notes"

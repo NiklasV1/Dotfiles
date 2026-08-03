@@ -1,10 +1,5 @@
 #!/bin/zsh
 
-# Load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-nvm use 24
-
 # Login to AWS if needed
 aws sts get-caller-identity --no-cli-pager
 AWS_EXIT_CODE="$?"

@@ -4,7 +4,8 @@ local goToFeaturePath = require("utils.work-utils").goToFeaturePath
 -- Commands
 local INSTALL = "pnpm install"
 local BUILD = "pnpm build"
-local GEN_CODE = "pnpm gen:code"
+local BUILD_TO = "pnpm run build-to"
+local GEN_CODE = "pnpm run gen:code"
 
 -- Command functions
 local function build()
@@ -12,7 +13,7 @@ local function build()
 end
 
 local function buildFeature()
-	executeCommands({ goToFeaturePath(), BUILD }, "", "zsh")
+	executeCommands({ goToFeaturePath(), BUILD_TO }, "", "zsh")
 end
 
 local function genCode()

@@ -17,8 +17,7 @@ end
 
 -- Daily note
 vim.keymap.set("n", "<leader>nd", function()
-	local currentNotePath = "~/Notes/Daily-Notes/" .. os.date("%d-%m-%Y") .. ".md"
-	vim.cmd("edit " .. currentNotePath)
+	vim.cmd("edit ~/Notes/Tasks/work.md")
 end, { desc = "[N]otes [D]aily" })
 
 -- Code review guide

@@ -1,6 +1,6 @@
 ---
 name: explain-code-unit
-description: Explain a component, service, controller, class, module, hook, function, or other code unit. Use when the user asks how a specific unit works, where it is used, what it depends on, or what to know before changing it.
+description: Explain a component, service, controller, class, module, hook, function, or other code unit. Only use this when the user explicitly asks for "explain-code-unit".
 ---
 
 # Explain Code Unit

@@ -94,4 +94,5 @@ Recommended verification:
 ## Next Agent Prompt
 
 Continue the work using the handoff at `<absolute path to this file>`. Read it first, then inspect the referenced files and proceed with the implementation plan while respecting the listed constraints.
+Implement each point step by step. Stop after each point so I have time to review the code. I'll accept the proposed code or offer suggested changes. After these changes are implemented, we can continue with the next step.
 ```

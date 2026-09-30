@@ -20,6 +20,11 @@ vim.keymap.set("n", "<leader>nd", function()
 	vim.cmd("edit ~/Notes/Tasks/work.md")
 end, { desc = "[N]otes [D]aily" })
 
+-- Personal note
+vim.keymap.set("n", "<leader>np", function()
+	vim.cmd("edit ~/Notes/Tasks/personal.md")
+end, { desc = "[N]otes [P]ersonal" })
+
 -- Code review guide
 vim.keymap.set("n", "<leader>nr", function()
 	vim.cmd("edit " .. "~/Notes/code_review.md")

@@ -9,4 +9,4 @@ on_project_first_start: lazygit
 windows:
   - Editor: nvim
   - Terminal:
-  - Server: npm ci && npm run build
+  - Server: pnpm ci && pnpm run build

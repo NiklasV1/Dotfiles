@@ -208,3 +208,4 @@ export NPM_CAPAWESOME_TOKEN=""
 [ -f "$HOME/.config/zsh/npm-op.zsh" ] && source "$HOME/.config/zsh/npm-op.zsh"
 
 export NX_TUI=false
+export CHROME_BIN=chromium

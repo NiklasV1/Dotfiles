@@ -4,7 +4,8 @@
     "snapaddy-components": {
       "type": "local",
       "command": [
-        "npx",
+        "pnpm",
+        "dlx",
         "-y",
         "markdown-mcp-resource@latest",
         "https://components.snapaddy.com/assets/mcp/index.json"
@@ -21,7 +22,8 @@
     "angular": {
       "type": "local",
       "command": [
-        "npx",
+        "pnpm",
+        "dlx",
         "-y",
         "@angular/cli",
         "mcp",
@@ -32,7 +34,8 @@
     "chrome": {
       "type": "local",
       "command": [
-        "npx",
+        "pnpm",
+        "dlx",
         "-y",
         "chrome-devtools-mcp@latest",
         "--no-usage-statistics"
@@ -42,7 +45,8 @@
     "postgres": {
       "type": "local",
       "command": [
-        "npx",
+        "pnpm",
+        "dlx",
         "-y",
         "@modelcontextprotocol/server-postgres",
         "postgres://sa_backend:mySecretDBPassword@localhost:5432/postgres"
